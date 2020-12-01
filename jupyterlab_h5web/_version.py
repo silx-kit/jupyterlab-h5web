@@ -1,0 +1,1 @@
+from jupyterlab_hdf import __version__
