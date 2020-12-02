@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReactWidget } from '@jupyterlab/apputils';
 import { SilxProvider, App } from '@h5web/app';
+import '~@h5web/app/app.css';
 
 class H5webApp extends ReactWidget {
   readonly filePath: string;
