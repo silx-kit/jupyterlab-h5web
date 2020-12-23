@@ -2,7 +2,9 @@
 
 ![Github Actions Status](https://github.com/loichuder/jupyterlab-h5web/workflows/Build/badge.svg)
 
-A JupyterLab extension to view HDF5 file contents.
+A JupyterLab extension to explore and visualize HDF5 file contents. Based on [h5web](https://github.com/silx-kit/h5web).
+
+**WARNING: This extension is still in active development. Please report any encountered issue.**
 
 This extension is composed of a Python package named `jupyterlab_h5web`
 for the server extension and a NPM package named `jupyterlab-h5web`
@@ -20,6 +22,15 @@ Note: You will need NodeJS to install the extension.
 pip install jupyterlab_h5web
 jupyter lab build
 ```
+
+## Usage
+
+Once the extension is installed, you can double-click on an HDF5 file or right*click -> \_View HDF5 contents* to launch a tab.
+
+This tab is composed of a sidebar, where you can explore the structure of the HDF5 file, and of a main area where the visualization of the selected entity takes place. This visualization is controlled by the upper-right button that can toggle between:
+
+- _Display_: visualize datasets using `Line`, `Heatmap` or `Matrix` visualizations.
+- _Inspect_: show the metadata and attributes of any entity
 
 ## Troubleshoot
 
@@ -42,51 +53,4 @@ If it is installed, try:
 ```bash
 jupyter lab clean
 jupyter lab build
-```
-
-## Contributing
-
-### Install
-
-The `jlpm` command is JupyterLab's pinned version of
-[yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
-`yarn` or `npm` in lieu of `jlpm` below.
-
-```bash
-# Clone the repo to your local environment
-# Move to jupyterlab-h5web directory
-
-# Install server extension
-pip install -e .
-# Register server extension
-jupyter serverextension enable --py jupyterlab_h5web --sys-prefix
-
-# Install dependencies
-jlpm
-# Build Typescript source
-jlpm build
-# Link your development version of the extension with JupyterLab
-jupyter labextension install .
-# Rebuild Typescript source after making changes
-jlpm build
-# Rebuild JupyterLab after making any changes
-jupyter lab build
-```
-
-You can watch the source directory and run JupyterLab in watch mode to watch for changes in the extension's source and automatically rebuild the extension and application.
-
-```bash
-# Watch the source directory in another terminal tab
-jlpm watch
-# Run jupyterlab in watch mode in one terminal tab
-jupyter lab --watch
-```
-
-Now every change will be built locally and bundled into JupyterLab. Be sure to refresh your browser page after saving file changes to reload the extension (note: you'll need to wait for webpack to finish, which can take 10s+ at times).
-
-### Uninstall
-
-```bash
-pip uninstall jupyterlab_h5web
-jupyter labextension uninstall jupyterlab-h5web
 ```
