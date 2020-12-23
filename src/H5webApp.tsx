@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { ReactWidget } from '@jupyterlab/apputils';
-import { SilxProvider, App } from '@h5web/app';
-import '~@h5web/app/app.css';
+import { App, JupyterProvider } from '@h5web/app';
+import { ServerConnection } from '@jupyterlab/services';
 
 class H5webApp extends ReactWidget {
   readonly filePath: string;
@@ -13,11 +14,15 @@ class H5webApp extends ReactWidget {
   }
 
   render(): JSX.Element {
-    console.log(this.filePath);
+    const { baseUrl } = ServerConnection.makeSettings();
+
     return (
-      <SilxProvider domain="bsa_002_000-integrate-sub">
+      <JupyterProvider
+        url={baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl}
+        domain={this.filePath}
+      >
         <App />
-      </SilxProvider>
+      </JupyterProvider>
     );
   }
 }

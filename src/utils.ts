@@ -32,7 +32,7 @@ export function activateExtension(
     execute: () => {
       const file = factory.tracker.currentWidget.selectedItems().next();
 
-      const content = new H5webApp(file.name);
+      const content = new H5webApp(file.path);
       const widget = new MainAreaWidget<H5webApp>({ content });
       widget.title.label = file.name;
       app.shell.add(widget, 'main');
@@ -47,11 +47,12 @@ export function activateExtension(
 
   addDoubleClickFeature(app, factory.defaultBrowser);
 
-  runBackendTest();
+  // runBackendTest();
 }
 
 export async function runBackendTest(): Promise<void> {
   try {
+    // TODO: To fix by adding a test handler to the backend
     const data = await requestAPI<any>('get_example');
     console.log(data);
   } catch (error) {
