@@ -43,7 +43,8 @@ cmdclass = create_cmdclass(
 )
 
 cmdclass["jsdeps"] = combine_commands(
-    install_npm(HERE, build_cmd="build:all", npm=["jlpm"]), ensure_targets(jstargets),
+    install_npm(HERE, build_cmd="build:all", npm=["jlpm"]),
+    ensure_targets(jstargets),
 )
 
 with open("README.md", "r") as fh:
@@ -67,13 +68,14 @@ setup_args = dict(
     platforms="Linux, Mac OS X, Windows",
     keywords=["Jupyter", "JupyterLab"],
     classifiers=[
-        "License :: OSI Approved :: BSD License",
+        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Framework :: Jupyter",
+        "Topic :: Scientific/Engineering :: Visualization",
     ],
 )
 

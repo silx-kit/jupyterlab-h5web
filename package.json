@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-h5web",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A JupyterLab extension.",
   "keywords": [
     "jupyter",
@@ -39,7 +39,7 @@
     "watch": "tsc -w"
   },
   "dependencies": {
-    "@h5web/app": "0.0.6",
+    "@h5web/app": "0.0.7",
     "@jupyterlab/application": "^2.0.0",
     "@jupyterlab/coreutils": "^4.0.0",
     "@jupyterlab/filebrowser": "^2.2.5",
