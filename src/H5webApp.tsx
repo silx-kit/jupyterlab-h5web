@@ -1,8 +1,23 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ReactWidget } from '@jupyterlab/apputils';
 import { App, JupyterProvider } from '@h5web/app';
 import { ServerConnection } from '@jupyterlab/services';
+
+// Render the App twice on mount as the CSS is not loaded at first render.
+function TwoRenderApp(): JSX.Element {
+  const [isFirstRender, setIsFirstRender] = useState(true);
+
+  useEffect(() => {
+    setIsFirstRender(false);
+  }, []);
+
+  if (isFirstRender) {
+    return <></>;
+  }
+
+  return <App />;
+}
 
 class H5webApp extends ReactWidget {
   readonly filePath: string;
@@ -21,7 +36,7 @@ class H5webApp extends ReactWidget {
         url={baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl}
         domain={this.filePath}
       >
-        <App />
+        <TwoRenderApp />
       </JupyterProvider>
     );
   }

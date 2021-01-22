@@ -39,7 +39,7 @@
     "watch": "tsc -w"
   },
   "dependencies": {
-    "@h5web/app": "0.0.7",
+    "@h5web/app": "0.0.8",
     "@jupyterlab/application": "^2.0.0",
     "@jupyterlab/coreutils": "^4.0.0",
     "@jupyterlab/filebrowser": "^2.2.5",
