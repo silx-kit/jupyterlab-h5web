@@ -26,12 +26,12 @@
   },
   "scripts": {
     "build": "jlpm run build:lib",
-    "build:labextension": "cd jupyterlab_h5web && rimraf labextension && mkdirp labextension && cd labextension && npm pack ../..",
+    "build:labextension": "cd jupyterlab-h5web && rimraf labextension && mkdirp labextension && cd labextension && npm pack ../..",
     "build:lib": "tsc",
     "build:all": "jlpm run build:labextension",
     "clean": "jlpm run clean:lib",
     "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
-    "clean:labextension": "rimraf jupyterlab_h5web/labextension",
+    "clean:labextension": "rimraf jupyterlab-h5web/labextension",
     "clean:all": "jlpm run clean:lib && jlpm run clean:labextension",
     "eslint": "eslint . --ext .ts,.tsx --fix",
     "eslint:check": "eslint . --ext .ts,.tsx",
@@ -67,7 +67,7 @@
           "pip"
         ],
         "base": {
-          "name": "jupyterlab-h5web"
+          "name": "jupyterlab_hdf"
         }
       }
     },

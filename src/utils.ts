@@ -57,7 +57,7 @@ export async function runBackendTest(): Promise<void> {
     console.log(data);
   } catch (error) {
     console.error(
-      `The jupyterlab_h5web server extension appears to be missing.\n${error}`
+      `The jupyterlab_hdf server extension appears to be missing.\n${error}`
     );
   }
 }

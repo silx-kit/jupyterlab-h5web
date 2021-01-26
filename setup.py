@@ -15,7 +15,7 @@ import setuptools
 HERE = os.path.abspath(os.path.dirname(__file__))
 
 # The name of the project
-name = "jupyterlab_h5web"
+name = "jupyterlab-h5web"
 
 # Get our version
 version = get_version(os.path.join(name, "_version.py"))
@@ -34,7 +34,7 @@ data_files_spec = [
     (
         "etc/jupyter/jupyter_notebook_config.d",
         "jupyter-config",
-        "jupyterlab_h5web.json",
+        "jupyterlab-h5web.json",
     ),
 ]
 
