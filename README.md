@@ -8,10 +8,6 @@ A JupyterLab extension to explore and visualize HDF5 file contents. Based on [h5
 
 ![Extension screenshot](https://user-images.githubusercontent.com/42204205/103009417-0be4e480-4537-11eb-9657-29677df14f50.png)
 
-This extension is composed of a Python package named `jupyterlab_h5web`
-for the server extension and a NPM package named `jupyterlab-h5web`
-for the frontend extension.
-
 ## Requirements
 
 - JupyterLab >= 2.0
@@ -27,7 +23,7 @@ jupyter lab build
 
 ## Usage
 
-Once the extension is installed, you can double-click on an HDF5 file or right*click -> \_View HDF5 contents* to launch a tab.
+Once the extension is installed, you can double-click on an HDF5 file or right-click -> _View HDF5 contents_ to launch a tab.
 
 This tab is composed of a sidebar, where you can explore the structure of the HDF5 file, and of a main area where the visualization of the selected entity takes place. This visualization is controlled by the upper-right button that can toggle between:
 
@@ -37,13 +33,13 @@ This tab is composed of a sidebar, where you can explore the structure of the HD
 ## Troubleshoot
 
 If you are seeing the frontend extension but it is not working, check
-that the server extension is enabled:
+that the `jupyterlab_hdf` extension is enabled:
 
 ```bash
 jupyter serverextension list
 ```
 
-If the server extension is installed and enabled but you are not seeing
+If the `jupyterlab_hdf` is installed and enabled but you are not seeing
 the frontend, check the frontend is installed:
 
 ```bash

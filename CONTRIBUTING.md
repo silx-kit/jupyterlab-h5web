@@ -10,10 +10,10 @@ The `jlpm` command is JupyterLab's pinned version of
 # Clone the repo to your local environment
 # Move to jupyterlab-h5web directory
 
-# Install server extension
+# Install package in development mode
 pip install -e .
-# Register server extension
-jupyter serverextension enable --py jupyterlab_h5web --sys-prefix
+# Ensure that `jupyterlab_hdf` server extension is present and enabled
+jupyter serverextension list
 
 # Install dependencies
 jlpm
