@@ -1,18 +1,18 @@
 {
   "name": "jupyterlab-h5web",
   "version": "0.0.1",
-  "description": "A JupyterLab extension.",
+  "description": "A JupyterLab extension to explore and visualize HDF5 file contents.",
   "keywords": [
     "jupyter",
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/loichuder/jupyterlab-h5web",
+  "homepage": "https://github.com/silx-kit/jupyterlab-h5web",
   "bugs": {
-    "url": "https://github.com/loichuder/jupyterlab-h5web/issues"
+    "url": "https://github.com/silx-kit/jupyterlab-h5web/issues"
   },
-  "license": "BSD-3-Clause",
-  "author": "Silx",
+  "license": "MIT",
+  "author": "Loic Huder",
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
     "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
@@ -22,7 +22,7 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loichuder/jupyterlab-h5web.git"
+    "url": "https://github.com/silx-kit/jupyterlab-h5web.git"
   },
   "scripts": {
     "build": "jlpm run build:lib",

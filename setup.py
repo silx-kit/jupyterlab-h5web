@@ -1,7 +1,8 @@
 """
 Setup Module to setup Python Handlers for the jupyterlab-h5web extension.
 """
-import os
+from pathlib import Path
+import json
 
 from jupyter_packaging import (
     create_cmdclass,
@@ -12,25 +13,25 @@ from jupyter_packaging import (
 )
 import setuptools
 
-HERE = os.path.abspath(os.path.dirname(__file__))
+HERE = Path(__file__).parent.resolve()
 
 # The name of the project
 name = "jupyterlab-h5web"
 
-# Get our version
-version = get_version(os.path.join(name, "_version.py"))
+# Get the package info from package.json
+pkg_json = json.loads((HERE / "package.json").read_bytes())
 
-lab_path = os.path.join(HERE, name, "labextension")
+lab_path = HERE / name / "labextension"
 
 # Representative files that should exist after a successful build
 jstargets = [
-    os.path.join(HERE, "lib", "jupyterlab-h5web.js"),
+    str(HERE / "lib" / "jupyterlab-h5web.js"),
 ]
 
 package_data_spec = {name: ["*"]}
 
 data_files_spec = [
-    ("share/jupyter/lab/extensions", lab_path, "*.tgz"),
+    ("share/jupyter/lab/extensions", str(lab_path), "*.tgz"),
     (
         "etc/jupyter/jupyter_notebook_config.d",
         "jupyter-config",
@@ -47,15 +48,15 @@ cmdclass["jsdeps"] = combine_commands(
     ensure_targets(jstargets),
 )
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+long_description = (HERE / "README.md").read_text()
 
 setup_args = dict(
     name=name,
-    version=version,
-    url="https://github.com/loichuder/jupyterlab-h5web",
-    author="Loic Huder",
-    description="A JupyterLab extension to explore and visualize HDF5 file contents",
+    version=pkg_json["version"],
+    url=pkg_json["homepage"],
+    author=pkg_json["author"],
+    description=pkg_json["description"],
+    license=pkg_json["license"],
     long_description=long_description,
     long_description_content_type="text/markdown",
     cmdclass=cmdclass,
@@ -64,7 +65,6 @@ setup_args = dict(
     python_requires=">=3.6",
     zip_safe=False,
     include_package_data=True,
-    license="MIT",
     platforms="Linux, Mac OS X, Windows",
     keywords=["Jupyter", "JupyterLab"],
     classifiers=[
