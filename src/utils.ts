@@ -1,13 +1,17 @@
 import { JupyterFrontEnd } from '@jupyterlab/application';
-import { requestAPI } from './jupyterlab-h5web';
-import { FileBrowser, IFileBrowserFactory } from '@jupyterlab/filebrowser';
-import { Command } from './models';
+import { MainAreaWidget } from '@jupyterlab/apputils';
+import { IFileBrowserFactory } from '@jupyterlab/filebrowser';
 import { buildIcon, runIcon } from '@jupyterlab/ui-components';
 
-import { MainAreaWidget } from '@jupyterlab/apputils';
-
+import {
+  HDF5_FILE_TYPE,
+  HDF5_MIME_TYPE,
+  HDF5_FILE_FORMAT,
+  Command
+} from './models';
 import H5webApp from './H5webApp';
-import { PathExt } from '@jupyterlab/coreutils';
+import { requestAPI } from './jupyterlab-h5web';
+import H5webWidgetFactory from './widget';
 
 export function activateExtension(
   app: JupyterFrontEnd,
@@ -16,21 +20,31 @@ export function activateExtension(
   console.log('JupyterLab extension jupyterlab-h5web is activated!');
 
   app.docRegistry.addFileType({
-    name: 'hdf5file',
+    name: HDF5_FILE_TYPE,
     icon: buildIcon,
     displayName: 'HDF5 File',
     extensions: ['.hdf5', '.h5'],
-    fileFormat: 'json',
-    contentType: 'directory',
-    mimeTypes: ['hdf5']
+    mimeTypes: [HDF5_MIME_TYPE],
+    fileFormat: HDF5_FILE_FORMAT
   });
 
+  app.docRegistry.addWidgetFactory(
+    new H5webWidgetFactory({
+      defaultFor: [HDF5_FILE_TYPE],
+      fileTypes: [HDF5_FILE_TYPE],
+      name: 'h5web',
+      readOnly: true,
+      modelName: HDF5_FILE_FORMAT
+    })
+  );
+
+  const { defaultBrowser } = factory;
   app.commands.addCommand(Command.openInH5web, {
     label: 'View HDF5 file contents',
     caption: 'Explore and visualize the contents of the HDF5 file',
     icon: runIcon,
     execute: () => {
-      const file = factory.tracker.currentWidget.selectedItems().next();
+      const file = defaultBrowser.selectedItems().next();
 
       const content = new H5webApp(file.path);
       const widget = new MainAreaWidget<H5webApp>({ content });
@@ -41,11 +55,9 @@ export function activateExtension(
 
   app.contextMenu.addItem({
     command: Command.openInH5web,
-    selector: '.jp-DirListing-item[data-file-type="hdf5file"]',
+    selector: `.jp-DirListing-item[data-file-type=${HDF5_FILE_TYPE}]`,
     rank: 0
   });
-
-  addDoubleClickFeature(app, factory.defaultBrowser);
 
   // runBackendTest();
 }
@@ -60,50 +72,4 @@ export async function runBackendTest(): Promise<void> {
       `The jupyterlab_hdf server extension appears to be missing.\n${error}`
     );
   }
-}
-
-export function addDoubleClickFeature(
-  app: JupyterFrontEnd,
-  browser: FileBrowser
-): void {
-  const { commands } = app;
-
-  const handleDblClick = async (evt: Event): Promise<void> => {
-    const event = evt as MouseEvent;
-    // Do nothing if it's not a left mouse press.
-    if (event.button !== 0) {
-      return;
-    }
-
-    // Do nothing if any modifier keys are pressed.
-    if (event.ctrlKey || event.shiftKey || event.altKey || event.metaKey) {
-      return;
-    }
-
-    // Stop the event propagation.
-    event.preventDefault();
-    event.stopPropagation();
-
-    const item = browser.modelForClick(event);
-    if (!item) {
-      return;
-    }
-
-    const { contents } = browser.model.manager.services;
-    const extname = PathExt.extname(item.path);
-    if (extname === '.hdf5' || extname === '.h5') {
-      // special handling for .hdf5 files
-      commands.execute(Command.openInH5web);
-    } else if (item.type === 'directory') {
-      try {
-        await browser.model.cd('/' + contents.localPath(item.path));
-      } catch (error) {
-        console.error(error);
-      }
-    } else {
-      browser.model.manager.openOrReveal(item.path);
-    }
-  };
-
-  browser.node.addEventListener('dblclick', handleDblClick, true);
 }
