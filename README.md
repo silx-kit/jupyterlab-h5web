@@ -6,7 +6,7 @@ A JupyterLab extension to explore and visualize HDF5 file contents. Based on [h5
 
 **WARNING: This extension is still in active development. Please report any encountered issue.**
 
-![Extension screenshot](https://user-images.githubusercontent.com/42204205/103009417-0be4e480-4537-11eb-9657-29677df14f50.png)
+![Extension screenshot](https://user-images.githubusercontent.com/42204205/106109102-6c280100-6149-11eb-96eb-38a14983702f.png)
 
 ## Requirements
 
