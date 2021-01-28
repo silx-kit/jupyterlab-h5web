@@ -4,13 +4,14 @@ import {
 } from '@jupyterlab/application';
 import { MainAreaWidget } from '@jupyterlab/apputils';
 import { IFileBrowserFactory } from '@jupyterlab/filebrowser';
-import { buildIcon, runIcon } from '@jupyterlab/ui-components';
 
 import {
   HDF5_FILE_TYPE,
   HDF5_MIME_TYPE,
   HDF5_FILE_FORMAT,
-  Command
+  Command,
+  hdf5Icon,
+  h5webIcon
 } from './constants';
 import H5webApp from './H5webApp';
 import H5webWidgetFactory from './widget';
@@ -24,7 +25,7 @@ const extension: JupyterFrontEndPlugin<void> = {
 
     app.docRegistry.addFileType({
       name: HDF5_FILE_TYPE,
-      icon: buildIcon,
+      icon: hdf5Icon,
       displayName: 'HDF5 File',
       extensions: ['.hdf5', '.h5'],
       mimeTypes: [HDF5_MIME_TYPE],
@@ -45,7 +46,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     app.commands.addCommand(Command.openInH5web, {
       label: 'View HDF5 file contents',
       caption: 'Explore and visualize the contents of the HDF5 file',
-      icon: runIcon,
+      icon: h5webIcon,
       execute: () => {
         const file = defaultBrowser.selectedItems().next();
 

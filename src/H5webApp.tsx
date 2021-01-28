@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { ReactWidget } from '@jupyterlab/apputils';
 import { App, JupyterProvider } from '@h5web/app';
 import { ServerConnection } from '@jupyterlab/services';
+import { h5webIcon } from './constants';
 
 // Render the App twice on mount as the CSS is not loaded at first render.
 function TwoRenderApp(): JSX.Element {
@@ -26,6 +27,7 @@ class H5webApp extends ReactWidget {
     super();
     this.addClass('jp-ReactWidget');
     this.filePath = filePath;
+    this.title.icon = h5webIcon;
   }
 
   render(): JSX.Element {
