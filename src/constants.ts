@@ -2,10 +2,6 @@ import { LabIcon } from '@jupyterlab/ui-components';
 import hdf5IconSvg from '../style/hdf5-icon.svg';
 import h5webIconSvg from '../style/h5web-icon.svg';
 
-export enum Command {
-  openInH5web = 'h5web:open-in-h5web'
-}
-
 /* The file format is set for the following reasons:
   - A model data is fetched by the core JupyterLab according to the file format.
   - If set to `text`, the fetching fails by raising an error "The file is not UTF-8 encoded"
