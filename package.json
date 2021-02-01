@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-h5web",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "A JupyterLab extension to explore and visualize HDF5 file contents.",
   "keywords": [
     "jupyter",
@@ -36,7 +36,8 @@
     "eslint": "eslint . --ext .ts,.tsx --fix",
     "eslint:check": "eslint . --ext .ts,.tsx",
     "prepare": "jlpm run clean && jlpm run build",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "@h5web/app": "0.0.8",
