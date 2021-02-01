@@ -53,3 +53,10 @@ If it is installed, try:
 jupyter lab clean
 jupyter lab build
 ```
+
+## Uninstall
+
+```bash
+pip uninstall jupyterlab_h5web
+jupyter labextension uninstall jupyterlab-h5web
+```

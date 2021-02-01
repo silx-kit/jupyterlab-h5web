@@ -42,9 +42,29 @@ Now every change will be built locally and bundled into JupyterLab. Be sure to r
 
 This extension uses `prettier` to format `*.ts` files and `black` to format `*.py` files.
 
-## Uninstall
+## PyPI package
 
-```bash
-pip uninstall jupyterlab_h5web
-jupyter labextension uninstall jupyterlab-h5web
-```
+### Why a Python package for a front-end extension ?
+
+1. To ease up installation (e.g. automatic resolution of the `jupyter_hdf` PyPI package)
+2. To get ready to release a pre-built extension (_JupyterLab 3_)
+
+The pre-built extension will indeed remove the need for `node`. For _JupyterLab 2_, the extension must be included in JupyterLab at build. As a consequence, the PyPI package contains the TypeScript sources so that the installation of the PyPI package triggers a build of these sources (needing `node`).
+
+In _JupyterLab 3_, we will be able to pre-build the extension and release it as the PyPI package.
+
+### Metadata
+
+The metadata (author, licence, version...) is set in `package.json` that acts as a the single source of truth. The metadata of the PyPI package (`setup.py`) is fetched from `package.json`.
+
+### Release process
+
+The release process is adapted from [the one from h5web](https://github.com/silx-kit/h5web/blob/master/CONTRIBUTING.md#release-process).
+
+To release a new version:
+
+- Check out `master` and pull the latest changes.
+- Make sure your working tree doesn't have uncommitted changes and that the latest commit on `master` has passed the CI.
+- Run `npm version [ patch | minor | major | <new-version> ]`
+
+This command bumps the version number in `package.json`, commits the change and then tags the commit with the same version number. The `postversion` script then runs automatically and pushes the new commit and the new tag. This, in turn, triggers the _Release_ workflow on the CI, which builds and publishes the package to PyPI.
