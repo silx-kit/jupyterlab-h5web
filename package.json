@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-h5web",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A JupyterLab extension to explore and visualize HDF5 file contents.",
   "keywords": [
     "jupyter",
@@ -12,7 +12,7 @@
     "url": "https://github.com/silx-kit/jupyterlab-h5web/issues"
   },
   "license": "MIT",
-  "author": { 
+  "author": {
     "name": "Loic Huder",
     "email": "h5web@esrf.fr"
   },
