@@ -1,4 +1,4 @@
-include LICENSE
+include LICENSE.md
 include README.md
 include pyproject.toml
 

@@ -24,7 +24,7 @@ jupyter lab build
 
 ## Usage
 
-Once the extension is installed, you can double-click on an HDF5 file or right-click -> _View HDF5 contents_ to launch a tab.
+Once the extension is installed, you can double-click on an HDF5 file or right-click _Open with_ -> _h5web_ to launch a tab.
 
 This tab is composed of a sidebar, where you can explore the structure of the HDF5 file, and of a main area where the visualization of the selected entity takes place. This visualization is controlled by the upper-right button that can toggle between:
 
