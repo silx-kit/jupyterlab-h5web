@@ -11,16 +11,25 @@ A JupyterLab extension to explore and visualize HDF5 file contents. Based on [h5
 
 ## Requirements
 
-- JupyterLab >= 2.0
+- JupyterLab ~= 2.0 (not JupyterLab 3)
 
 ## Install
 
-Note: You will need NodeJS to install the extension.
+_Note: You will need NodeJS to install the extension._
 
 ```bash
 pip install jupyterlab_h5web
 jupyter lab build
 ```
+
+To enable support for additional filters such as [blosc](https://github.com/Blosc/hdf5-blosc) or [bitshuffle](https://github.com/kiyo-masui/bitshuffle):
+
+```bash
+pip install jupyterlab_h5web[full]
+jupyter lab build
+```
+
+This will install [hdf5plugin](https://pypi.org/project/hdf5plugin/) in addition to the extension.
 
 ## Usage
 
@@ -30,6 +39,20 @@ This tab is composed of a sidebar, where you can explore the structure of the HD
 
 - _Display_: visualize datasets using `Line`, `Heatmap` or `Matrix` visualizations.
 - _Inspect_: show the metadata and attributes of any entity
+
+## Changelog
+
+### 0.0.3
+
+- Added wheels
+
+### 0.0.2
+
+- Removed `npm` from the build process
+
+### 0.0.1
+
+- First release :tada:
 
 ## Troubleshoot
 

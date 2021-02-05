@@ -65,6 +65,7 @@ To release a new version:
 
 - Check out `master` and pull the latest changes.
 - Make sure your working tree doesn't have uncommitted changes and that the latest commit on `master` has passed the CI.
+- Write the CHANGELOG
 - Run `npm version [ patch | minor | major | <new-version> ]`
 
 This command bumps the version number in `package.json`, commits the change and then tags the commit with the same version number. The `postversion` script then runs automatically and pushes the new commit and the new tag. This, in turn, triggers the _Release_ workflow on the CI, which builds and publishes the package to PyPI.
