@@ -7,6 +7,7 @@ import {
   HDF5_FILE_TYPE,
   HDF5_MIME_TYPE,
   HDF5_FILE_FORMAT,
+  HDF5_EXTENSIONS,
   hdf5Icon
 } from './constants';
 import H5webWidgetFactory from './widget';
@@ -21,7 +22,7 @@ const extension: JupyterFrontEndPlugin<void> = {
       name: HDF5_FILE_TYPE,
       icon: hdf5Icon,
       displayName: 'HDF5 File',
-      extensions: ['.hdf5', '.h5'],
+      extensions: HDF5_EXTENSIONS,
       mimeTypes: [HDF5_MIME_TYPE],
       fileFormat: HDF5_FILE_FORMAT
     });

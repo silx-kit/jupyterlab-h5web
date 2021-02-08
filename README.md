@@ -40,6 +40,16 @@ This tab is composed of a sidebar, where you can explore the structure of the HD
 - _Display_: visualize datasets using `Line`, `Heatmap` or `Matrix` visualizations.
 - _Inspect_: show the metadata and attributes of any entity
 
+### Supported file formats
+
+**jupyter-h5web** detects HDF5 files based on their file extensions. The viewer works for the following extensions:
+
+- "Classic" HDF5: `.h5`, `.hdf5`
+- [NeXus](https://www.nexusformat.org/): `.nexus`, `.nx`
+- [CXI](https://cxidb.org/cxi.html): `.cxi`
+
+For other types of files, you can change the extension to one of the supported extensions or, if it is widespread, [open an issue](https://github.com/silx-kit/jupyterlab-h5web/issues) to discuss its support.
+
 ## Changelog
 
 ### 0.0.3
