@@ -34,12 +34,14 @@ class H5webApp extends ReactWidget {
     const { baseUrl } = ServerConnection.makeSettings();
 
     return (
-      <JupyterProvider
-        url={baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl}
-        domain={this.filePath}
-      >
-        <TwoRenderApp />
-      </JupyterProvider>
+      <div className="h5web-root">
+        <JupyterProvider
+          url={baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl}
+          domain={this.filePath}
+        >
+          <TwoRenderApp />
+        </JupyterProvider>
+      </div>
     );
   }
 }
