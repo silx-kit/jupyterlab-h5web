@@ -1,6 +1,6 @@
 # jupyterlab-h5web
 
-![Github Actions Status](https://github.com/loichuder/jupyterlab-h5web/workflows/Build/badge.svg)
+![Github Actions Status](https://github.com/silx-kit/jupyterlab-h5web/workflows/Build/badge.svg)
 [![PyPI version](https://badge.fury.io/py/jupyterlab-h5web.svg)](https://badge.fury.io/py/jupyterlab-h5web)
 
 A JupyterLab extension to explore and visualize HDF5 file contents. Based on [h5web](https://github.com/silx-kit/h5web).
