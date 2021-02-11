@@ -14,7 +14,14 @@ export const HDF5_FILE_TYPE = 'hdf5file';
 
 export const HDF5_MIME_TYPE = 'application/x-hdf5';
 
-export const HDF5_EXTENSIONS = ['.hdf5', '.h5', '.nexus', '.nx', '.cxi'];
+export const HDF5_EXTENSIONS = [
+  '.hdf5',
+  '.h5',
+  '.nexus',
+  '.nx',
+  '.nxs',
+  '.cxi'
+];
 
 export const hdf5Icon = new LabIcon({
   name: 'hdf5-icon',
