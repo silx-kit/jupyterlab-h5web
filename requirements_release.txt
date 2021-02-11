@@ -1,5 +1,5 @@
 setuptools
 wheel
 twine
-jupyterlab~=2.0
-jupyter_packaging~=0.4.0
+jupyterlab
+jupyter_packaging

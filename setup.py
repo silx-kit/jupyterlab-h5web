@@ -61,7 +61,7 @@ setup_args = dict(
     long_description_content_type="text/markdown",
     cmdclass=cmdclass,
     packages=setuptools.find_packages(),
-    install_requires=["jupyterlab~=2.0", "jupyterlab_hdf"],
+    install_requires=["jupyterlab_hdf"],
     extras_require={"full": ["hdf5plugin"]},
     python_requires=">=3.6",
     zip_safe=False,

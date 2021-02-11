@@ -1,4 +1,4 @@
-name: Build
+name: Build_JupyterLab2
 
 on:
   push:

@@ -1,8 +1,10 @@
-name: Build_JLab3
+name: Build_JupyterLab3
 
 on:
   push:
-    branches: '3.0'
+    branches: main
+  pull_request:
+    branches: '*'
 
 jobs:
   build:
