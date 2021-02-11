@@ -52,6 +52,12 @@ For other types of files, you can change the extension to one of the supported e
 
 ## Changelog
 
+### 0.0.4
+
+- Added optional support of filters through `hdf5plugin`
+- Added `.nexus`, `.nx`, `.nxs` and `.cxi` to the supported extensions
+- Fixed unwanted background changes when switching themes in JupyterLab
+
 ### 0.0.3
 
 - Added wheels
