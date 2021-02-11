@@ -43,7 +43,7 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
-    "@h5web/app": "0.0.8",
+    "@h5web/app": "^0.0.10",
     "@jupyterlab/application": "^2.0.0",
     "@jupyterlab/coreutils": "^4.0.0",
     "@jupyterlab/filebrowser": "^2.2.5",
