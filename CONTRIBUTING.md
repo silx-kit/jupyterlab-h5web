@@ -59,13 +59,12 @@ The metadata (author, licence, version...) is set in `package.json` that acts as
 
 ### Release process
 
-The release process is adapted from [the one from h5web](https://github.com/silx-kit/h5web/blob/master/CONTRIBUTING.md#release-process).
+The release process is adapted from [the one from h5web](https://github.com/silx-kit/h5web/blob/main/CONTRIBUTING.md#release-process).
 
 To release a new version:
 
-- Check out `master` and pull the latest changes.
-- Make sure your working tree doesn't have uncommitted changes and that the latest commit on `master` has passed the CI.
-- Write the CHANGELOG
+- Update the changelog with the upcoming version, commit and push.
+- Make sure your working tree doesn't have other uncommitted changes and that the latest commit on `main` has passed the CI.
 - Run `npm version [ patch | minor | major | <new-version> ]`
 
 This command bumps the version number in `package.json`, commits the change and then tags the commit with the same version number. The `postversion` script then runs automatically and pushes the new commit and the new tag. This, in turn, triggers the _Release_ workflow on the CI, which builds and publishes the package to PyPI.
