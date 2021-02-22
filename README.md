@@ -52,6 +52,11 @@ For other types of files, you can change the extension to one of the supported e
 
 ## Changelog
 
+### 0.0.5
+
+- Updated `@h5web/app` to version [0.0.11](https://github.com/silx-kit/h5web/releases/tag/v0.0.11)
+- h5web has now a dark theme displayed when the JupyterLab's dark theme is on
+
 ### 0.0.4
 
 - Added optional support of filters through `hdf5plugin`
