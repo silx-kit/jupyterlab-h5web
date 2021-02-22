@@ -69,10 +69,10 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz#ccfef6ddbe59f8fe8f694783e1d3eb88902dc5eb"
   integrity sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==
 
-"@h5web/app@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-0.0.10.tgz#82c861c69505f90fd643838fa2254cfe73860f2b"
-  integrity sha512-znV2Nfbi3QCnn4/BQfxIvhSywBQOsPauwPDJ5YfF1/ree8fnU/Nf/2Txg+pO00Z+jAXUblncJ1A6sUSbkryFPw==
+"@h5web/app@0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-0.0.11.tgz#09eeebb271de8f187bc31ea5aea05d404aa96c34"
+  integrity sha512-8gI8pTQISx4uxPFdiBg2Xeab/Vno7eNyxVD3XyUDCc7p9CJLGNj+cbGWQN+uaurCIvK1NU2a2naBiltEBI/MQA==
 
 "@jupyterlab/application@^2.0.0":
   version "2.2.6"

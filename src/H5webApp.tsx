@@ -36,7 +36,7 @@ class H5webApp extends ReactWidget {
     return (
       <JupyterProvider
         url={baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl}
-        domain={this.filePath}
+        filepath={this.filePath}
       >
         <TwoRenderApp />
       </JupyterProvider>
