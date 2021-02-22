@@ -9,7 +9,6 @@ from jupyter_packaging import (
     install_npm,
     ensure_targets,
     combine_commands,
-    get_version,
 )
 import setuptools
 
