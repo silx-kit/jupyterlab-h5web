@@ -11,7 +11,7 @@ A JupyterLab extension to explore and visualize HDF5 file contents. Based on [h5
 
 ## Requirements
 
-- JupyterLab ~= 2.0 (not JupyterLab 3)
+- JupyterLab 2 or JupyterLab 3
 
 ## Install
 
