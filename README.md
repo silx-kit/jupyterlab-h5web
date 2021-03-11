@@ -77,14 +77,32 @@ For other types of files, you can change the extension to one of the supported e
 
 ## Troubleshoot
 
+### Check the server extension
+
 If you are seeing the frontend extension but it is not working, check
-that the `jupyterlab_hdf` extension is enabled:
+that `jupyterlab_hdf` is installed and enabled.
+
+It should be listed when running:
 
 ```bash
 jupyter serverextension list
 ```
 
-If the `jupyterlab_hdf` is installed and enabled but you are not seeing
+If `jupyterlab_hdf` does not appear, try to install it manually:
+
+```
+pip install jupyterlab_hdf
+```
+
+and to enable it:
+
+```
+jupyter serverextension enable jupyterlab_hdf
+```
+
+### Check the frontend extension
+
+If `jupyterlab_hdf` is installed and enabled but you are not seeing
 the frontend, check the frontend is installed:
 
 ```bash
