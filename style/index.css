@@ -14,6 +14,7 @@
 
 body[data-jp-theme-light='false'] .h5web-root {
   --black: var(--jp-inverse-layout-color0);
+  --near-black: var(--jp-inverse-layout-color0);
   --dark-slate-gray: var(--jp-inverse-layout-color1);
   --dark-gray: var(--jp-inverse-layout-color2);
   --gray: var(--jp-inverse-layout-color2);
@@ -33,6 +34,8 @@ body[data-jp-theme-light='false'] .h5web-root {
   --secondary-darker: var(--jp-brand-color4);
   --secondary-bg: var(--jp-layout-color1);
   --secondary-light-bg: var(--jp-layout-color2);
+  --secondary-light-bg-90: #424242e5;
+  --btn-bg-raised: var(--jp-layout-color3);
   --btn-shadow-color: var(--jp-layout-color2);
   --btn-shadow-dark-color: var(--jp-layout-color1);
   --btn-shadow-darker-color: var(--jp-layout-color0);
