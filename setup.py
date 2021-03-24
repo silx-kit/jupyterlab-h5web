@@ -15,7 +15,7 @@ import setuptools
 HERE = Path(__file__).parent.resolve()
 
 # The name of the project
-name = "jupyterlab-h5web"
+name = "jupyterlab_h5web"
 
 # Get the package info from package.json
 pkg_json = json.loads((HERE / "package.json").read_bytes())
