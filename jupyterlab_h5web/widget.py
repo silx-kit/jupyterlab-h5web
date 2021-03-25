@@ -4,7 +4,7 @@ from typing import Dict, Tuple, Union
 from IPython.core.display import DisplayObject
 
 
-class H5web(DisplayObject):
+class H5Web(DisplayObject):
     mimetype = "application/x-hdf5"
 
     def __init__(self, data: Union[str, Path], **kwargs) -> None:

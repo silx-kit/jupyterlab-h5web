@@ -32,8 +32,6 @@ const extension: JupyterFrontEndPlugin<void> = {
     const [mimePlugin] = createRendermimePlugins([mimeExtension]);
     app.registerPlugin(mimePlugin);
     mimePlugin.activate(app, rendermime);
-
-    // runBackendTest();
   },
 };
 

@@ -1,1 +1,1 @@
-from .widget import H5web
+from .widget import H5Web

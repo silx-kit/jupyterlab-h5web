@@ -25,7 +25,7 @@ class HDF5FilePathRenderer extends Widget implements IRenderMime.IRenderer {
     }
     return new Promise<void>((resolve, reject) => {
       ReactDOM.render(
-        <div style={{ height: '400px' }}>
+        <div className="h5web-in-cell">
           <H5webApp filePath={path} />
         </div>,
         this.node,
