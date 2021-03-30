@@ -24,7 +24,7 @@ lab_path = HERE / name / "labextension"
 
 # Representative files that should exist after a successful build
 jstargets = [
-    str(HERE / "lib" / "jupyterlab-h5web.js"),
+    str(HERE / "lib" / "index.js"),
 ]
 
 package_data_spec = {name: ["*"]}

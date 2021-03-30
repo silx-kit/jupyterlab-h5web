@@ -36,8 +36,10 @@
     "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
     "clean:labextension": "rimraf jupyterlab-h5web/labextension",
     "clean:all": "jlpm run clean:lib && jlpm run clean:labextension",
-    "eslint": "eslint . --ext .ts,.tsx --fix",
-    "eslint:check": "eslint . --ext .ts,.tsx",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint \"**/*.{ts,tsx,js,jsx}\" --max-warnings=0",
+    "lint:tsc": "tsc --noEmit",
+    "lint:prettier": "prettier --check .",
     "prepare": "jlpm run clean && jlpm run build",
     "watch": "tsc -w",
     "postversion": "git push && git push --tags"
@@ -45,19 +47,22 @@
   "dependencies": {
     "@h5web/app": "0.0.13",
     "@jupyterlab/application": "^2.0.0 || ^3.0.0",
+    "@jupyterlab/apputils": "~2.3.0 || ^3.0.5",
     "@jupyterlab/coreutils": "^4.0.0 || ^5.0.0",
+    "@jupyterlab/docregistry": "^3.0.6",
     "@jupyterlab/filebrowser": "^2.2.5 || ^3.0.0",
     "@jupyterlab/launcher": "^2.2.6 || ^3.0.0",
-    "@jupyterlab/services": "^5.0.0 || ^6.0.0"
+    "@jupyterlab/services": "^5.0.0 || ^6.0.0",
+    "@jupyterlab/ui-components": "^3.0.4",
+    "react": "~16.9.0 || ^17.0.1",
+    "react-dom": "~16.9.0|| ^17.0.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.25.0",
-    "@typescript-eslint/parser": "^2.25.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-prettier": "^3.1.2",
+    "eslint": "^7.23.0",
+    "eslint-config-galex": "2.13.5",
     "mkdirp": "^1.0.3",
-    "prettier": "1.16.4",
+    "npm-run-all": "4.1.5",
+    "prettier": "^2.2.1",
     "rimraf": "^2.6.1",
     "typescript": "~4.1.0"
   },

@@ -33,7 +33,7 @@ jobs:
       - name: Build the extension
         run: |
           jlpm
-          jlpm run eslint:check
+          jlpm run lint
 
           pip install .
           jupyter lab build

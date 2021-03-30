@@ -20,15 +20,15 @@ export const HDF5_EXTENSIONS = [
   '.nexus',
   '.nx',
   '.nxs',
-  '.cxi'
+  '.cxi',
 ];
 
 export const hdf5Icon = new LabIcon({
   name: 'hdf5-icon',
-  svgstr: hdf5IconSvg
+  svgstr: hdf5IconSvg,
 });
 
 export const h5webIcon = new LabIcon({
   name: 'h5web-icon',
-  svgstr: h5webIconSvg
+  svgstr: h5webIconSvg,
 });

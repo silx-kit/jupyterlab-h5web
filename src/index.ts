@@ -1,6 +1,6 @@
 import {
   JupyterFrontEnd,
-  JupyterFrontEndPlugin
+  JupyterFrontEndPlugin,
 } from '@jupyterlab/application';
 
 import {
@@ -8,7 +8,7 @@ import {
   HDF5_MIME_TYPE,
   HDF5_FILE_FORMAT,
   HDF5_EXTENSIONS,
-  hdf5Icon
+  hdf5Icon,
 } from './constants';
 import H5webWidgetFactory from './widget';
 
@@ -16,6 +16,7 @@ const extension: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab-h5web',
   autoStart: true,
   activate: (app: JupyterFrontEnd): void => {
+    // eslint-disable-next-line no-console
     console.log('JupyterLab extension jupyterlab-h5web is activated!');
 
     app.docRegistry.addFileType({
@@ -24,7 +25,7 @@ const extension: JupyterFrontEndPlugin<void> = {
       displayName: 'HDF5 File',
       extensions: HDF5_EXTENSIONS,
       mimeTypes: [HDF5_MIME_TYPE],
-      fileFormat: HDF5_FILE_FORMAT
+      fileFormat: HDF5_FILE_FORMAT,
     });
 
     app.docRegistry.addWidgetFactory(
@@ -33,12 +34,12 @@ const extension: JupyterFrontEndPlugin<void> = {
         fileTypes: [HDF5_FILE_TYPE],
         name: 'h5web',
         readOnly: true,
-        modelName: HDF5_FILE_FORMAT
+        modelName: HDF5_FILE_FORMAT,
       })
     );
 
     // runBackendTest();
-  }
+  },
 };
 
 export default extension;
