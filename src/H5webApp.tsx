@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { ReactWidget } from '@jupyterlab/apputils';
 import { App, JupyterProvider } from '@h5web/app';
@@ -14,23 +13,23 @@ function TwoRenderApp(): JSX.Element {
   }, []);
 
   if (isFirstRender) {
-    return <></>;
+    return null;
   }
 
   return <App />;
 }
 
 class H5webApp extends ReactWidget {
-  readonly filePath: string;
+  private readonly filePath: string;
 
-  constructor(filePath: string) {
+  public constructor(filePath: string) {
     super();
     this.addClass('jp-ReactWidget');
     this.filePath = filePath;
     this.title.icon = h5webIcon;
   }
 
-  render(): JSX.Element {
+  public render(): JSX.Element {
     const { baseUrl } = ServerConnection.makeSettings();
 
     return (
