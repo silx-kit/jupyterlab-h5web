@@ -12,7 +12,7 @@ const HDF5_FILE_TYPE = {
   displayName: 'HDF5 File',
   extensions: ['.hdf5', '.h5', '.nexus', '.nx', '.nxs', '.cxi'],
   mimeTypes: ['application/x-hdf5'],
-  fileFormat: 'base64' as const
+  fileFormat: 'base64' as const,
 };
 
 export default HDF5_FILE_TYPE;

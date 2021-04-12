@@ -3,6 +3,7 @@ import {
   JupyterFrontEndPlugin,
 } from '@jupyterlab/application';
 import { createRendermimePlugins } from '@jupyterlab/application/lib/mimerenderers';
+// eslint-disable-next-line import/no-namespace
 import * as mimeExtension from './mimeplugin';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 

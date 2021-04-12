@@ -9,16 +9,16 @@ import { h5webIcon } from './icons';
 import H5webApp from './H5webApp';
 
 class H5webWidget extends ReactWidget {
-  readonly filePath: string;
+  private readonly filePath: string;
 
-  constructor(filePath: string) {
+  public constructor(filePath: string) {
     super();
     this.addClass('jp-ReactWidget');
     this.filePath = filePath;
     this.title.icon = h5webIcon;
   }
 
-  render(): JSX.Element {
+  public render(): JSX.Element {
     return <H5webApp filePath={this.filePath} />;
   }
 }

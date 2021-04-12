@@ -4,10 +4,10 @@ import h5webIconSvg from '../style/h5web-icon.svg';
 
 export const hdf5Icon = new LabIcon({
   name: 'hdf5-icon',
-  svgstr: hdf5IconSvg
+  svgstr: hdf5IconSvg,
 });
 
 export const h5webIcon = new LabIcon({
   name: 'h5web-icon',
-  svgstr: h5webIconSvg
+  svgstr: h5webIconSvg,
 });
