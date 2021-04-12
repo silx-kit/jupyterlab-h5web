@@ -4,6 +4,13 @@
   fill: var(--jp-icon-contrast-color0);
 }
 
+.h5web-in-cell {
+  height: 400px;
+  width: 100%;
+  resize: vertical;
+  overflow: auto;
+}
+
 .h5web-root {
   width: 100%;
   height: 100%;

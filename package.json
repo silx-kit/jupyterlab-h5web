@@ -29,12 +29,12 @@
   },
   "scripts": {
     "build": "jlpm run build:lib",
-    "build:labextension": "rimraf jupyterlab-h5web/labextension && mkdirp jupyterlab-h5web/labextension && jlpm pack -f jupyterlab-h5web/labextension/jupyterlab-h5web.tgz",
+    "build:labextension": "rimraf jupyterlab_h5web/labextension && mkdirp jupyterlab_h5web/labextension && jlpm pack -f jupyterlab_h5web/labextension/jupyterlab-h5web.tgz",
     "build:lib": "tsc",
     "build:all": "jlpm run build:labextension",
     "clean": "jlpm run clean:lib",
     "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
-    "clean:labextension": "rimraf jupyterlab-h5web/labextension",
+    "clean:labextension": "rimraf jupyterlab_h5web/labextension",
     "clean:all": "jlpm run clean:lib && jlpm run clean:labextension",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint \"**/*.{ts,tsx,js,jsx}\" --max-warnings=0",
@@ -52,19 +52,25 @@
     "@jupyterlab/docregistry": "^3.0.6",
     "@jupyterlab/filebrowser": "^2.2.5 || ^3.0.0",
     "@jupyterlab/launcher": "^2.2.6 || ^3.0.0",
+    "@jupyterlab/rendermime": "~2.3.0 || ^3.0.7",
+    "@jupyterlab/rendermime-interfaces": "~2.3.0 || ^3.0.6",
     "@jupyterlab/services": "^5.0.0 || ^6.0.0",
     "@jupyterlab/ui-components": "^3.0.4",
+    "@lumino/widgets": "~1.18.0",
     "react": "~16.9.0 || ^17.0.1",
-    "react-dom": "~16.9.0|| ^17.0.1"
+    "react-dom": "~16.9.0 || ^17.0.1"
   },
   "devDependencies": {
+    "@types/react": "~16.9.0 || ^17.0.1",
+    "@types/react-dom": "~16.9.0 || ^17.0.1",
     "eslint": "^7.23.0",
     "eslint-config-galex": "2.13.5",
     "mkdirp": "^1.0.3",
     "npm-run-all": "4.1.5",
     "prettier": "^2.2.1",
     "rimraf": "^2.6.1",
-    "typescript": "~4.1.0"
+    "typescript": "~4.1.0",
+    "yarn-deduplicate": "^3.1.0"
   },
   "sideEffects": [
     "style/*.css"
