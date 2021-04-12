@@ -3,13 +3,17 @@
 ![Github Actions Status](https://github.com/silx-kit/jupyterlab-h5web/workflows/Build/badge.svg)
 [![PyPI version](https://badge.fury.io/py/jupyterlab-h5web.svg)](https://badge.fury.io/py/jupyterlab-h5web)
 
-A JupyterLab extension to explore and visualize HDF5 file contents. Based on
-[h5web](https://github.com/silx-kit/h5web).
+**This extension is still in active development. Please report any encountered
+issue.**
 
-**WARNING: This extension is still in active development. Please report any
-encountered issue.**
+![Demo](https://user-images.githubusercontent.com/2936402/114533096-d5e68000-9c4d-11eb-81d3-67d313c9216f.gif)
 
-![Extension screenshot](https://user-images.githubusercontent.com/42204205/106109102-6c280100-6149-11eb-96eb-38a14983702f.png)
+**jupyterlab-h5web** is a JupyterLab extension to explore and visualize HDF5
+file contents, using the web-based viewer
+[h5web](https://github.com/silx-kit/h5web). h5web supports the
+[NeXus](https://www.nexusformat.org/) format.
+
+See [Usage](README.md#Usage) for more details.
 
 ## Requirements
 
@@ -38,8 +42,13 @@ to the extension.
 
 ## Usage
 
-Once the extension is installed, you can double-click on an HDF5 file or
-right-click _Open with_ -> _h5web_ to launch a tab.
+This extension enables opening HDF5 files in a JupyterLab tab and exploring HDF5
+files in Jupyter notebooks.
+
+### In JupyterLab
+
+You can double-click on an HDF5 file or right-click _Open with_ -> _h5web_ to
+launch a tab.
 
 This tab is composed of a sidebar, where you can explore the structure of the
 HDF5 file, and of a main area where the visualization of the selected entity
@@ -49,6 +58,24 @@ toggle between:
 - _Display_: visualize datasets using `Line`, `Heatmap` or `Matrix`
   visualizations.
 - _Inspect_: show the metadata and attributes of any entity
+
+_Note: Opening a file this way will fetch the whole file. This is a limitation
+for heavy files and should be fixed soon._
+
+### In Jupyter notebooks
+
+To open a HDF5 file with H5Web, use the `H5Web` widget in a notebook cell:
+
+```python
+from jupyterlab_h5web import H5Web
+
+H5Web('<path to the HDF5 file>')
+```
+
+An example is provided in [example.ipynb](example.ipynb).
+
+_Note: The limitation of the JupyterLab tab does not apply here: the widget will
+only fetch HDF5 contents on-demand._
 
 ### Supported file formats
 
