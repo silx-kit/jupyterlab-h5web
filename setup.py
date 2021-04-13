@@ -1,6 +1,3 @@
-"""
-Setup Module to setup Python Handlers for the jupyterlab-h5web extension.
-"""
 from pathlib import Path
 import json
 
