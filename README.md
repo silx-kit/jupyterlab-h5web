@@ -2,6 +2,7 @@
 
 ![Github Actions Status](https://github.com/silx-kit/jupyterlab-h5web/workflows/Build/badge.svg)
 [![PyPI version](https://badge.fury.io/py/jupyterlab-h5web.svg)](https://badge.fury.io/py/jupyterlab-h5web)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/silx-kit/jupyterlab-h5web/HEAD?urlpath=lab/tree/example.ipynb)
 
 **This extension is still in active development. Please report any encountered
 issue.**
