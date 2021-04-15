@@ -25,6 +25,7 @@ body[data-jp-theme-light='false'] .h5web-root {
   --dark-slate-gray: var(--jp-inverse-layout-color1);
   --dark-gray: var(--jp-inverse-layout-color2);
   --gray: var(--jp-inverse-layout-color2);
+  --light-gray: var(--jp-layout-color2);
   --white: var(--jp-layout-color0);
   --primary: var(--jp-brand-color1);
   --primary-light: var(--jp-layout-color2);
@@ -46,4 +47,8 @@ body[data-jp-theme-light='false'] .h5web-root {
   --btn-shadow-color: var(--jp-layout-color2);
   --btn-shadow-dark-color: var(--jp-layout-color1);
   --btn-shadow-darker-color: var(--jp-layout-color0);
+}
+
+.h5web-root .reflex-container > .reflex-splitter {
+  background: var(--secondary-bg);
 }
