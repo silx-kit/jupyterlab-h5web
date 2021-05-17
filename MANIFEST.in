@@ -6,6 +6,7 @@ include jupyter-config/jupyterlab-h5web.json
 
 include package.json
 include ts*.json
+include yarn.lock
 include jupyterlab_h5web/labextension/*.tgz
 
 # Javascript files
