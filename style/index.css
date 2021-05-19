@@ -14,41 +14,19 @@
 .h5web-root {
   width: 100%;
   height: 100%;
-  color: var(--jp-ui-font-color1);
   font-size: var(--jp-content-font-size1);
-  --danger: var(--jp-error-color1);
 }
 
 body[data-jp-theme-light='false'] .h5web-root {
-  --black: var(--jp-inverse-layout-color0);
-  --near-black: var(--jp-inverse-layout-color0);
-  --dark-slate-gray: var(--jp-inverse-layout-color1);
-  --dark-gray: var(--jp-inverse-layout-color2);
-  --gray: var(--jp-inverse-layout-color2);
-  --light-gray: var(--jp-layout-color2);
-  --white: var(--jp-layout-color0);
-  --primary: var(--jp-brand-color1);
-  --primary-light: var(--jp-layout-color2);
-  --primary-dark: var(--jp-brand-color3);
-  --primary-bg: var(--jp-layout-color1);
-  --primary-light-bg: var(--jp-layout-color1);
-  --primary-light-bg-70: #212121b6;
-  --primary-dark-bg: var(--jp-layout-color3);
-  --secondary: var(--jp-brand-color3);
-  --secondary-light: var(--jp-brand-color1);
-  --secondary-lighter: var(--jp-layout-color4);
-  --secondary-dark: var(--jp-brand-color1);
-  --secondary-dark-15: #757575aa;
-  --secondary-darker: var(--jp-brand-color4);
-  --secondary-bg: var(--jp-layout-color1);
-  --secondary-light-bg: var(--jp-layout-color2);
-  --secondary-light-bg-90: #424242e5;
-  --btn-bg-raised: var(--jp-layout-color3);
-  --btn-shadow-color: var(--jp-layout-color2);
-  --btn-shadow-dark-color: var(--jp-layout-color1);
-  --btn-shadow-darker-color: var(--jp-layout-color0);
+  filter: invert();
+
+  /* Set shadows to lighter colors so they remain dark once inverted */
+  --btn-shadow-color: #f5f5f5;
+  --btn-shadow-dark-color: #fafafa;
+  --btn-shadow-darker-color: #fff;
 }
 
-.h5web-root .reflex-container > .reflex-splitter {
-  background: var(--secondary-bg);
+body[data-jp-theme-light='false'] .h5web-root .no-invert,
+body[data-jp-theme-light='false'] .h5web-root .no-invert-canvas > canvas {
+  filter: invert(); /* invert back to normal colors */
 }
