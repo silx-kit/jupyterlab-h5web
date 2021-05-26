@@ -310,10 +310,10 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz#ccfef6ddbe59f8fe8f694783e1d3eb88902dc5eb"
   integrity sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==
 
-"@h5web/app@0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-0.0.14.tgz#49bf5cc0062524ab7b7df44a9e1d61581e19f522"
-  integrity sha512-xiysiqpAKAwjiMr/g7dUSTbew00Nc3gm67wSQ1NLnUs8tV5Zk/3y9jUKHhiitCLF7ARrHEJIH4OL9Y/LRl79zw==
+"@h5web/app@0.0.18":
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-0.0.18.tgz#65d9145a9a84d026df2ef32b79bfc68bd07fcd45"
+  integrity sha512-74q3WA3hy/CDHtzUY/I5HPDGPfWe974CHOjxrHu45yTcSqGg7atXXStM9NB+ftWQEZvEuqcKJr+J5iyCJ926Ng==
 
 "@jest/types@^26.6.2":
   version "26.6.2"
