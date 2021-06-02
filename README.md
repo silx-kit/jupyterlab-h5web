@@ -41,6 +41,21 @@ jupyter lab build
 This will install [hdf5plugin](https://pypi.org/project/hdf5plugin/) in addition
 to the extension.
 
+## Update
+
+In the case you want to update `jupyterlab_h5web` after having already installed
+it, do a clean reinstallation:
+
+```bash
+# Uninstall the old version
+jupyter labextension uninstall jupyterlab-h5web
+pip uninstall jupyterlab_h5web
+# Install the new version
+pip install jupyterlab_h5web
+```
+
+Otherwise, the `labextension` may not be updated correctly.
+
 ## Usage
 
 This extension enables opening HDF5 files in a JupyterLab tab and exploring HDF5
@@ -137,9 +152,15 @@ jupyter lab clean
 jupyter lab build
 ```
 
+### Stale H5Web
+
+In the case the displayed H5Web does not match the installed version, try to
+reinstall the package using the procedure described in
+[Update](README.md#Update).
+
 ## Uninstall
 
 ```bash
-pip uninstall jupyterlab_h5web
 jupyter labextension uninstall jupyterlab-h5web
+pip uninstall jupyterlab_h5web
 ```
