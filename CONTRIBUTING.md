@@ -12,7 +12,7 @@ The `jlpm` command is JupyterLab's pinned version of
 
 # Install package in development mode
 pip install -e .
-# Ensure that `jupyterlab_hdf` server extension is present and enabled
+# Ensure that `jupyterlab_h5web` server extension is present and enabled
 jupyter serverextension list
 
 # Install dependencies
@@ -51,8 +51,7 @@ This extension uses `prettier` to format `*.ts` files and `black` to format
 
 ### Why a Python package for a front-end extension ?
 
-1. To ease up installation (e.g. automatic resolution of the `jupyter_hdf` PyPI
-   package)
+1. To ease up installation
 2. To get ready to release a pre-built extension (_JupyterLab 3_)
 
 The pre-built extension will indeed remove the need for `node`. For _JupyterLab

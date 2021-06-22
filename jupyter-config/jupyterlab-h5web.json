@@ -1,7 +1,7 @@
 {
   "NotebookApp": {
     "nbserver_extensions": {
-      "jupyterlab_hdf": true
+      "jupyterlab_h5web": true
     }
   }
 }

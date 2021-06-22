@@ -116,7 +116,7 @@ See https://github.com/silx-kit/jupyterlab-h5web/releases.
 ### Check the server extension
 
 If you are seeing the frontend extension but it is not working, check that
-`jupyterlab_hdf` is installed and enabled.
+`jupyterlab_h5web` is installed and enabled.
 
 It should be listed when running:
 
@@ -124,21 +124,15 @@ It should be listed when running:
 jupyter serverextension list
 ```
 
-If `jupyterlab_hdf` does not appear, try to install it manually:
+If `jupyterlab_h5web` does not appear or is disabled, try to enable it:
 
 ```
-pip install jupyterlab_hdf
-```
-
-and to enable it:
-
-```
-jupyter serverextension enable jupyterlab_hdf
+jupyter serverextension enable jupyterlab_h5web
 ```
 
 ### Check the frontend extension
 
-If `jupyterlab_hdf` is installed and enabled but you are not seeing the
+If `jupyterlab_h5web` is installed and enabled but you are not seeing the
 frontend, check the frontend is installed:
 
 ```bash

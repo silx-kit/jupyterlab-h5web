@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { App, JupyterProvider } from '@h5web/app';
+import { App, H5CoreProvider as H5GroveProvider } from '@h5web/app';
 import { ServerConnection } from '@jupyterlab/services';
 
 // Render the App twice on mount as the CSS is not loaded at first render.
@@ -23,12 +23,12 @@ function H5webApp(props: { filePath: string }) {
 
   return (
     <div className="h5web-root">
-      <JupyterProvider
-        url={baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl}
+      <H5GroveProvider
+        url={`${baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl}/h5web`}
         filepath={filePath}
       >
         <TwoRenderApp />
-      </JupyterProvider>
+      </H5GroveProvider>
     </div>
   );
 }
