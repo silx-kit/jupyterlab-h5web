@@ -66,7 +66,7 @@ def setup_handlers(web_app, base_dir: str):
             handler,
             {"base_dir": Path(base_dir)},
         )
-        for endpoint, handler in endpoints
+        for endpoint, handler in endpoints.items()
     ]
 
     web_app.add_handlers(pattern, handlers)
