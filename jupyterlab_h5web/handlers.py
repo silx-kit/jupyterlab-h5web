@@ -1,5 +1,5 @@
 import h5py
-import tornado.web
+from tornado.web import authenticated, MissingArgumentError
 from jupyter_server.base.handlers import APIHandler
 from jupyter_server.utils import url_path_join
 from pathlib import Path
@@ -14,8 +14,11 @@ class BaseHandler(APIHandler):
     def initialize(self, base_dir: Path) -> None:
         self.base_dir = base_dir
 
-    @tornado.web.authenticated
-    def get(self, file_path: str):
+    @authenticated
+    def get(self):
+        file_path = self.get_query_argument("file", None)
+        if file_path is None:
+            raise MissingArgumentError("File argument is required")
         path = self.get_query_argument("path", None)
         format = self.get_query_argument("format", None)
 
@@ -57,7 +60,7 @@ class MetadataHandler(BaseHandler):
 
 
 def setup_handlers(web_app, base_dir: str):
-    pattern = "(.*)"
+    pattern = ".*$"
     endpoints = {"attr": AttributeHandler, "data": DataHandler, "meta": MetadataHandler}
 
     handlers = [
