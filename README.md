@@ -50,8 +50,10 @@ it, do a clean reinstallation:
 # Uninstall the old version
 jupyter labextension uninstall jupyterlab-h5web
 pip uninstall jupyterlab_h5web
+
 # Install the new version
 pip install jupyterlab_h5web
+jupyter lab build
 ```
 
 Otherwise, the `labextension` may not be updated correctly.
