@@ -317,10 +317,10 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz#ccfef6ddbe59f8fe8f694783e1d3eb88902dc5eb"
   integrity sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==
 
-"@h5web/app@0.0.23":
-  version "0.0.23"
-  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-0.0.23.tgz#90060caf1239f1c9d8abe0e2af01fe30a2c7ad06"
-  integrity sha512-4iahpPb4A0ucI4deH/9e7AiJBBaRVaHeuLw3KIWzmoXgYWf19NpLueFfW1tBd5Jib/YTb+10zblen9hfcfY9eA==
+"@h5web/app@0.0.24":
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-0.0.24.tgz#9be3a71ddf3f2880fca82b6dbac97491f7528ef8"
+  integrity sha512-huzS16ZxmiJeXZ5cdukb2JEwOx2+xS6j15GCKfReFXuPdSr+8mue99BLIO8SXlZFyyyVL5jESxA9dA6gktae2Q==
   dependencies:
     "@react-three/fiber" "^7.0.1"
     three "^0.129.0"

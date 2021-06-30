@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { App, H5CoreProvider as H5GroveProvider } from '@h5web/app';
+import { App, H5GroveProvider } from '@h5web/app';
 import { ServerConnection } from '@jupyterlab/services';
 
 // Render the App twice on mount as the CSS is not loaded at first render.
