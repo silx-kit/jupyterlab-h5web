@@ -18,6 +18,8 @@ data_files_spec = [
     (str(app_suffix / labext_name), str(lab_path.relative_to(".")), "**"),
     (str(app_suffix / labext_name), ".", "install.json"),
     (str(config_suffix / "jupyter_server_config.d"), "jupyter-config/server-config", "jupyterlab_h5web.json"),
+    # For backward compatibility with notebook server
+    (str(config_suffix / "jupyter_notebook_config.d"), "jupyter-config/nb-config", "jupyterlab_h5web.json"),
 ]
 
 long_description = ("README.md").read_text()

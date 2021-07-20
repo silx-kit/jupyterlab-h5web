@@ -1,4 +1,18 @@
+import json
+
+from ._version import __version__
 from .widget import H5Web
+
+
+with ("labextension" / "package.json").open() as fid:
+    data = json.load(fid)
+
+
+def _jupyter_labextension_paths():
+    return [{
+        "src": "labextension",
+        "dest": data["name"]
+    }]
 
 
 def _jupyter_server_extension_points():
@@ -6,7 +20,13 @@ def _jupyter_server_extension_points():
 
 
 def _load_jupyter_server_extension(server_app):
-    """Registers the API handler to receive HTTP requests from the frontend extension."""
+    """Registers the API handler to receive HTTP requests from the frontend extension.
+
+    Parameters
+    ----------
+    server_app: jupyterlab.labapp.LabApp
+        JupyterLab application instance
+    """
     from .handlers import setup_handlers
 
     # root_dir for jupyter lab 3.x / notebook_dir for jupyter lab 2.x
@@ -16,9 +36,7 @@ def _load_jupyter_server_extension(server_app):
         else server_app.notebook_dir
     )
     setup_handlers(server_app.web_app, base_dir)
-    server_app.log.info(
-        f"Jupyterlab-h5web extension will serve HDF5 files from {base_dir}"
-    )
+    server_app.log.info(f"Jupyterlab-h5web extension will serve HDF5 files from {base_dir}")
 
 
 # For backward compatibility with notebook server - useful for Binder/JupyterHub
