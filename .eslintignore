@@ -1,3 +1,6 @@
 **/*.d.ts
-tests
+coverage
+dist
 lib
+node_modules
+tests

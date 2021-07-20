@@ -1,3 +1,5 @@
-/build/
 node_modules
+**/node_modules
 **/lib
+**/package.json
+jupyterlab_h5web
