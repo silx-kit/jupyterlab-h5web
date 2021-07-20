@@ -1,50 +1,29 @@
-from pathlib import Path
+"""
+jupyterlab_h5web setup
+"""
 import json
+import sys
+from pathlib import Path
 
-from jupyter_packaging import (
-    create_cmdclass,
-    install_npm,
-    ensure_targets,
-    combine_commands,
-)
 import setuptools
-
-HERE = Path(__file__).parent.resolve()
 
 # The name of the project
 name = "jupyterlab_h5web"
-
-# Get the package info from package.json
-pkg_json = json.loads((HERE / "package.json").read_bytes())
-
-lab_path = HERE / name / "labextension"
-
-# Representative files that should exist after a successful build
-jstargets = [
-    str(HERE / "lib" / "index.js"),
-]
-
-package_data_spec = {name: ["*"]}
+lab_path = (name / "labextension")
+labext_name = "jupyterlab-h5web"
+app_suffix = Path("share/jupyter/labextensions")
+config_suffix = Path("etc/jupyter")
 
 data_files_spec = [
-    ("share/jupyter/lab/extensions", str(lab_path), "*.tgz"),
-    (
-        "etc/jupyter/jupyter_notebook_config.d",
-        "jupyter-config",
-        "jupyterlab-h5web.json",
-    ),
+    (str(app_suffix / labext_name), str(lab_path.relative_to(".")), "**"),
+    (str(app_suffix / labext_name), ".", "install.json"),
+    (str(config_suffix / "jupyter_server_config.d"), "jupyter-config/server-config", "jupyterlab_h5web.json"),
 ]
 
-cmdclass = create_cmdclass(
-    "jsdeps", package_data_spec=package_data_spec, data_files_spec=data_files_spec
-)
+long_description = ("README.md").read_text()
 
-cmdclass["jsdeps"] = combine_commands(
-    install_npm(HERE, build_cmd="build:all", npm=["jlpm"]),
-    ensure_targets(jstargets),
-)
-
-long_description = (HERE / "README.md").read_text()
+# Get the package info from package.json
+pkg_json = json.loads(("package.json").read_bytes())
 
 setup_args = dict(
     name=name,
@@ -56,15 +35,14 @@ setup_args = dict(
     license=pkg_json["license"],
     long_description=long_description,
     long_description_content_type="text/markdown",
-    cmdclass=cmdclass,
     packages=setuptools.find_packages(),
     install_requires=["jupyter_server>=1.6,<2", "h5grove"],
     extras_require={"full": ["hdf5plugin"]},
-    python_requires=">=3.6",
     zip_safe=False,
     include_package_data=True,
+    python_requires=">=3.6",
     platforms="Linux, Mac OS X, Windows",
-    keywords=["Jupyter", "JupyterLab"],
+    keywords=["Jupyter", "JupyterLab", "JupyterLab3"],
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
@@ -78,6 +56,29 @@ setup_args = dict(
     ],
 )
 
+# Representative files that should exist after a successful build
+ensured_targets = [
+    str(lab_path / "package.json"),
+    str(lab_path / "static/style.js")
+]
+
+try:
+    from jupyter_packaging import (
+        wrap_installers,
+        npm_builder,
+        get_data_files
+    )
+    post_develop = npm_builder(
+        build_cmd="install:extension", source_dir="src", build_dir=lab_path
+    )
+    setup_args["cmdclass"] = wrap_installers(post_develop=post_develop, ensured_targets=ensured_targets)
+    setup_args["data_files"] = get_data_files(data_files_spec)
+except ImportError as e:
+    import logging
+    logging.basicConfig(format="%(levelname)s: %(message)s")
+    logging.warning("Build tool `jupyter-packaging` is missing. Install it with pip or conda.")
+    if not ("--name" in sys.argv or "--version" in sys.argv):
+        raise e
 
 if __name__ == "__main__":
     setuptools.setup(**setup_args)
