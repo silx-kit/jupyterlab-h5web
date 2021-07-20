@@ -1,6 +1,6 @@
 import { LabIcon } from '@jupyterlab/ui-components';
-import hdf5IconSvg from '../style/hdf5-icon.svg';
-import h5webIconSvg from '../style/h5web-icon.svg';
+import hdf5IconSvg from '../style/icon/hdf5-icon.svg';
+import h5webIconSvg from '../style/icon/h5web-icon.svg';
 
 export const hdf5Icon = new LabIcon({
   name: 'hdf5-icon',
