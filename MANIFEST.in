@@ -5,15 +5,18 @@ include pyproject.toml
 include jupyter-config/jupyterlab-h5web.json
 
 include package.json
+include install.json
 include ts*.json
 include yarn.lock
-include jupyterlab_h5web/labextension/*.tgz
+
+graft jupyterlab_h5web/labextension
 
 # Javascript files
 graft src
 graft style
 prune **/node_modules
 prune lib
+prune binder
 
 # Patterns to exclude from any directory
 global-exclude *~
