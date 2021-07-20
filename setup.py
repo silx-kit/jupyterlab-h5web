@@ -9,7 +9,7 @@ import setuptools
 
 # The name of the project
 name = "jupyterlab_h5web"
-lab_path = (name / "labextension")
+lab_path = name / Path("labextension")
 labext_name = "jupyterlab-h5web"
 app_suffix = Path("share/jupyter/labextensions")
 config_suffix = Path("etc/jupyter")
@@ -22,10 +22,10 @@ data_files_spec = [
     (str(config_suffix / "jupyter_notebook_config.d"), "jupyter-config/nb-config", "jupyterlab_h5web.json"),
 ]
 
-long_description = ("README.md").read_text()
+long_description = Path("README.md").read_text()
 
 # Get the package info from package.json
-pkg_json = json.loads(("package.json").read_bytes())
+pkg_json = json.loads(Path("package.json").read_bytes())
 
 setup_args = dict(
     name=name,

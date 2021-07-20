@@ -37,6 +37,7 @@
     "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
     "clean:labextension": "rimraf jupyterlab_h5web/labextension",
     "clean:all": "jlpm run clean:lib && jlpm run clean:labextension",
+    "deduplicate": "jlpm run yarn-deduplicate",
     "eslint": "eslint . --ext .ts,.tsx --fix",
     "eslint:check": "eslint . --ext .ts,.tsx",
     "install:extension": "jlpm run build",
@@ -47,7 +48,6 @@
     "lint:eslint": "eslint \"**/*.{ts,tsx,js,jsx}\" --max-warnings=0",
     "lint:tsc": "tsc --noEmit",
     "lint:prettier": "prettier --check .",
-    "prepare": "jlpm run clean && jlpm run build",
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
@@ -62,11 +62,12 @@
     "@jupyterlab/rendermime-interfaces": "^3.0.0",
     "@jupyterlab/services": "^6.0.0",
     "@jupyterlab/ui-components": "^3.0.0",
-    "@lumino/widgets": "~1.18.0",
+    "@lumino/widgets": "^1.23.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@jupyterlab/builder": "^3.0.0",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.1",
     "eslint": "^7.23.0",
