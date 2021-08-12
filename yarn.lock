@@ -317,13 +317,13 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz#ccfef6ddbe59f8fe8f694783e1d3eb88902dc5eb"
   integrity sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==
 
-"@h5web/app@0.0.24":
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-0.0.24.tgz#9be3a71ddf3f2880fca82b6dbac97491f7528ef8"
-  integrity sha512-huzS16ZxmiJeXZ5cdukb2JEwOx2+xS6j15GCKfReFXuPdSr+8mue99BLIO8SXlZFyyyVL5jESxA9dA6gktae2Q==
+"@h5web/app@0.0.27":
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-0.0.27.tgz#f4d8e454ef59da561d0aef18d37bf301e9b90903"
+  integrity sha512-Vj9zXArwgadbHOyyK//raHRG1WYr/cEU8yZEdLblKQu3t5dPKSTmA4nBvGrz0A6JlEedHhl8824byMFOq4e8UA==
   dependencies:
-    "@react-three/fiber" "^7.0.1"
-    three "^0.129.0"
+    "@react-three/fiber" "^7.0.6"
+    three "^0.130.1"
 
 "@jest/types@^26.6.2":
   version "26.6.2"
@@ -807,10 +807,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@react-three/fiber@^7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.1.tgz#d7b5db1c4b45fe90442647f88dff1906e56ccfd9"
-  integrity sha512-UrC5wVywYAHIvcfHEreJXqDZJvQTFSuB737MBv1VliI4d1S0MbSLG9hOCDaWWgX9Wq+6jvVxG2JNfGXvZK1ATQ==
+"@react-three/fiber@^7.0.6":
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.6.tgz#faa5aa5d496ae778a89fe2d3f503428a0e3c841b"
+  integrity sha512-GSMmnk66B/xGGfbSj5lGiZCxGQD0i8rm0Bt/Xp6TD2b9cYe2Lxb2wegU04zIeN89aoUYMHXhL1GNXsZvvOjfUA==
   dependencies:
     "@babel/runtime" "^7.13.10"
     react-merge-refs "^1.1.0"
@@ -3347,10 +3347,10 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-three@^0.129.0:
-  version "0.129.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.129.0.tgz#f5e530bbc96eac5d5b4749cb5da886ef0d42f554"
-  integrity sha512-wiWio1yVRg2Oj6WEWsTHQo5eSzYpEwSBtPSi3OofNpvFbf26HFfb9kw4FZJNjII4qxzp0b1xLB11+tKkBGB1ZA==
+three@^0.130.1:
+  version "0.130.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.130.1.tgz#797588b2877ace31603bbbc864eb2e3022f0b3b4"
+  integrity sha512-OSPPKcGvFSiGkG3jFrwwC76PBV/ZSrGxpBbg28bW8s9GU8r/y2spNGtEXHEb/CVqo0Ctf5Lx2rVaxQZB6OasaA==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
