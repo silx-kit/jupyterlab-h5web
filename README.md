@@ -18,7 +18,8 @@ See [Usage](README.md#Usage) for more details.
 
 ## Requirements
 
-- JupyterLab 2 (JupyterLab 3 can be used but is not officially supported).
+- JupyterLab 2 (JupyterLab 3 can be used up to 3.0.x but is not officially
+  supported).
 
 ## Install
 

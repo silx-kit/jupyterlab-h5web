@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        jupyterlab: ['2.0', '3.0']
+        jupyterlab: ['2.0', '3.0.0']
       fail-fast: false
     steps:
       - name: Checkout
