@@ -8,7 +8,7 @@ import { ReactWidget } from '@jupyterlab/apputils';
 import { h5webIcon } from './icons';
 import H5webApp from './H5webApp';
 
-class H5webWidget extends ReactWidget {
+export class H5webWidget extends ReactWidget {
   private readonly filePath: string;
 
   public constructor(filePath: string) {
