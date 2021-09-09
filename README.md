@@ -78,9 +78,6 @@ toggle between:
   visualizations.
 - _Inspect_: show the metadata and attributes of any entity
 
-_Note: Opening a file this way will fetch the whole file. This is a limitation
-for heavy files and should be fixed soon._
-
 ### In Jupyter notebooks
 
 To open a HDF5 file with H5Web, use the `H5Web` widget in a notebook cell:
@@ -92,9 +89,6 @@ H5Web('<path to the HDF5 file>')
 ```
 
 An example is provided in [example.ipynb](example.ipynb).
-
-_Note: The limitation of the JupyterLab tab does not apply here: the widget will
-only fetch HDF5 contents on-demand._
 
 ### Supported file formats
 
