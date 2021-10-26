@@ -20,18 +20,17 @@ class BaseHandler(APIHandler):
         if file_path is None:
             raise MissingArgumentError("File argument is required")
         path = self.get_query_argument("path", None)
-        format = self.get_query_argument("format", None)
+        format_arg = self.get_query_argument("format", None)
 
         with h5py.File(as_absolute_path(self.base_dir, Path(file_path)), "r") as h5file:
             content = self.get_content(h5file, path)
 
-        encoded_content_chunks, headers = encode(content, format)
+        chunks, headers = encode(content, format_arg)
 
         for key, value in headers.items():
             self.set_header(key, value)
-        for chunk in encoded_content_chunks:
-            self.write(chunk)
-        self.finish()
+
+        self.finish(chunks)
 
     def get_content(self, h5file, path):
         raise NotImplementedError
