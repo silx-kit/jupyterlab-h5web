@@ -19,12 +19,13 @@ body[data-jp-theme-light='false'] .h5web-root {
   filter: invert();
 
   /* Set shadows to lighter colors so they remain dark once inverted */
-  --btn-shadow-color: #f5f5f5;
-  --btn-shadow-dark-color: #fafafa;
-  --btn-shadow-darker-color: #fff;
+  --h5w-btnRaised--shadowColor: #f5f5f5;
+  --h5w-btnRaised-hover--shadowColor: #fff;
+  --h5w-domainSlider-track--shadowColor: #f5f5f5;
+  --h5w-domainSlider-dataTrack--shadowColor: #fff;
 }
 
-body[data-jp-theme-light='false'] .h5web-root .no-invert,
-body[data-jp-theme-light='false'] .h5web-root .no-invert-canvas > canvas {
+body[data-jp-theme-light='false'] .h5web-root [data-keep-colors],
+body[data-jp-theme-light='false'] .h5web-root [data-keep-canvas-colors] canvas {
   filter: invert(); /* invert back to normal colors */
 }
