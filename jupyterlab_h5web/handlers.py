@@ -35,6 +35,11 @@ class BaseHandler(APIHandler):
     def get_content(self, h5file, path):
         raise NotImplementedError
 
+    def finish(self, *args, **kwargs):
+        # Override APIHandler.finish to remove the JSON Content-Type header as h5grove can return application/octet-stream
+        self.update_api_activity()
+        return super(APIHandler, self).finish(*args, **kwargs)
+
 
 class AttributeHandler(BaseHandler):
     def get_content(self, h5file, path):
