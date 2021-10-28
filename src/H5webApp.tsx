@@ -1,5 +1,5 @@
-import '@h5web/app/dist/style-lib.css';
-import '@h5web/app/dist/style.css';
+import '@h5web/app/style-lib.css';
+import '@h5web/app/style.css';
 
 import React, { useEffect, useState } from 'react';
 import { App, H5GroveProvider } from '@h5web/app';
