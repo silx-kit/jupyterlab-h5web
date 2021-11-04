@@ -1,2 +1,2 @@
 dependencies:
-  - jupyterlab<3
+  - jupyterlab

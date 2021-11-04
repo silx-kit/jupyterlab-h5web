@@ -2,73 +2,70 @@
 
 ## Install
 
+Note: You will need NodeJS to build the extension package.
+
 The `jlpm` command is JupyterLab's pinned version of
 [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
 `yarn` or `npm` in lieu of `jlpm` below.
 
 ```bash
 # Clone the repo to your local environment
-# Move to jupyterlab-h5web directory
-
+# Change directory to the jupyterlab_h5web directory
 # Install package in development mode
 pip install -e .
-# Ensure that `jupyterlab_h5web` server extension is present and enabled
-jupyter serverextension list
-
-# Install dependencies
-jlpm
-# Build Typescript source
-jlpm build
 # Link your development version of the extension with JupyterLab
-jupyter labextension install .
-# Rebuild Typescript source after making changes
-jlpm build
-# Rebuild JupyterLab after making any changes
-jupyter lab build
+jupyter labextension develop . --overwrite
+# Server extension must be manually installed in develop mode
+jupyter server extension enable jupyterlab_h5web
+# Rebuild extension Typescript source after making changes
+jlpm run build
 ```
 
-You can watch the source directory and run JupyterLab in watch mode to watch for
-changes in the extension's source and automatically rebuild the extension and
-application.
+You can watch the source directory and run JupyterLab at the same time in
+different terminals to watch for changes in the extension's source and
+automatically rebuild the extension.
 
 ```bash
-# Watch the source directory in another terminal tab
-jlpm watch
-# Run jupyterlab in watch mode in one terminal tab
-jupyter lab --watch
+# Watch the source directory in one terminal, automatically rebuilding when needed
+jlpm run watch
+# Run JupyterLab in another terminal
+jupyter lab
 ```
 
-Now every change will be built locally and bundled into JupyterLab. Be sure to
-refresh your browser page after saving file changes to reload the extension
-(note: you'll need to wait for webpack to finish, which can take 10s+ at times).
+With the watch command running, every saved change will immediately be built
+locally and available in your running JupyterLab. Refresh JupyterLab to load the
+change in your browser (you may need to wait several seconds for the extension
+to be rebuilt).
+
+By default, the `jlpm run build` command generates the source maps for this
+extension to make it easier to debug using the browser dev tools. To also
+generate source maps for the JupyterLab core extensions, you can run the
+following command:
+
+```bash
+jupyter lab build --minimize=False
+```
+
+## Development uninstall
+
+```bash
+# Server extension must be manually disabled in develop mode
+jupyter server extension disable jupyterlab_h5web
+pip uninstall jupyterlab_h5web
+```
+
+In development mode, you will also need to remove the symlink created by
+`jupyter labextension develop` command. To find its location, you can run
+`jupyter labextension list` to figure out where the `labextensions` folder is
+located. Then you can remove the symlink named `jupyterlab-h5web` within that
+folder.
 
 ## Formatting
 
 This extension uses `prettier` to format `*.ts` files and `black` to format
 `*.py` files.
 
-## PyPI package
-
-### Why a Python package for a front-end extension ?
-
-1. To ease up installation
-2. To get ready to release a pre-built extension (_JupyterLab 3_)
-
-The pre-built extension will indeed remove the need for `node`. For _JupyterLab
-2_, the extension must be included in JupyterLab at build. As a consequence, the
-PyPI package contains the TypeScript sources so that the installation of the
-PyPI package triggers a build of these sources (needing `node`).
-
-In _JupyterLab 3_, we will be able to pre-build the extension and release it as
-the PyPI package.
-
-### Metadata
-
-The metadata (author, licence, version...) is set in `package.json` that acts as
-a the single source of truth. The metadata of the PyPI package (`setup.py`) is
-fetched from `package.json`.
-
-### Release process
+## Release process
 
 The release process is adapted from
 [the one from h5web](https://github.com/silx-kit/h5web/blob/main/CONTRIBUTING.md#release-process).

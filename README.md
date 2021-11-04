@@ -4,9 +4,6 @@
 [![PyPI version](https://badge.fury.io/py/jupyterlab-h5web.svg)](https://badge.fury.io/py/jupyterlab-h5web)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/silx-kit/jupyterlab-h5web/HEAD?urlpath=lab/tree/example.ipynb)
 
-**This extension is still in active development. Please report any encountered
-issue.**
-
 ![Demo](https://user-images.githubusercontent.com/2936402/114533096-d5e68000-9c4d-11eb-81d3-67d313c9216f.gif)
 
 **jupyterlab-h5web** is a JupyterLab extension to explore and visualize HDF5
@@ -18,16 +15,16 @@ See [Usage](README.md#Usage) for more details.
 
 ## Requirements
 
-- JupyterLab 2 (JupyterLab 3 can be used up to 3.0.x but is not officially
-  supported).
+- JupyterLab 3
+
+For JupyterLab 2, use the
+[0.x versions](https://github.com/silx-kit/jupyterlab-h5web/tree/0.x) of the
+extension.
 
 ## Install
 
-_Note: You will need NodeJS to install the extension._
-
 ```bash
 pip install jupyterlab_h5web
-jupyter lab build
 ```
 
 To enable support for additional filters such as
@@ -36,28 +33,10 @@ To enable support for additional filters such as
 
 ```bash
 pip install jupyterlab_h5web[full]
-jupyter lab build
 ```
 
 This will install [hdf5plugin](https://pypi.org/project/hdf5plugin/) in addition
 to the extension.
-
-## Update
-
-In the case you want to update `jupyterlab_h5web` after having already installed
-it, do a clean reinstallation:
-
-```bash
-# Uninstall the old version
-jupyter labextension uninstall jupyterlab-h5web
-pip uninstall jupyterlab_h5web
-
-# Install the new version
-pip install jupyterlab_h5web
-jupyter lab build
-```
-
-Otherwise, the `labextension` may not be updated correctly.
 
 ## Usage
 
@@ -110,6 +89,9 @@ See https://github.com/silx-kit/jupyterlab-h5web/releases.
 
 ## Troubleshoot
 
+If the following instructions do not solve your issue, you can open an
+[issue on GitHub](https://github.com/silx-kit/jupyterlab-h5web/issues).
+
 ### Check the server extension
 
 If you are seeing the frontend extension but it is not working, check that
@@ -136,22 +118,8 @@ frontend, check the frontend is installed:
 jupyter labextension list
 ```
 
-If it is installed, try:
-
-```bash
-jupyter lab clean
-jupyter lab build
-```
-
-### Stale H5Web
-
-In the case the displayed H5Web does not match the installed version, try to
-reinstall the package using the procedure described in
-[Update](README.md#Update).
-
 ## Uninstall
 
 ```bash
-jupyter labextension uninstall jupyterlab-h5web
 pip uninstall jupyterlab_h5web
 ```
