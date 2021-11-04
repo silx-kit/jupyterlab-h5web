@@ -1,3 +1,6 @@
+@import '~@h5web/app/dist/style-lib.css';
+@import '~@h5web/app/dist/style.css';
+
 .h5web-icon {
   fill: var(--jp-icon-contrast-color0);
 }
