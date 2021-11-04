@@ -1,12 +1,12 @@
-name: Build
+name: Build for JupyterLab 2
 
 on:
   push:
     branches:
-      - main
+      - 0.x
   pull_request:
     branches:
-      - main
+      - 0.x
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
           architecture: 'x64'
 
       - name: Install dependencies ⚙️
-        run: python -m pip install -U jupyterlab~=3.0 check-manifest
+        run: python -m pip install -U jupyterlab~=2.0
 
       - name: Build the extension 🏗️
         run: |
@@ -35,16 +35,9 @@ jobs:
           jlpm
           jlpm run lint
           python -m pip install .
+          jupyter lab build
 
           jupyter serverextension list 2>&1 | grep -ie "jupyterlab_h5web.*OK"
           jupyter labextension list 2>&1 | grep -ie "jupyterlab-h5web.*OK"
 
           python -m jupyterlab.browser_check
-
-          check-manifest -v
-
-          pip install build
-          python -m build --sdist
-          cp dist/*.tar.gz jupyterlab_h5web.tar.gz
-          pip uninstall -y jupyterlab_h5web jupyterlab
-          rm -rf jupyterlab_h5web
