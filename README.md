@@ -1,11 +1,8 @@
 # jupyterlab-h5web
 
-![Github Actions Status](https://github.com/silx-kit/jupyterlab-h5web/workflows/Build/badge.svg)
+![Github Actions Status](https://github.com/silx-kit/jupyterlab-h5web/workflows/Build%20for%20JupyterLab%202/badge.svg)
 [![PyPI version](https://badge.fury.io/py/jupyterlab-h5web.svg)](https://badge.fury.io/py/jupyterlab-h5web)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/silx-kit/jupyterlab-h5web/HEAD?urlpath=lab/tree/example.ipynb)
-
-**This extension is still in active development. Please report any encountered
-issue.**
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/silx-kit/jupyterlab-h5web/0.x?urlpath=lab/tree/example.ipynb)
 
 ![Demo](https://user-images.githubusercontent.com/2936402/114533096-d5e68000-9c4d-11eb-81d3-67d313c9216f.gif)
 
@@ -18,8 +15,7 @@ See [Usage](README.md#Usage) for more details.
 
 ## Requirements
 
-- JupyterLab 2 (JupyterLab 3 can be used up to 3.0.x but is not officially
-  supported).
+- JupyterLab 2
 
 ## Install
 
@@ -109,6 +105,9 @@ its support.
 See https://github.com/silx-kit/jupyterlab-h5web/releases.
 
 ## Troubleshoot
+
+If the following instructions do not solve your issue, you can open an
+[issue on GitHub](https://github.com/silx-kit/jupyterlab-h5web/issues).
 
 ### Check the server extension
 
