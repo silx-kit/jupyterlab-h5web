@@ -1,1 +1,3 @@
 pip install .
+# Quick fix to resolve package.json in `fetchVersion` without building the ext (https://github.com/jupyterlab/extension-cookiecutter-ts/issues/188)
+cp package.json jupyterlab_h5web
