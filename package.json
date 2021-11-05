@@ -36,6 +36,7 @@
     "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
     "clean:labextension": "rimraf jupyterlab_h5web/labextension",
     "clean:all": "jlpm run clean:lib && jlpm run clean:labextension",
+    "deduplicate": "jlpm run yarn-deduplicate",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint \"**/*.{ts,tsx,js,jsx}\" --max-warnings=0",
     "lint:tsc": "tsc --noEmit",
@@ -46,23 +47,23 @@
   },
   "dependencies": {
     "@h5web/app": "1.1.0",
-    "@jupyterlab/application": "^2.0.0 || ^3.0.0",
-    "@jupyterlab/apputils": "~2.3.0 || ^3.0.5",
-    "@jupyterlab/coreutils": "^4.0.0 || ^5.0.0",
-    "@jupyterlab/docregistry": "^3.0.6",
-    "@jupyterlab/filebrowser": "^2.2.5 || ^3.0.0",
-    "@jupyterlab/launcher": "^2.2.6 || ^3.0.0",
-    "@jupyterlab/rendermime": "~2.3.0 || ^3.0.7",
-    "@jupyterlab/rendermime-interfaces": "~2.3.0 || ^3.0.6",
-    "@jupyterlab/services": "^5.0.0 || ^6.0.0",
-    "@jupyterlab/ui-components": "^3.0.4",
-    "@lumino/widgets": "~1.18.0",
+    "@jupyterlab/application": "^2.0.0",
+    "@jupyterlab/apputils": "^2.0.0",
+    "@jupyterlab/coreutils": "^4.0.0",
+    "@jupyterlab/docregistry": "^2.0.0",
+    "@jupyterlab/filebrowser": "^2.0.0",
+    "@jupyterlab/launcher": "^2.0.0",
+    "@jupyterlab/rendermime": "^2.0.0",
+    "@jupyterlab/rendermime-interfaces": "^2.0.0",
+    "@jupyterlab/services": "^5.0.0",
+    "@jupyterlab/ui-components": "^2.0.0",
+    "@lumino/widgets": "^1.30.0",
     "react": "~16.9.0 || ^17.0.1",
     "react-dom": "~16.9.0 || ^17.0.1"
   },
   "devDependencies": {
-    "@types/react": "~16.9.0 || ^17.0.1",
-    "@types/react-dom": "~16.9.0 || ^17.0.1",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
     "eslint": "^7.23.0",
     "eslint-config-galex": "2.13.5",
     "mkdirp": "^1.0.3",
@@ -71,6 +72,9 @@
     "rimraf": "^2.6.1",
     "typescript": "~4.1.0",
     "yarn-deduplicate": "^3.1.0"
+  },
+  "resolutions": {
+    "@jupyterlab/**/@types/react": "^17.0.3"
   },
   "sideEffects": [
     "style/*.css"
