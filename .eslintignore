@@ -2,3 +2,5 @@
 coverage
 dist
 lib
+jupyterlab_h5web/labextension
+.ipynb_checkpoints
