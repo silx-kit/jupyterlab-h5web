@@ -477,7 +477,7 @@
     path-posix "~1.0.0"
     url-parse "~1.4.7"
 
-"@jupyterlab/docmanager@^2.3.1":
+"@jupyterlab/docmanager@^2.0.0", "@jupyterlab/docmanager@^2.3.1":
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/@jupyterlab/docmanager/-/docmanager-2.3.1.tgz#35f896a512a4659a72b7172e0718663c34948113"
   integrity sha512-tdU55VoYwch1+Z/+EKIF0IDWUqI1TsfKO8cZ8DY0his5j3UtkPYPyAIw3ZiI8g5UF1jhFUrs+zXUo45yUCVAaA==
