@@ -47,28 +47,13 @@ refresh your browser page after saving file changes to reload the extension
 This extension uses `prettier` to format `*.ts` files and `black` to format
 `*.py` files.
 
-## PyPI package
-
-### Why a Python package for a front-end extension ?
-
-1. To ease up installation
-2. To get ready to release a pre-built extension (_JupyterLab 3_)
-
-The pre-built extension will indeed remove the need for `node`. For _JupyterLab
-2_, the extension must be included in JupyterLab at build. As a consequence, the
-PyPI package contains the TypeScript sources so that the installation of the
-PyPI package triggers a build of these sources (needing `node`).
-
-In _JupyterLab 3_, we will be able to pre-build the extension and release it as
-the PyPI package.
-
-### Metadata
+## PyPI package metadata
 
 The metadata (author, licence, version...) is set in `package.json` that acts as
 a the single source of truth. The metadata of the PyPI package (`setup.py`) is
 fetched from `package.json`.
 
-### Release process
+## Release process
 
 The release process is adapted from
 [the one from h5web](https://github.com/silx-kit/h5web/blob/main/CONTRIBUTING.md#release-process).
