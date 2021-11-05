@@ -1,3 +1,5 @@
 **/*.d.ts
 tests
 lib
+jupyterlab_h5web/labextension
+.ipynb_checkpoints
