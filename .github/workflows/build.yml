@@ -45,12 +45,11 @@ jobs:
           check-manifest -v
 
           pip install build
-          python -m build --sdist
-          cp dist/*.tar.gz jupyterlab_h5web.tar.gz
+          python -m build
           pip uninstall -y jupyterlab_h5web jupyterlab
           rm -rf jupyterlab_h5web
 
       - uses: actions/upload-artifact@v2
         with:
           name: jupyterlab_h5web-dist
-          path: jupyterlab_h5web.tar.gz
+          path: dist
