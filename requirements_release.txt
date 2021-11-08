@@ -1,5 +1,0 @@
-setuptools
-wheel
-twine
-jupyterlab
-jupyter_packaging
