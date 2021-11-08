@@ -12,12 +12,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Install Python 🐍
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.6'
-          architecture: 'x64'
-
       - name: Download the built extension
         uses: actions/download-artifact@v2
         with:
@@ -25,9 +19,7 @@ jobs:
           path: dist
 
       - name: Publish package on PyPI 🎉
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-        run: |
-          pip install -U twine
-          twine upload dist/*
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
