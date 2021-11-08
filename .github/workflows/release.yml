@@ -12,6 +12,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Install Python 🐍
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.6'
+          architecture: 'x64'
+
       - name: Download the built extension
         uses: actions/download-artifact@v2
         with:
@@ -22,4 +28,6 @@ jobs:
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-        run: twine upload dist/*
+        run: |
+          pip install -U twine
+          twine upload dist/*
