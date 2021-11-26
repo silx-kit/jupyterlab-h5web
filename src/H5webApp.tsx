@@ -26,6 +26,7 @@ function H5webApp(props: { filePath: string }) {
       <H5GroveProvider
         url={`${baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl}/h5web`}
         filepath={filePath}
+        axiosParams={{ file: filePath }}
       >
         <TwoRenderApp />
       </H5GroveProvider>

@@ -316,12 +316,12 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz#ccfef6ddbe59f8fe8f694783e1d3eb88902dc5eb"
   integrity sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==
 
-"@h5web/app@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-1.1.0.tgz#eed4e9e7c6b94fe2578a98cec178c0dbee829cce"
-  integrity sha512-cxNYN8WxUEag9QIx1lLK1BLRrd0GN3RiIyqAVV3hhc+Q2Vnf6esmzdBLDG0WTWw/8BCC7DDCP531Y+NYG+QuZg==
+"@h5web/app@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-1.2.0.tgz#9ea4744243b877865e4689b1b5b5eff049d2d672"
+  integrity sha512-eSKJwelu5Fj1eUJ88n4YMKD4rm/DYH9AcxTEiidWsv0heRKK0KggqKifsn8ZRV4Bz/6J+x6fbn7OgGgCZ1jb9Q==
   dependencies:
-    "@h5web/lib" "1.1.0"
+    "@h5web/lib" "1.2.0"
     "@react-hookz/web" "12.0.0"
     "@react-three/fiber" "7.0.9"
     axios "0.22.0"
@@ -338,10 +338,10 @@
     three "0.132.2"
     zustand "3.5.12"
 
-"@h5web/lib@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@h5web/lib/-/lib-1.1.0.tgz#ac2bca36e864b8a07d95d9db98737b4bd39da051"
-  integrity sha512-rH2fL7Sppu365hpcxGqnwHCzxAsaiXhwFyl9N5Ah9aXlLM4t0H+kMu978dXnOgGpBmUeCOdY4kwCV/O0lL4Ozg==
+"@h5web/lib@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@h5web/lib/-/lib-1.2.0.tgz#586448368f791ce34ff97fd18f7c4718dee74d0a"
+  integrity sha512-NqQuEYlpfsTmRBTNti5WpXWkUkA1IrwnxK0+ErDzamSZlvLK5IGu14//8bzXVdlVol/SKpqsfi0RqtNEsNz6qQ==
   dependencies:
     "@react-hookz/web" "12.0.0"
     "@visx/axis" "2.1.1"
