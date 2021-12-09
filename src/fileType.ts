@@ -11,7 +11,7 @@ const HDF5_FILE_TYPE: Partial<DocumentRegistry.IFileType> = {
   name: 'hdf5file',
   icon: hdf5Icon,
   displayName: 'HDF5 File',
-  extensions: ['.hdf5', '.h5', '.nexus', '.nx', '.nxs', '.cxi'],
+  extensions: ['.cxi', '.hdf', '.hdf5', '.h5', '.nexus', '.nx', '.nx5', '.nxs'],
   mimeTypes: ['application/x-hdf5'],
   fileFormat: 'base64' as const,
 };
