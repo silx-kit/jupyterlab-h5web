@@ -25,12 +25,12 @@ class BaseHandler(APIHandler):
         with h5py.File(as_absolute_path(self.base_dir, Path(file_path)), "r") as h5file:
             content = self.get_content(h5file, path)
 
-        chunks, headers = encode(content, format_arg)
+        response = encode(content, format_arg)
 
-        for key, value in headers.items():
+        for key, value in response.headers.items():
             self.set_header(key, value)
 
-        self.finish(chunks)
+        self.finish(response.content)
 
     def get_content(self, h5file, path):
         raise NotImplementedError
