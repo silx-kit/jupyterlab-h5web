@@ -41,3 +41,11 @@ jobs:
           jupyter labextension list 2>&1 | grep -ie "jupyterlab-h5web.*OK"
 
           python -m jupyterlab.browser_check
+
+      - name: Upload debug logs on failure 📬
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: Build log
+          path: |
+            /tmp/*.log
