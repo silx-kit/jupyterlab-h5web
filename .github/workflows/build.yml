@@ -24,7 +24,7 @@ jobs:
       - name: Install Python 🐍
         uses: actions/setup-python@v2
         with:
-          python-version: '3.6'
+          python-version: '3.7'
           architecture: 'x64'
 
       - name: Install dependencies ⚙️
@@ -48,6 +48,14 @@ jobs:
           python -m build
           pip uninstall -y jupyterlab_h5web jupyterlab
           rm -rf jupyterlab_h5web
+
+      - name: Upload debug logs on failure 📬
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: Build log
+          path: |
+            /tmp/*.log
 
       - uses: actions/upload-artifact@v2
         with:
