@@ -35,6 +35,7 @@ jobs:
           jlpm
           jlpm run lint
           python -m pip install .
+          jupyter labextension install .
           jupyter lab build
 
           jupyter serverextension list 2>&1 | grep -ie "jupyterlab_h5web.*OK"

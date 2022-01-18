@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { App, H5GroveProvider } from '@h5web/app';
+import { App, getFeedbackMailto, H5GroveProvider } from '@h5web/app';
 import { ServerConnection } from '@jupyterlab/services';
+
+const FEEDBACK_EMAIL = 'h5web@esrf.fr';
 
 // Render the App twice on mount as the CSS is not loaded at first render.
 function TwoRenderApp() {
@@ -14,7 +16,11 @@ function TwoRenderApp() {
     return null;
   }
 
-  return <App />;
+  return (
+    <App
+      getFeedbackURL={(context) => getFeedbackMailto(context, FEEDBACK_EMAIL)}
+    />
+  );
 }
 
 function H5webApp(props: { filePath: string }) {
