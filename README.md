@@ -106,8 +106,13 @@ See https://github.com/silx-kit/jupyterlab-h5web/releases.
 
 ## Troubleshoot
 
-If the following instructions do not solve your issue, you can open an
-[issue on GitHub](https://github.com/silx-kit/jupyterlab-h5web/issues).
+### Error on `jupyter lab build`
+
+If `jupyter lab build` fails, try to remove the `minimize` step from the build
+by running `jupyter lab build --minimize=False` instead of `jupyter lab build`.
+
+This will fix
+[Terser errors when minimizing three.js](https://github.com/jupyterlab/jupyterlab/issues/8688).
 
 ### Check the server extension
 
@@ -147,6 +152,9 @@ jupyter lab build
 In the case the displayed H5Web does not match the installed version, try to
 reinstall the package using the procedure described in
 [Update](README.md#Update).
+
+If the above instructions did not solve your issue, you can open an
+[issue on GitHub](https://github.com/silx-kit/jupyterlab-h5web/issues).
 
 ## Uninstall
 
