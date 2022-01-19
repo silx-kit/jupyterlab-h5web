@@ -18,7 +18,22 @@
   font-size: var(--jp-content-font-size1);
 }
 
-body[data-jp-theme-light='false'] .h5web-root {
+/* Deactivate h5web dark mode handling */
+.h5web-root > div,
+.h5web-root > div [data-keep-colors],
+.h5web-root > div [data-keep-canvas-colors] canvas {
+  filter: none;
+}
+
+.h5web-root > div {
+  --h5w-btnRaised--shadowColor: gray;
+  --h5w-btnRaised-hover--shadowColor: dimgray;
+  --h5w-domainSlider-track--shadowColor: gray;
+  --h5w-domainSlider-dataTrack--shadowColor: var(--secondary-darker);
+}
+
+/* Trigger h5web dark mode on JupyterLab dark mode*/
+body[data-jp-theme-light='false'] .h5web-root > div {
   filter: invert();
 
   /* Set shadows to lighter colors so they remain dark once inverted */
