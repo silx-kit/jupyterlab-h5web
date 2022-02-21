@@ -316,13 +316,13 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz#ccfef6ddbe59f8fe8f694783e1d3eb88902dc5eb"
   integrity sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==
 
-"@h5web/app@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-1.4.0.tgz#d9caa36ee3b9e807fa41677ae917f8a5b37cf0ea"
-  integrity sha512-pjEIh3Q1EHovAeZ2MdxJO/MFPiY+p5gBtsDCctbxX2cJDN8li+c8RTZ4/R4x8t9uNEOJjRcdSiLZkcoypaGtIw==
+"@h5web/app@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-2.0.0.tgz#3ca039b6c82a1c8a1652a98c04c72809da17f6e7"
+  integrity sha512-AaSIief4Aolvu3gwxJNW3/OFHXJfMlNimI5uyv9yue9JwnKeQal77hYUKaWgodJusH5FCGPXgF+BuDOQcLtAcg==
   dependencies:
-    "@h5web/lib" "1.4.0"
-    "@react-hookz/web" "12.1.1"
+    "@h5web/lib" "2.0.0"
+    "@react-hookz/web" "12.1.2"
     "@react-three/fiber" "7.0.24"
     axios "0.24.0"
     d3-format "3.1.0"
@@ -334,16 +334,16 @@
     react-reflex "4.0.3"
     react-slider "1.3.1"
     react-suspense-fetch "0.4.0"
-    react-use "17.3.1"
+    react-use "17.3.2"
     three "0.135.0"
-    zustand "3.6.7"
+    zustand "3.6.9"
 
-"@h5web/lib@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@h5web/lib/-/lib-1.4.0.tgz#96794f13d235716506d256a80ebb09b12d7c3f27"
-  integrity sha512-FX5rtHfKJ69qohhkgQrtLuXQxM8Nnsz79O/m970n4t5M3mu4Gmg3vVOKjxQHCFIVrEjAK898ANyEzSgg5QeS+Q==
+"@h5web/lib@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@h5web/lib/-/lib-2.0.0.tgz#2ab44faa21866049fbf531c610135899c4f54e2d"
+  integrity sha512-WXmW9qNTyS8DMD038ClXiVRsKs3G6DPcNre82+9RZECuvEYM9tTn5LLJ7PUISVFovC5fXUFyOH9hIY9PoTaK7w==
   dependencies:
-    "@react-hookz/web" "12.1.1"
+    "@react-hookz/web" "12.1.2"
     "@visx/axis" "2.4.0"
     "@visx/grid" "2.4.0"
     "@visx/scale" "2.2.2"
@@ -363,7 +363,7 @@
     react-keyed-flatten-children "1.3.0"
     react-measure "2.5.2"
     react-slider "1.3.1"
-    react-use "17.3.1"
+    react-use "17.3.2"
     react-window "1.8.6"
 
 "@jest/types@^26.6.2":
@@ -825,10 +825,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@react-hookz/web@12.1.1":
-  version "12.1.1"
-  resolved "https://registry.yarnpkg.com/@react-hookz/web/-/web-12.1.1.tgz#b3aa420931911f890d9f95729c2e462d4d55cfb7"
-  integrity sha512-PiyDjwr7HOSZgLoH7pwiffou1sxqB8oT57+mF1WAcpvEpO9jIP7ZJ+jZEL6jquHPsf1tETUQnbY6AQUyhw90yg==
+"@react-hookz/web@12.1.2":
+  version "12.1.2"
+  resolved "https://registry.yarnpkg.com/@react-hookz/web/-/web-12.1.2.tgz#065ef3157135e104a84d03fdafdafcf5bf3693cb"
+  integrity sha512-jtdwcNflKjZlEyP9Sv2mk9N1t79nOF8y/dCxTNItaMppDtF+OVBD85Orh8CuI55V7EFxLhEFtSo4DmeYp8ReXA==
 
 "@react-three/fiber@7.0.24":
   version "7.0.24"
@@ -3517,10 +3517,10 @@ react-use-measure@^2.0.4, react-use-measure@^2.1.1:
   dependencies:
     debounce "^1.2.1"
 
-react-use@17.3.1:
-  version "17.3.1"
-  resolved "https://registry.yarnpkg.com/react-use/-/react-use-17.3.1.tgz#12b248555775519aa2b900b22f1928d029bf99d1"
-  integrity sha512-hs7+tS4rRm1QLHPfanLCqXIi632tP4V7Sai1ENUP2WTufU6am++tU9uSw9YrNCFqbABiEv0ndKU1XCUcfu2tXA==
+react-use@17.3.2:
+  version "17.3.2"
+  resolved "https://registry.yarnpkg.com/react-use/-/react-use-17.3.2.tgz#448abf515f47c41c32455024db28167cb6e53be8"
+  integrity sha512-bj7OD0/1wL03KyWmzFXAFe425zziuTf7q8olwCYBfOeFHY1qfO1FAMjROQLsLZYwG4Rx63xAfb7XAbBrJsZmEw==
   dependencies:
     "@types/js-cookie" "^2.2.6"
     "@xobotyi/scrollbar-width" "^1.9.5"
@@ -4300,7 +4300,7 @@ yarn-deduplicate@^3.1.0:
     commander "^6.1.0"
     semver "^7.3.2"
 
-zustand@3.6.7, zustand@^3.5.1:
-  version "3.6.7"
-  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.6.7.tgz#aab5ac0a9d6d21dce752aecd390f373ed9c9d70a"
-  integrity sha512-bYWKXMfoJwZyliFgidcQ3tJC/F2f2hHq1+lhTk8dVPX2k28i4VnpnKjBGNxAd2QNliV0m455Vm+gDL8LShrV3g==
+zustand@3.6.9, zustand@^3.5.1:
+  version "3.6.9"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.6.9.tgz#f61a756ddea9f95c7ee7cfd3af2f88c10078afbc"
+  integrity sha512-OvDNu/jEWpRnEC7k8xh8GKjqYog7td6FZrLMuHs/IeI8WhrCwV+FngVuwMIFhp5kysZXr6emaeReMqjLGaldAQ==
