@@ -320,39 +320,39 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
   integrity sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==
 
-"@h5web/app@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-2.0.0.tgz#3ca039b6c82a1c8a1652a98c04c72809da17f6e7"
-  integrity sha512-AaSIief4Aolvu3gwxJNW3/OFHXJfMlNimI5uyv9yue9JwnKeQal77hYUKaWgodJusH5FCGPXgF+BuDOQcLtAcg==
+"@h5web/app@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-3.0.2.tgz#cd65a71a9745a96bd7b652860bf4e50ef82873ec"
+  integrity sha512-P2Jcw9bipcW8KKUvHxTtk674q5hDJSzcAenhkfseUxvBINUYxS5/aK1P9gQCQu+oBr87PA7F3zsoiHMZuPAjhg==
   dependencies:
-    "@h5web/lib" "2.0.0"
-    "@react-hookz/web" "12.1.2"
-    "@react-three/fiber" "7.0.24"
-    axios "0.24.0"
+    "@h5web/lib" "3.0.2"
+    "@react-hookz/web" "13.1.0"
+    "@react-three/fiber" "7.0.26"
+    axios "0.26.0"
     d3-format "3.1.0"
     lodash "4.17.21"
     ndarray "1.0.19"
     ndarray-ops "1.2.2"
     react-error-boundary "3.1.4"
     react-icons "4.3.1"
-    react-reflex "4.0.3"
+    react-reflex "4.0.6"
     react-slider "1.3.1"
     react-suspense-fetch "0.4.0"
     react-use "17.3.2"
     three "0.135.0"
-    zustand "3.6.9"
+    zustand "3.7.0"
 
-"@h5web/lib@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@h5web/lib/-/lib-2.0.0.tgz#2ab44faa21866049fbf531c610135899c4f54e2d"
-  integrity sha512-WXmW9qNTyS8DMD038ClXiVRsKs3G6DPcNre82+9RZECuvEYM9tTn5LLJ7PUISVFovC5fXUFyOH9hIY9PoTaK7w==
+"@h5web/lib@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@h5web/lib/-/lib-3.0.2.tgz#c4429c4a586171828675c0c9009bd57a1f135ee5"
+  integrity sha512-MEEXG/MtufttFKAnD9TXRtgMBXapF2draqnKNCN+MssypecBBJ7sNgK0VoD3ZUg1NAY/xWs4sQZ51iLSoUOZfg==
   dependencies:
-    "@react-hookz/web" "12.1.2"
-    "@visx/axis" "2.4.0"
-    "@visx/grid" "2.4.0"
+    "@react-hookz/web" "13.1.0"
+    "@visx/axis" "2.6.0"
+    "@visx/grid" "2.6.0"
     "@visx/scale" "2.2.2"
     "@visx/shape" "2.4.0"
-    "@visx/tooltip" "2.2.2"
+    "@visx/tooltip" "2.8.0"
     d3-array "3.1.1"
     d3-color "3.0.1"
     d3-format "3.1.0"
@@ -973,15 +973,22 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
-"@react-hookz/web@12.1.2":
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/@react-hookz/web/-/web-12.1.2.tgz#065ef3157135e104a84d03fdafdafcf5bf3693cb"
-  integrity sha512-jtdwcNflKjZlEyP9Sv2mk9N1t79nOF8y/dCxTNItaMppDtF+OVBD85Orh8CuI55V7EFxLhEFtSo4DmeYp8ReXA==
+"@react-hookz/deep-equal@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@react-hookz/deep-equal/-/deep-equal-1.0.1.tgz#1e9aad97b964879b54a3909f36f0727befa13e1f"
+  integrity sha512-6k/pU2jNlgYvKOy84vpCAZ8MGVwybvAdjzrh4UicCVOCPxz0LSBws1OE6O5TO4sPHaSw+yLfNzNK8RicGFc1Kw==
 
-"@react-three/fiber@7.0.24":
-  version "7.0.24"
-  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.24.tgz#f3a40326e233e4a1c95b3bb5384ff19c81412958"
-  integrity sha512-CJi1Mex7jqByTEVZoUzg0xZEw63CUjm4bUDx0XIhuAmNUsmFmht7cRt87zUQSSDQvmaDqvoDWW7dD+uFJW/kUQ==
+"@react-hookz/web@13.1.0":
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/@react-hookz/web/-/web-13.1.0.tgz#7fafa6d04fdba3935f079732a6ae8e316dd37762"
+  integrity sha512-U7/KB0OI6umgABmzAWqWyeQ3v+BPeYGkEbjEyH/4DBdJfCskVfv5y9GZ0aFlo8uFGzeNlGYE1acFzXliVdy/qQ==
+  dependencies:
+    "@react-hookz/deep-equal" "^1.0.1"
+
+"@react-three/fiber@7.0.26":
+  version "7.0.26"
+  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.26.tgz#36ec19fa7bff00738a7dd368d37d81fed912dd52"
+  integrity sha512-46NBais4fQIGcMGLBbOf84lp8y/cg73jOEVmAQQJqWX6iOVeNg29jYd15LBuCW2qPD1qDRU0rOfLbMDgwr/vxQ==
   dependencies:
     "@babel/runtime" "^7.13.10"
     react-merge-refs "^1.1.0"
@@ -1402,14 +1409,14 @@
   resolved "https://registry.yarnpkg.com/@verdaccio/ui-theme/-/ui-theme-3.2.1.tgz#041a5b436847f73ebddeb693758b0f30819a98b0"
   integrity sha512-xaN1nVxGWSIO4Qmnm3xZwvUf2jOUIt43nAp2IbSiPdozQztCcfU1LHEHiMW2mP036LoUWcHbb3Z6Tj1GHyuQNg==
 
-"@visx/axis@2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@visx/axis/-/axis-2.4.0.tgz#0785a872e1a2706ece2f3e9e350736b04039359e"
-  integrity sha512-5QA1Std1HSfBjVObulMW6gi2ZlBg9zuP8jUpgs1LL5tLWritla4T6cheEGLNa6Yuuy/DKzpHJUmNGBtpBGFEGw==
+"@visx/axis@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@visx/axis/-/axis-2.6.0.tgz#33c7713590818705ae4a10bc6ab6d589bdb9ce9c"
+  integrity sha512-Ti8AxclK4m/2SHQPGMMsvotTxZGaLQIMB10C9tyHP9JNBCLWKWtq1XTrGxlySffnfhXML80zLYsEdLPumzxFvw==
   dependencies:
     "@types/react" "*"
     "@visx/group" "2.1.0"
-    "@visx/point" "2.1.0"
+    "@visx/point" "2.6.0"
     "@visx/scale" "2.2.2"
     "@visx/shape" "2.4.0"
     "@visx/text" "2.3.0"
@@ -1433,15 +1440,15 @@
     "@types/d3-shape" "^1.3.1"
     d3-shape "^1.0.6"
 
-"@visx/grid@2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@visx/grid/-/grid-2.4.0.tgz#8ddf3bf6154ae0f6ffb27e3919079229471813f8"
-  integrity sha512-1tk8XaLeFRQA8BKy/+oP7aqsE99GKzyEYA1w4waga2VI0bDZiSnuZix6cy5PTusZxt9ZzjTmPGkC2RXq9+I5XA==
+"@visx/grid@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@visx/grid/-/grid-2.6.0.tgz#bb24e88dafd3eba3a867a4327dc9dad32bfda2be"
+  integrity sha512-LH4yioffUZRT1ic3KSYqhimF6GPZCs3jzv4Xdz5gNVsSbEY4BOQyulxtq8375Z80DpLwK1VQAMxoNdj1EDkxIg==
   dependencies:
     "@types/react" "*"
     "@visx/curve" "2.1.0"
     "@visx/group" "2.1.0"
-    "@visx/point" "2.1.0"
+    "@visx/point" "2.6.0"
     "@visx/scale" "2.2.2"
     "@visx/shape" "2.4.0"
     classnames "^2.3.1"
@@ -1456,10 +1463,10 @@
     classnames "^2.3.1"
     prop-types "^15.6.2"
 
-"@visx/point@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@visx/point/-/point-2.1.0.tgz#b3e263826f28b3a170d6604dea8ffa27a4b9ac3b"
-  integrity sha512-vVnfI7oqjjttkn05Xi/ooR0UqQRoGf68lyT3SOl0WPHvIQBGNh3XoVUBHDr15/NUkfErgK6TNlfXY763YncPWg==
+"@visx/point@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@visx/point/-/point-2.6.0.tgz#c4316ca409b5b829c5455f07118d8c14a92cc633"
+  integrity sha512-amBi7yMz4S2VSchlPdliznN41TuES64506ySI22DeKQ+mc1s1+BudlpnY90sM1EIw4xnqbKmrghTTGfy6SVqvQ==
 
 "@visx/scale@2.2.2":
   version "2.2.2"
@@ -1503,10 +1510,10 @@
     prop-types "^15.7.2"
     reduce-css-calc "^1.3.0"
 
-"@visx/tooltip@2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@visx/tooltip/-/tooltip-2.2.2.tgz#dc6e1c50fb0aaa0ffcb773eb0a5beb25ec89170d"
-  integrity sha512-wI0t+hE+gp7euuqI8likKBDsx70I+WJ6UJ9YCra8/LyyuVSbOobnLZlqQw1QhIYbdmnDReIckZ0dq3sa6z2qbw==
+"@visx/tooltip@2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@visx/tooltip/-/tooltip-2.8.0.tgz#6318286a5eaf84f868fcf005237edb18121c7b36"
+  integrity sha512-INt5/OSchHr7PphYznTV5jw3YP1X006IwWwmAUacDkHk12hunKjnssdIVskIDQXxlNTho1g44ynl7sc3zGbfQQ==
   dependencies:
     "@types/react" "*"
     "@visx/bounds" "2.1.2"
@@ -1961,12 +1968,12 @@ axe-core@^4.0.2:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.1.3.tgz#64a4c85509e0991f5168340edc4bedd1ceea6966"
   integrity sha512-vwPpH4Aj4122EW38mxO/fxhGKtwWTMLDIJfZ1He0Edbtjcfna/R3YB67yVhezUMzqc3Jr3+Ii50KRntlENL4xQ==
 
-axios@0.24.0:
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
-  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+axios@0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.0.tgz#9a318f1c69ec108f8cd5f3c3d390366635e13928"
+  integrity sha512-lKoGLMYtHvFrPVt3r+RBMp9nh34N0M8zEfCWqdWZx6phynIEhQqAdydpyBAAG211zlhX9Rgu08cOamy6XjE5Og==
   dependencies:
-    follow-redirects "^1.14.4"
+    follow-redirects "^1.14.8"
 
 axobject-query@^2.2.0:
   version "2.2.0"
@@ -3650,10 +3657,10 @@ focus-group@^0.3.1:
   resolved "https://registry.yarnpkg.com/focus-group/-/focus-group-0.3.1.tgz#e0f32ed86b0dabdd6ffcebdf898ecb32e47fedce"
   integrity sha1-4PMu2GsNq91v/OvfiY7LMuR/7c4=
 
-follow-redirects@^1.14.4:
-  version "1.14.4"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.4.tgz#838fdf48a8bbdd79e52ee51fb1c94e3ed98b9379"
-  integrity sha512-zwGkiSXC1MUJG/qmeIFH2HBJx9u0V46QGUe3YR1fXG8bXQxq7fLj0RjLZQ5nubr9qNJUZrH+xUcwXEoXNpfS+g==
+follow-redirects@^1.14.8:
+  version "1.14.9"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.9.tgz#dd4ea157de7bfaf9ea9b3fbd85aa16951f78d8d7"
+  integrity sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
 
 forever-agent@~0.6.1:
   version "0.6.1"
@@ -5981,10 +5988,10 @@ react-reconciler@^0.26.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-reflex@4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/react-reflex/-/react-reflex-4.0.3.tgz#46a3b00f044b34d3e862a6629d90efecc587fe3e"
-  integrity sha512-73ylI4kLi6gCEhNZIEO3DrFc8cuYJzhROPs38+OqnzYm123Ed+BsBXECVGu90D1viftdv/leMgnVtxHi4xnSBw==
+react-reflex@4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/react-reflex/-/react-reflex-4.0.6.tgz#fa7da95cde64cece6d4314d751391bbc294c5433"
+  integrity sha512-nBVQg+EDJ3vKGtiOKCZHaYS8fM/QcHJhVPnat0Ua1DIrzrOI64r8e30HU/ovqDgXVbY5cOTXP4hPRVmWUBfvbQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     lodash.throttle "^4.1.1"
@@ -7660,7 +7667,7 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zustand@3.6.9, zustand@^3.5.1:
-  version "3.6.9"
-  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.6.9.tgz#f61a756ddea9f95c7ee7cfd3af2f88c10078afbc"
-  integrity sha512-OvDNu/jEWpRnEC7k8xh8GKjqYog7td6FZrLMuHs/IeI8WhrCwV+FngVuwMIFhp5kysZXr6emaeReMqjLGaldAQ==
+zustand@3.7.0, zustand@^3.5.1:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.7.0.tgz#a5c68fb06bdee9c63ad829de2432635be6d0ce69"
+  integrity sha512-USzVzLGrvZ8VK1/sEsOAmeqa8N7D3OBdZskVaL7DL89Q4QLTYD053iIlZ5KDidyZ+Od80Dttin/f8ZulOLFFDQ==

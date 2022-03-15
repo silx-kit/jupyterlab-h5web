@@ -29,6 +29,9 @@
   --h5w-btnRaised-hover--shadowColor: dimgray;
   --h5w-domainSlider-track--shadowColor: gray;
   --h5w-domainSlider-dataTrack--shadowColor: var(--secondary-darker);
+
+  --h5w-line--color: darkblue;
+  --h5w-line--colorAux: orangered, forestgreen, red, mediumorchid, olive;
 }
 
 /* Trigger h5web dark mode on JupyterLab dark mode*/
@@ -40,6 +43,9 @@ body[data-jp-theme-light='false'] .h5web-root > div {
   --h5w-btnRaised-hover--shadowColor: #fff;
   --h5w-domainSlider-track--shadowColor: #f5f5f5;
   --h5w-domainSlider-dataTrack--shadowColor: #fff;
+
+  --h5w-line--color: deepskyblue;
+  --h5w-line--colorAux: orange, lightgreen, red, violet, gold;
 }
 
 body[data-jp-theme-light='false'] .h5web-root [data-keep-colors],
