@@ -64,12 +64,12 @@ class MetadataHandler(BaseHandler):
 
 
 def setup_handlers(web_app, base_dir: str):
-    pattern = ".*$"
+    pattern = ".*"
     endpoints = {"attr": AttributeHandler, "data": DataHandler, "meta": MetadataHandler}
 
     handlers = [
         (
-            url_path_join(web_app.settings["base_url"], "h5web", endpoint, pattern),
+            url_path_join(web_app.settings["base_url"], "h5web", endpoint),
             handler,
             {"base_dir": Path(base_dir)},
         )
