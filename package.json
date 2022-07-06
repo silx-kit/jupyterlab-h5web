@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-h5web",
-  "version": "5.0.1-beta.0",
+  "version": "6.0.0",
   "description": "A JupyterLab extension to explore and visualize HDF5 file contents.",
   "keywords": [
     "jupyter",
