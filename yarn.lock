@@ -320,12 +320,12 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
   integrity sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==
 
-"@h5web/app@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-6.0.0.tgz#e3f327410f05bb495e2fcc4be9256afd4cdde2f9"
-  integrity sha512-Qsyu2YKKBvT5vJKaVT3oVNtUjJqON46wcDB+OZVTQ50qyaZc7g8sgSlq3O7XxX4xQNdIUGGjq4ASKM0Kq/TwJg==
+"@h5web/app@6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@h5web/app/-/app-6.0.1.tgz#d45fc74b299330da1c4d58baba1d37913beb24cd"
+  integrity sha512-10Xq8Wcg5r8h/E88oXY5k5v6zKh7kHi1agXbEHW2P1Rhy7VyY2PxL0z7KBS38AR51YBqhWOJjTaadoqR8DCu/w==
   dependencies:
-    "@h5web/lib" "6.0.0"
+    "@h5web/lib" "6.0.1"
     "@react-hookz/web" "14.2.2"
     "@react-three/fiber" "7.0.26"
     axios "0.27.2"
@@ -342,10 +342,10 @@
     three "0.135.0"
     zustand "4.0.0-rc.1"
 
-"@h5web/lib@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@h5web/lib/-/lib-6.0.0.tgz#efbae775293f86ff1522671b01aad1b82eb11c0e"
-  integrity sha512-dcPCaxTY7crLQMnIM6TzEqhM+ImWUoa+ahdIAdcv7rvWk8iTlv5WuJJoOam0HtXAd/IYv6IVmvAdI+oMAC4gCA==
+"@h5web/lib@6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@h5web/lib/-/lib-6.0.1.tgz#141c02f00eb9ef3b2afdaca860a7b89708c53d47"
+  integrity sha512-8wrrs38X0ewvvCuqUZYJVvA0k5qnELgxXFUZjaCDSJHwu8LKtjdLo3ru6hx0p2mAiIr6Wmb3aYMiMPqYkpVvkA==
   dependencies:
     "@react-hookz/web" "14.2.2"
     "@visx/axis" "2.10.0"
