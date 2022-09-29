@@ -18,6 +18,7 @@ function TwoRenderApp() {
   return (
     <App
       getFeedbackURL={(context) => getFeedbackMailto(context, FEEDBACK_EMAIL)}
+      disableDarkMode
     />
   );
 }
