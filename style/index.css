@@ -5,7 +5,9 @@
 }
 
 .h5web-in-cell {
-  height: 400px;
+  aspect-ratio: 16 / 10;
+  min-height: 500px;
+  max-height: 75vh;
   width: 100%;
   resize: vertical;
   overflow: auto;

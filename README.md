@@ -67,6 +67,8 @@ from jupyterlab_h5web import H5Web
 H5Web('<path to the HDF5 file>')
 ```
 
+The cell height can be resized with the handle at the bottom-right.
+
 An example is provided in [example.ipynb](example.ipynb).
 
 ### Supported file formats
