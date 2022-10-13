@@ -1,13 +1,17 @@
-import h5py
 from tornado.web import authenticated, MissingArgumentError
 from jupyter_server.base.handlers import APIHandler
 from jupyter_server.utils import url_path_join
 from pathlib import Path
 
 from h5grove.encoders import encode
-from h5grove.content import create_content, ResolvedEntityContent, DatasetContent
+from h5grove.content import (
+    get_content_from_file,
+    EntityContent,
+    ResolvedEntityContent,
+    DatasetContent,
+)
 
-from .utils import as_absolute_path
+from .utils import as_absolute_path, create_error
 
 
 class BaseHandler(APIHandler):
@@ -22,17 +26,22 @@ class BaseHandler(APIHandler):
         path = self.get_query_argument("path", None)
         format_arg = self.get_query_argument("format", None)
 
-        with h5py.File(as_absolute_path(self.base_dir, Path(file_path)), "r") as h5file:
-            content = self.get_content(h5file, path)
+        with get_content_from_file(
+            as_absolute_path(self.base_dir, Path(file_path)),
+            path,
+            create_error,
+            h5py_options={"locking": False},
+        ) as content:
+            payload = self.parse_content(content)
 
-        response = encode(content, format_arg)
+        response = encode(payload, format_arg)
 
         for key, value in response.headers.items():
             self.set_header(key, value)
 
         self.finish(response.content)
 
-    def get_content(self, h5file, path):
+    def parse_content(self, content: EntityContent):
         raise NotImplementedError
 
     def finish(self, *args, **kwargs):
@@ -42,24 +51,21 @@ class BaseHandler(APIHandler):
 
 
 class AttributeHandler(BaseHandler):
-    def get_content(self, h5file, path):
-        content = create_content(h5file, path)
+    def parse_content(self, content):
         assert isinstance(content, ResolvedEntityContent)
         return content.attributes()
 
 
 class DataHandler(BaseHandler):
-    def get_content(self, h5file, path):
+    def parse_content(self, content):
         selection = self.get_query_argument("selection", None)
 
-        content = create_content(h5file, path)
         assert isinstance(content, DatasetContent)
         return content.data(selection)
 
 
 class MetadataHandler(BaseHandler):
-    def get_content(self, h5file, path):
-        content = create_content(h5file, path)
+    def parse_content(self, content):
         return content.metadata()
 
 
