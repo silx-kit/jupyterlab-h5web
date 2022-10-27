@@ -46,6 +46,13 @@ following command:
 jupyter lab build --minimize=False
 ```
 
+> **Note**: Building the extension in developement mode prevents from testing
+> R3F visualisations
+> ([they freeze the browser](https://github.com/silx-kit/jupyterlab-h5web/issues/67)).
+> To test the visualisations, the extension must be built in production mode by
+> running `jlpm build:prod`. Unfortunately, this means that the `watch` command
+> cannot be used (`jlpm build:prod` must be run at each change).
+
 ## Development uninstall
 
 ```bash
