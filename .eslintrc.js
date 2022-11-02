@@ -1,10 +1,14 @@
-const { createConfig } = require('eslint-config-galex/src/createConfig');
+const { createConfig } = require('eslint-config-galex/dist/createConfig');
+const { getDependencies } = require('eslint-config-galex/dist/getDependencies');
+
 const {
-  files: reactFiles,
-} = require('eslint-config-galex/src/overrides/react');
+  createReactOverride,
+} = require('eslint-config-galex/dist/overrides/react');
 const {
-  files: tsFiles,
-} = require('eslint-config-galex/src/overrides/typescript');
+  createTypeScriptOverride,
+} = require('eslint-config-galex/dist/overrides/typescript');
+
+const dependencies = getDependencies();
 
 module.exports = createConfig({
   rules: {
@@ -22,22 +26,19 @@ module.exports = createConfig({
     'unicorn/consistent-destructuring': 'off',
   },
   overrides: [
-    {
-      files: reactFiles,
+    createReactOverride({
+      ...dependencies,
       rules: {
         'react/jsx-no-constructed-context-values': 'off', // too strict
       },
-    },
-    {
-      files: tsFiles,
+    }),
+    createTypeScriptOverride({
+      ...dependencies,
       rules: {
         '@typescript-eslint/ban-ts-comment': 'off', // too strict
         '@typescript-eslint/no-floating-promises': 'off', // big crash sometimes better than silent fail
         '@typescript-eslint/lines-between-class-members': 'off', // allow grouping single-line members
-
-        // TypeScript requires types where they should not be required
-        // https://github.com/typescript-eslint/typescript-eslint/issues/2183
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off', // worsens readability sometimes (e.g. for React components)
 
         // Unused vars should be removed but not prevent compilation
         '@typescript-eslint/no-unused-vars': 'warn',
@@ -54,6 +55,6 @@ module.exports = createConfig({
           'interface',
         ],
       },
-    },
+    }),
   ],
 });
