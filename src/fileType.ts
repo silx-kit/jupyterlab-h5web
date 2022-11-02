@@ -1,4 +1,4 @@
-import { DocumentRegistry } from '@jupyterlab/docregistry';
+import type { DocumentRegistry } from '@jupyterlab/docregistry';
 import { hdf5Icon } from './icons';
 
 /* The file format is set for the following reasons:

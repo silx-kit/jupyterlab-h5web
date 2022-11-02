@@ -1,9 +1,6 @@
 import React from 'react';
-import {
-  ABCWidgetFactory,
-  Context,
-  DocumentWidget,
-} from '@jupyterlab/docregistry';
+import type { Context } from '@jupyterlab/docregistry';
+import { ABCWidgetFactory, DocumentWidget } from '@jupyterlab/docregistry';
 import { ReactWidget } from '@jupyterlab/apputils';
 import { h5webIcon } from './icons';
 import H5webApp from './H5webApp';

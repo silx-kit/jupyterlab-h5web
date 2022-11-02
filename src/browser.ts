@@ -1,10 +1,10 @@
-import { JupyterFrontEnd } from '@jupyterlab/application';
+import type { JupyterFrontEnd } from '@jupyterlab/application';
 import { MainAreaWidget } from '@jupyterlab/apputils';
 import { PathExt } from '@jupyterlab/coreutils';
-import { IDocumentManager } from '@jupyterlab/docmanager';
-import { DocumentRegistry } from '@jupyterlab/docregistry';
-import { FileBrowser } from '@jupyterlab/filebrowser';
-import { Kernel } from '@jupyterlab/services';
+import type { IDocumentManager } from '@jupyterlab/docmanager';
+import type { DocumentRegistry } from '@jupyterlab/docregistry';
+import type { FileBrowser } from '@jupyterlab/filebrowser';
+import type { Kernel } from '@jupyterlab/services';
 
 import HDF5_FILE_TYPE from './fileType';
 import { h5webIcon } from './icons';
@@ -42,7 +42,7 @@ export function activateOpenInBrowser(
   app: JupyterFrontEnd,
   browser: FileBrowser,
   docManager: IDocumentManager
-) {
+): void {
   const { commands } = app;
   commands.addCommand(OPEN_H5WEB_COMMAND, {
     label: 'View HDF5 file contents',
