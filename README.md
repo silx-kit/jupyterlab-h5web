@@ -23,6 +23,8 @@ extension.
 
 ## Install
 
+### With pip
+
 ```bash
 pip install jupyterlab_h5web
 ```
@@ -37,6 +39,12 @@ pip install jupyterlab_h5web[full]
 
 This will install [hdf5plugin](https://pypi.org/project/hdf5plugin/) in addition
 to the extension.
+
+### With conda
+
+```bash
+conda install -c conda-forge jupyterlab-h5web
+```
 
 ## Usage
 
