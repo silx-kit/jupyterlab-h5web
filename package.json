@@ -16,6 +16,9 @@
     "name": "European Synchrotron Radiation Facility",
     "email": "h5web@esrf.fr"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
     "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
@@ -49,7 +52,7 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
-    "@h5web/app": "7.0.0",
+    "@h5web/app": "7.1.0",
     "@jupyterlab/application": "^3.0.0",
     "@jupyterlab/apputils": "^3.0.0",
     "@jupyterlab/coreutils": "^5.0.0",
@@ -67,8 +70,9 @@
   },
   "devDependencies": {
     "@jupyterlab/builder": "^3.0.0",
-    "@types/react": "17.0.2",
-    "@types/react-dom": "17.0.2",
+    "@types/node": "^18.15.11",
+    "@types/react": "^17.0.56",
+    "@types/react-dom": "^17.0.19",
     "eslint": "8.26.0",
     "eslint-config-galex": "4.3.1",
     "mkdirp": "^1.0.3",
