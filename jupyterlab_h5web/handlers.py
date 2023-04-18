@@ -6,6 +6,7 @@ from pathlib import Path
 from h5grove.encoders import encode
 from h5grove.content import (
     get_content_from_file,
+    get_list_of_paths,
     EntityContent,
     ResolvedEntityContent,
     DatasetContent,
@@ -18,6 +19,8 @@ class BaseHandler(APIHandler):
     def initialize(self, base_dir: Path) -> None:
         self.base_dir = base_dir
 
+
+class ContentHandler(BaseHandler):
     @authenticated
     def get(self):
         file_path = self.get_query_argument("file", None)
@@ -45,18 +48,18 @@ class BaseHandler(APIHandler):
         raise NotImplementedError
 
     def finish(self, *args, **kwargs):
-        # Override APIHandler.finish to remove the JSON Content-Type header as h5grove can return application/octet-stream
+        # Override APIHandler.finish to remove the JSON Content-Type header as h5grove content can be application/octet-stream
         self.update_api_activity()
         return super(APIHandler, self).finish(*args, **kwargs)
 
 
-class AttributeHandler(BaseHandler):
+class AttributeHandler(ContentHandler):
     def parse_content(self, content):
         assert isinstance(content, ResolvedEntityContent)
         return content.attributes()
 
 
-class DataHandler(BaseHandler):
+class DataHandler(ContentHandler):
     def parse_content(self, content):
         selection = self.get_query_argument("selection", None)
 
@@ -64,14 +67,40 @@ class DataHandler(BaseHandler):
         return content.data(selection)
 
 
-class MetadataHandler(BaseHandler):
+class MetadataHandler(ContentHandler):
     def parse_content(self, content):
         return content.metadata()
 
 
+class PathsHandler(BaseHandler):
+    @authenticated
+    def get(self):
+        file_path = self.get_query_argument("file", None)
+        if file_path is None:
+            raise MissingArgumentError("File argument is required")
+        path = self.get_query_argument("path", None)
+
+        with get_list_of_paths(
+            as_absolute_path(self.base_dir, Path(file_path)),
+            path,
+            create_error,
+        ) as paths:
+            response = encode(paths)
+
+        for key, value in response.headers.items():
+            self.set_header(key, value)
+
+        self.finish(response.content)
+
+
 def setup_handlers(web_app, base_dir: str):
     pattern = ".*$"
-    endpoints = {"attr": AttributeHandler, "data": DataHandler, "meta": MetadataHandler}
+    endpoints = {
+        "attr": AttributeHandler,
+        "data": DataHandler,
+        "meta": MetadataHandler,
+        "paths": PathsHandler,
+    }
 
     handlers = [
         (
