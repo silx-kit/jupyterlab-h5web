@@ -62,9 +62,10 @@ class AttributeHandler(ContentHandler):
 class DataHandler(ContentHandler):
     def parse_content(self, content):
         selection = self.get_query_argument("selection", None)
+        dtype = self.get_query_argument("dtype", None)
 
         assert isinstance(content, DatasetContent)
-        return content.data(selection)
+        return content.data(selection, dtype=dtype)
 
 
 class MetadataHandler(ContentHandler):
