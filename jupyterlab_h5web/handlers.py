@@ -1,3 +1,4 @@
+import h5py
 from tornado.web import authenticated, MissingArgumentError
 from jupyter_server.base.handlers import APIHandler
 from jupyter_server.utils import url_path_join
@@ -13,6 +14,12 @@ from h5grove.content import (
 )
 
 from .utils import as_absolute_path, create_error
+
+
+H5PY_HAS_FILE_LOCKING_ARG = h5py.version.hdf5_version_tuple >= (1, 12, 1) or (
+    h5py.version.hdf5_version_tuple[:2] == (1, 10)
+    and h5py.version.hdf5_version_tuple[2] >= 7
+)
 
 
 class BaseHandler(APIHandler):
@@ -33,7 +40,7 @@ class ContentHandler(BaseHandler):
             as_absolute_path(self.base_dir, Path(file_path)),
             path,
             create_error,
-            h5py_options={"locking": False},
+            h5py_options={"locking": False} if H5PY_HAS_FILE_LOCKING_ARG else {},
         ) as content:
             payload = self.parse_content(content)
 
