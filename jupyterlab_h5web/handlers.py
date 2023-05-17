@@ -12,6 +12,7 @@ from h5grove.content import (
     ResolvedEntityContent,
     DatasetContent,
 )
+from h5grove.utils import parse_bool_arg
 
 from .utils import as_absolute_path, create_error
 
@@ -70,9 +71,12 @@ class DataHandler(ContentHandler):
     def parse_content(self, content):
         selection = self.get_query_argument("selection", None)
         dtype = self.get_query_argument("dtype", None)
+        flatten = parse_bool_arg(
+            self.get_query_argument("flatten", None), fallback=False
+        )
 
         assert isinstance(content, DatasetContent)
-        return content.data(selection, dtype=dtype)
+        return content.data(selection, flatten, dtype)
 
 
 class MetadataHandler(ContentHandler):
