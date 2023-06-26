@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-h5web",
-  "version": "8.0.0",
+  "version": "8.1.0",
   "description": "A JupyterLab extension to explore and visualize HDF5 file contents.",
   "keywords": [
     "jupyter",
@@ -33,7 +33,7 @@
   "scripts": {
     "build": "jlpm run build:lib && jlpm run build:labextension:dev",
     "build:prod": "jlpm run clean && jlpm run build:lib && jlpm run build:labextension",
-    "build:labextension": "jupyter labextension build .",
+    "build:labextension": "jupyter labextension build --source-map True .",
     "build:labextension:dev": "jupyter labextension build --development True .",
     "build:lib": "tsc",
     "clean": "jlpm run clean:lib",
@@ -53,34 +53,34 @@
   },
   "dependencies": {
     "@h5web/app": "8.0.0",
-    "@jupyterlab/application": "^3.0.0",
-    "@jupyterlab/apputils": "^3.0.0",
-    "@jupyterlab/coreutils": "^5.0.0",
-    "@jupyterlab/docmanager": "^3.0.0",
-    "@jupyterlab/docregistry": "^3.0.0",
-    "@jupyterlab/filebrowser": "^3.0.0",
-    "@jupyterlab/launcher": "^3.0.0",
-    "@jupyterlab/rendermime": "^3.0.0",
-    "@jupyterlab/rendermime-interfaces": "^3.0.0",
-    "@jupyterlab/services": "^6.0.0",
-    "@jupyterlab/ui-components": "^3.0.0",
-    "@lumino/widgets": "^1.25.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@jupyterlab/application": "^4.0.0",
+    "@jupyterlab/apputils": "^4.0.0",
+    "@jupyterlab/coreutils": "^6.0.0",
+    "@jupyterlab/docmanager": "^4.0.0",
+    "@jupyterlab/docregistry": "^4.0.0",
+    "@jupyterlab/filebrowser": "^4.0.0",
+    "@jupyterlab/launcher": "^4.0.0",
+    "@jupyterlab/rendermime": "^4.0.0",
+    "@jupyterlab/rendermime-interfaces": "^3.8.2",
+    "@jupyterlab/services": "^7.0.0",
+    "@jupyterlab/ui-components": "^4.0.0",
+    "@lumino/widgets": "^2.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@jupyterlab/builder": "^3.0.0",
+    "@jupyterlab/builder": "^4.0.0",
     "@types/node": "^18.15.11",
-    "@types/react": "^17.0.56",
-    "@types/react-dom": "^17.0.19",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "eslint": "8.26.0",
     "eslint-config-galex": "4.3.1",
     "mkdirp": "^1.0.3",
     "npm-run-all": "4.1.5",
     "prettier": "2.7.1",
-    "rimraf": "^3.0.2",
-    "typescript": "4.8.4",
-    "yarn-deduplicate": "^3.1.0"
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.0",
+    "yarn-deduplicate": "^6.0.0"
   },
   "sideEffects": [
     "style/*.css"
