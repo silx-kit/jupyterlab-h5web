@@ -17,11 +17,12 @@ See [Usage](README.md#Usage) for more details.
 
 - JupyterLab >= 4
 
-- For JupyterLab 3, use versions [<=8.0.0](https://github.com/silx-kit/jupyterlab-h5web/tree/v8.0.0)
+- For JupyterLab 3, use versions
+  [<=8.0.0](https://github.com/silx-kit/jupyterlab-h5web/tree/v8.0.0)
 
 - For JupyterLab 2, use the
-[0.x versions](https://github.com/silx-kit/jupyterlab-h5web/tree/0.x) of the
-extension.
+  [0.x versions](https://github.com/silx-kit/jupyterlab-h5web/tree/0.x) of the
+  extension.
 
 ## Install
 
