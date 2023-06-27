@@ -16,7 +16,7 @@ jobs:
       - name: Checkout 🏷️
         uses: actions/checkout@v3
 
-      - name: Base Setup
+      - name: Base Setup 🕹️ 🐍
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
       - name: Install dependencies ⚙️
@@ -29,7 +29,6 @@ jobs:
           jlpm run lint
           python -m pip install .
 
-          jupyter serverextension list 2>&1 | grep -ie "jupyterlab_h5web.*OK"
           jupyter labextension list 2>&1 | grep -ie "jupyterlab-h5web.*OK"
 
           python -m jupyterlab.browser_check
