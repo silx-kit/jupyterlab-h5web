@@ -40,9 +40,6 @@ module.exports = createConfig({
         '@typescript-eslint/lines-between-class-members': 'off', // allow grouping single-line members
         '@typescript-eslint/explicit-module-boundary-types': 'off', // worsens readability sometimes (e.g. for React components)
 
-        // Ignore ts complaining about possible null values
-        '@typescript-eslint/prefer-nullish-coalescing': 'off',
-
         // Unused vars should be removed but not prevent compilation
         '@typescript-eslint/no-unused-vars': 'warn',
 
