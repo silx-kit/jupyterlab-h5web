@@ -17,8 +17,8 @@
     "rootDir": "src",
     "skipLibCheck": true,
     "strict": true,
-    "strictNullChecks": false,
-    "target": "es2017",
+    "strictNullChecks": true,
+    "target": "es2018",
     "types": []
   },
   "include": ["src/*"]

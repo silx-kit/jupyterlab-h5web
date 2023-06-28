@@ -16,19 +16,11 @@ jobs:
       - name: Checkout 🏷️
         uses: actions/checkout@v3
 
-      - name: Set up Node 🕹️
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: 'package.json'
-
-      - name: Install Python 🐍
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.7'
-          architecture: 'x64'
+      - name: Base Setup 🕹️ 🐍
+        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
       - name: Install dependencies ⚙️
-        run: python -m pip install -U jupyterlab~=3.0 check-manifest
+        run: python -m pip install -U jupyterlab>=4.0 check-manifest
 
       - name: Build the extension 🏗️
         run: |
@@ -37,7 +29,6 @@ jobs:
           jlpm run lint
           python -m pip install .
 
-          jupyter serverextension list 2>&1 | grep -ie "jupyterlab_h5web.*OK"
           jupyter labextension list 2>&1 | grep -ie "jupyterlab-h5web.*OK"
 
           python -m jupyterlab.browser_check

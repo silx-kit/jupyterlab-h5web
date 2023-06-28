@@ -3,7 +3,7 @@ import { MainAreaWidget } from '@jupyterlab/apputils';
 import { PathExt } from '@jupyterlab/coreutils';
 import type { IDocumentManager } from '@jupyterlab/docmanager';
 import type { DocumentRegistry } from '@jupyterlab/docregistry';
-import type { FileBrowser } from '@jupyterlab/filebrowser';
+import type { IDefaultFileBrowser } from '@jupyterlab/filebrowser';
 import type { Kernel } from '@jupyterlab/services';
 
 import HDF5_FILE_TYPE from './fileType';
@@ -40,7 +40,7 @@ export function patchOpeningOfHdf5File(
 
 export function activateOpenInBrowser(
   app: JupyterFrontEnd,
-  browser: FileBrowser,
+  browser: IDefaultFileBrowser,
   docManager: IDocumentManager
 ): void {
   const { commands } = app;
@@ -51,9 +51,9 @@ export function activateOpenInBrowser(
     execute: () => {
       const file = browser.selectedItems().next();
 
-      const content = new H5webWidget(file.path);
+      const content = new H5webWidget(file.value.path);
       const widget = new MainAreaWidget<H5webWidget>({ content });
-      widget.title.label = file.name;
+      widget.title.label = file.value.name;
       app.shell.add(widget, 'main');
     },
   });

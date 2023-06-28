@@ -3,7 +3,7 @@ import type {
   JupyterFrontEndPlugin,
 } from '@jupyterlab/application';
 import { IDocumentManager } from '@jupyterlab/docmanager';
-import { IFileBrowserFactory } from '@jupyterlab/filebrowser';
+import { IDefaultFileBrowser } from '@jupyterlab/filebrowser';
 import { createRendermimePlugins } from '@jupyterlab/application/lib/mimerenderers';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 
@@ -15,10 +15,10 @@ import * as mimeExtension from './mimeplugin';
 const extension: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab-h5web',
   autoStart: true,
-  requires: [IFileBrowserFactory, IRenderMimeRegistry, IDocumentManager],
+  requires: [IDefaultFileBrowser, IRenderMimeRegistry, IDocumentManager],
   activate: (
     app: JupyterFrontEnd,
-    factory: IFileBrowserFactory,
+    defaultFileBrowser: IDefaultFileBrowser,
     rendermime: IRenderMimeRegistry,
     docManager: IDocumentManager
   ): void => {
@@ -31,7 +31,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     app.registerPlugin(mimePlugin);
     mimePlugin.activate(app, rendermime);
 
-    activateOpenInBrowser(app, factory.defaultBrowser, docManager);
+    activateOpenInBrowser(app, defaultFileBrowser, docManager);
   },
 };
 
