@@ -91,6 +91,7 @@ works for the following extensions:
 - "Classic" HDF5: `.h5`, `.hdf5`
 - [NeXus](https://www.nexusformat.org/): `.nexus`, `.nx`, `.nxs`
 - [CXI](https://cxidb.org/cxi.html): `.cxi`
+- [NetCDF4](https://docs.unidata.ucar.edu/nug/current/): `.nc`, `.nc4`
 
 For other types of files, you can change the extension to one of the supported
 extensions or, if it is widespread,
