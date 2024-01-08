@@ -22,6 +22,7 @@ const HDF5_FILE_TYPE = {
     '.nxs',
     '.nc',
     '.nc4',
+    '.loom',
   ],
   mimeTypes: ['application/x-hdf5'],
   fileFormat: 'base64' as const,

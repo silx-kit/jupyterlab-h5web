@@ -92,6 +92,7 @@ works for the following extensions:
 - [NeXus](https://www.nexusformat.org/): `.nexus`, `.nx`, `.nxs`
 - [CXI](https://cxidb.org/cxi.html): `.cxi`
 - [NetCDF4](https://docs.unidata.ucar.edu/nug/current/): `.nc`, `.nc4`
+- [Loom](http://linnarssonlab.org/loompy/format/index.html): `.loom`
 
 For other types of files, you can change the extension to one of the supported
 extensions or, if it is widespread,
