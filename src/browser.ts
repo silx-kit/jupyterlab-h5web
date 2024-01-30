@@ -51,7 +51,13 @@ export function activateOpenInBrowser(
     execute: () => {
       const file = browser.selectedItems().next();
 
-      const content = new H5webWidget(file.value.path);
+      // https://github.com/silx-kit/jupyterlab-h5web/issues/121
+      const rawPath = file.value.path as string;
+      const path = rawPath.startsWith('RTC:')
+        ? rawPath.slice(4, rawPath.length)
+        : rawPath;
+
+      const content = new H5webWidget(path);
       const widget = new MainAreaWidget<H5webWidget>({ content });
       widget.title.label = file.value.name;
       app.shell.add(widget, 'main');
