@@ -54,7 +54,7 @@ setup_args = dict(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
-    install_requires=["jupyter_server>=1.6,<3", "h5grove==1.3.0", "h5py>=3.5"],
+    install_requires=["jupyter_server>=1.6,<3", "h5grove==2.0.0", "h5py>=3.5"],
     extras_require={"full": ["hdf5plugin"]},
     python_requires=">=3.8",
     zip_safe=False,
