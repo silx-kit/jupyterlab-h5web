@@ -115,3 +115,6 @@ nexus.nx
 
 # VSCode
 .vscode
+
+# Collaborative
+.jupyter_ystore.db
