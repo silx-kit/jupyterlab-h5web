@@ -33,7 +33,7 @@ about: File a bug report to help us improve.
 
 <details><summary>Extension lists</summary>
 <pre>
-Paste the output from running `jupyter labextension list` and `jupyter serverextension list` from the command line here.
+Paste the output from running `jupyter labextension list` and `jupyter server extension list` from the command line here.
 You may want to sanitize the paths in the output.
 </pre>
 </details>

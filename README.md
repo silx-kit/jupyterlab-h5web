@@ -116,13 +116,13 @@ If you are seeing the frontend extension but it is not working, check that
 It should be listed when running:
 
 ```bash
-jupyter serverextension list
+jupyter server extension list
 ```
 
 If `jupyterlab_h5web` does not appear or is disabled, try to enable it:
 
 ```
-jupyter serverextension enable jupyterlab_h5web
+jupyter server extension enable jupyterlab_h5web
 ```
 
 ### Check the frontend extension
