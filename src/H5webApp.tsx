@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { App, getFeedbackMailto, H5GroveProvider } from '@h5web/app';
 import { ServerConnection } from '@jupyterlab/services';
 
@@ -25,14 +25,22 @@ function TwoRenderApp() {
 
 function H5webApp(props: { filePath: string }) {
   const { filePath } = props;
-  const { baseUrl } = ServerConnection.makeSettings();
+  const { baseUrl, token } = ServerConnection.makeSettings();
+
+  const axiosConfig = useMemo(
+    () => ({
+      params: { file: filePath },
+      headers: token ? { Authorization: `token ${token}` } : {},
+    }),
+    [filePath, token]
+  );
 
   return (
     <div className="h5web-root">
       <H5GroveProvider
         url={`${baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl}/h5web`}
         filepath={filePath}
-        axiosConfig={{ params: { file: filePath } }}
+        axiosConfig={axiosConfig}
       >
         <TwoRenderApp />
       </H5GroveProvider>
