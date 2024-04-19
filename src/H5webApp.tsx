@@ -25,11 +25,14 @@ function TwoRenderApp() {
 
 function H5webApp(props: { filePath: string }) {
   const { filePath } = props;
-  const { baseUrl } = ServerConnection.makeSettings();
+  const { baseUrl, token } = ServerConnection.makeSettings();
 
   const axiosConfig = useMemo(
-    () => ({ params: { file: filePath } }),
-    [filePath]
+    () => ({
+      params: { file: filePath },
+      headers: token ? { Authorization: `token ${token}` } : {},
+    }),
+    [filePath, token]
   );
 
   return (
