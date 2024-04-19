@@ -1,2 +1,2 @@
 dependencies:
-  - jupyterlab
+  - jupyterlab~=3.0
