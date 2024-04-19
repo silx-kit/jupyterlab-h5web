@@ -4,6 +4,7 @@ node_modules/
 *.egg-info/
 .ipynb_checkpoints
 *.tsbuildinfo
+.yarn
 jupyterlab_h5web/labextension
 
 # Created by https://www.gitignore.io/api/python
@@ -110,3 +111,10 @@ dmypy.json
 
 # VSCode
 .vscode
+
+# Example files
+simple.h5
+nexus.nx
+
+# Collaborative
+.jupyter_ystore.db
