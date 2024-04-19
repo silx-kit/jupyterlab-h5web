@@ -428,24 +428,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@h5web/app@npm:11.0.0":
-  version: 11.0.0
-  resolution: "@h5web/app@npm:11.0.0"
+"@h5web/app@npm:11.2.0":
+  version: 11.2.0
+  resolution: "@h5web/app@npm:11.2.0"
   dependencies:
-    "@h5web/lib": 11.0.0
+    "@h5web/lib": 11.2.0
     "@react-hookz/web": 24.0.4
-    "@react-three/fiber": 8.15.16
+    "@react-three/fiber": 8.15.19
     axios: 1.6.7
     d3-format: 3.1.0
     ndarray: 1.0.19
     ndarray-ops: 1.2.2
-    react-error-boundary: 4.0.12
+    react-error-boundary: 4.0.13
     react-icons: 5.0.1
-    react-reflex: 4.1.0
+    react-reflex: 4.2.6
     react-slider: 2.0.4
     react-suspense-fetch: 0.4.1
-    three: 0.161.0
-    zustand: 4.5.0
+    three: 0.162.0
+    zustand: 4.5.2
   peerDependencies:
     react: ">=18"
     react-dom: ">=18"
@@ -453,16 +453,16 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 1a63dde0fb5551c6661be08407aa1c35739fa178cab11b1365504fdbfbca4e0a31a4395dbf96cc07429b858f69803fef96a51bbcc2cecdb09660985207856b53
+  checksum: c4b236de0ea5ad4f50a117c6022e6c5948a1ebe11dcac519baafcb79bee15ec787523bfa0873e24d2b4d32650cd4931a40f5789b373024db6c0902a8adc79532
   languageName: node
   linkType: hard
 
-"@h5web/lib@npm:11.0.0":
-  version: 11.0.0
-  resolution: "@h5web/lib@npm:11.0.0"
+"@h5web/lib@npm:11.2.0":
+  version: 11.2.0
+  resolution: "@h5web/lib@npm:11.2.0"
   dependencies:
     "@react-hookz/web": 24.0.4
-    "@visx/axis": 3.8.0
+    "@visx/axis": 3.10.1
     "@visx/drag": 3.3.0
     "@visx/grid": 3.5.0
     "@visx/scale": 3.5.0
@@ -473,7 +473,7 @@ __metadata:
     d3-format: 3.1.0
     d3-interpolate: 3.0.1
     d3-scale: 4.0.2
-    d3-scale-chromatic: 3.0.0
+    d3-scale-chromatic: 3.1.0
     ndarray: 1.0.19
     ndarray-ops: 1.2.2
     react-aria-menubutton: 7.0.3
@@ -482,7 +482,7 @@ __metadata:
     react-measure: 2.5.2
     react-slider: 2.0.4
     react-window: 1.8.10
-    zustand: 4.5.0
+    zustand: 4.5.2
   peerDependencies:
     "@react-three/fiber": ">=8"
     react: ">=18"
@@ -492,7 +492,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: cbf6aba7c8f0c10f42b57639d2d5de540c58f4c6a42f01d18a12a58aa916bbb20fcaaf55dfdf8b6d5f23242e3e4277cdbe15f74b6500c3928e8c4fe8ba329e91
+  checksum: 370204919f57bb3b3ec0a789a452003c39c80949cef40c693ba6c45e16afac3cfd66d47c6a96a1fb2c72b3364d521ac5734cc65c48390e7bf87e44e80bd34904
   languageName: node
   linkType: hard
 
@@ -1295,9 +1295,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/fiber@npm:8.15.16":
-  version: 8.15.16
-  resolution: "@react-three/fiber@npm:8.15.16"
+"@react-three/fiber@npm:8.15.19":
+  version: 8.15.19
+  resolution: "@react-three/fiber@npm:8.15.19"
   dependencies:
     "@babel/runtime": ^7.17.8
     "@types/react-reconciler": ^0.26.7
@@ -1332,7 +1332,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: 58d5898563a9ca0c47e81e85c17fed6ee5021c272697081ee10edf557d197996e5249814a50d2e0f8f5625f26e8947a7419c3981b72f87f82826f833790240b0
+  checksum: 10d1c2910391e0fb55cb332f82f0c7f27e517c350c40159fbab9fc29c11f50e8de681705f67b7fa9f564eefafb167bc929f02dcc3e26a88f98d57f221886c0be
   languageName: node
   linkType: hard
 
@@ -1898,9 +1898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@visx/axis@npm:3.8.0":
-  version: 3.8.0
-  resolution: "@visx/axis@npm:3.8.0"
+"@visx/axis@npm:3.10.1":
+  version: 3.10.1
+  resolution: "@visx/axis@npm:3.10.1"
   dependencies:
     "@types/react": "*"
     "@visx/group": 3.3.0
@@ -1912,7 +1912,7 @@ __metadata:
     prop-types: ^15.6.0
   peerDependencies:
     react: ^16.3.0-0 || ^17.0.0-0 || ^18.0.0-0
-  checksum: 8d3163971b2a88bd81afbfdda0a1c0a5783e6b0a1f75de2153d20b16c165f031ffacc3807b4552126319ba3304007c1520016f1e06b551490842d037901d151f
+  checksum: dd840a9ff1582917f0ffe817a985d083176385865904b891e0e37f35d8264fecb81a958ac4c44f1b5b7bdafedf2f8ba50935853cc3c9f2a34e395eac1626f513
   languageName: node
   linkType: hard
 
@@ -3054,13 +3054,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3-scale-chromatic@npm:3.0.0":
-  version: 3.0.0
-  resolution: "d3-scale-chromatic@npm:3.0.0"
+"d3-scale-chromatic@npm:3.1.0":
+  version: 3.1.0
+  resolution: "d3-scale-chromatic@npm:3.1.0"
   dependencies:
     d3-color: 1 - 3
     d3-interpolate: 1 - 3
-  checksum: a8ce4cb0267a17b28ebbb929f5e3071d985908a9c13b6fcaa2a198e1e018f275804d691c5794b970df0049725b7944f32297b31603d235af6414004f0c7f82c0
+  checksum: ab6324bd8e1f708e731e02ab44e09741efda2b174cea1d8ca21e4a87546295e99856bc44e2fd3890f228849c96bccfbcf922328f95be6a7df117453eb5cf22c9
   languageName: node
   linkType: hard
 
@@ -5097,7 +5097,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "jupyterlab-h5web@workspace:."
   dependencies:
-    "@h5web/app": 11.0.0
+    "@h5web/app": 11.2.0
     "@jupyterlab/application": ^4.0.0
     "@jupyterlab/apputils": ^4.0.0
     "@jupyterlab/builder": ^4.0.0
@@ -6091,14 +6091,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-error-boundary@npm:4.0.12":
-  version: 4.0.12
-  resolution: "react-error-boundary@npm:4.0.12"
+"react-error-boundary@npm:4.0.13":
+  version: 4.0.13
+  resolution: "react-error-boundary@npm:4.0.13"
   dependencies:
     "@babel/runtime": ^7.12.5
   peerDependencies:
     react: ">=16.13.1"
-  checksum: c4a14c2b609037baba394d8871fb021a7c16fb1abfd8d23b2d2aa331bdcc420e5cff4b3d48f2f2ac7fa64ac90c322d0bcf358d706995b30df5a8d5fcb0c27b1e
+  checksum: 50398d080015d51d22c6f94c56f4ea336d10232d72345b36ee6f15b6b643666d20b072829b02f091a80e5af68fe67f68a62ef0d2b649dbd759ead929304449af
   languageName: node
   linkType: hard
 
@@ -6170,9 +6170,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-reflex@npm:4.1.0":
-  version: 4.1.0
-  resolution: "react-reflex@npm:4.1.0"
+"react-reflex@npm:4.2.6":
+  version: 4.2.6
+  resolution: "react-reflex@npm:4.2.6"
   dependencies:
     "@babel/runtime": ^7.0.0
     lodash.throttle: ^4.1.1
@@ -6180,7 +6180,7 @@ __metadata:
     react-measure: ^2.0.2
   peerDependencies:
     react: ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 279d689301f8b642d675b3024a8d31720123eb71356e3aa4b81894d4a0c8369239e7e0d0f8d6131dc01e18fc897140f38730e37a9ebf3827d9e020652e595e5d
+  checksum: a205851c977e8731bf71d74b79ace0cb4a426b8908ea9e6bb8c9ba36cb9280306e024dae05c29ac4c3bf2c3091981225c61b3eb2a90e810db353cfc0ca90ca8f
   languageName: node
   linkType: hard
 
@@ -7085,10 +7085,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:0.161.0":
-  version: 0.161.0
-  resolution: "three@npm:0.161.0"
-  checksum: eb4df25a794dcd92b62ca4705b62c9391735863b4016fabe6d136e220449e5d840c0cfd183eb07caef3d6aeb241e78f58845087b4d27a30a420ed8f35a2ab12d
+"three@npm:0.162.0":
+  version: 0.162.0
+  resolution: "three@npm:0.162.0"
+  checksum: f3ba4d518f7cb209b6e4f8818177c1230014fc1b3dcd66ab113a9babf8e2b522645a1eb144dfc0900bf194e8890bc5d04f358dd4a7f06ee8aa44db56224f88fc
   languageName: node
   linkType: hard
 
@@ -7735,9 +7735,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zustand@npm:4.5.0":
-  version: 4.5.0
-  resolution: "zustand@npm:4.5.0"
+"zustand@npm:4.5.2":
+  version: 4.5.2
+  resolution: "zustand@npm:4.5.2"
   dependencies:
     use-sync-external-store: 1.2.0
   peerDependencies:
@@ -7751,7 +7751,7 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: 91685492ab33bb656b98e07d8fff2be1794d8e68ac5dc546ec457f4ae3d709f0c19de9e93045b9ee5d6b704f64503d9e085ffe1f600f6ade0459e572d1cf5c0d
+  checksum: 160052a7faaefbaad1071e890a06e5d7a04f6ff6985def30a7b4471f4ddbdd1d30bb05b3688a2777cd0b717d1f0d98dad24883a5caa3deeb3afb4d83b6dabc55
   languageName: node
   linkType: hard
 
