@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    uses: silx-kit/jupyterlab-h5web/.github/workflows/build.yml@main
+    uses: silx-kit/jupyterlab-h5web/.github/workflows/build.yml@8.x
   release:
     needs: build
     runs-on: ubuntu-latest
