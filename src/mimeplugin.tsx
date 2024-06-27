@@ -2,10 +2,10 @@ import type { IRenderMime } from '@jupyterlab/rendermime-interfaces';
 import { Widget } from '@lumino/widgets';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import HDF5_FILE_TYPE from './fileType';
-import H5webApp from './H5webApp';
+import H5WebInCell from './H5WebInCell';
 
 class HDF5FilePathRenderer extends Widget implements IRenderMime.IRenderer {
   /* Renders HDF5 files from their path with H5web */
@@ -22,15 +22,8 @@ class HDF5FilePathRenderer extends Widget implements IRenderMime.IRenderer {
       throw new TypeError('Expected string');
     }
 
-    return new Promise<void>((resolve) => {
-      ReactDOM.render(
-        <div className="h5web-in-cell">
-          <H5webApp filePath={path} />
-        </div>,
-        this.node,
-        () => resolve()
-      );
-    });
+    createRoot(this.node).render(<H5WebInCell path={path} />);
+    return Promise.resolve();
   }
 }
 
