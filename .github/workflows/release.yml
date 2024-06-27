@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download the built extension
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: jupyterlab_h5web-dist
           path: dist
