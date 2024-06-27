@@ -2,57 +2,53 @@
 
 ## Install
 
-Note: You will need NodeJS to build the extension package.
-
-The `jlpm` command is JupyterLab's pinned version of
-[yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
-`yarn` or `npm` in lieu of `jlpm` below.
-
 ```bash
-# Clone the repo to your local environment
+# Prepare environment with pip, conda, micromamba ...
+conda install -c conda-forge nodejs=20 jupyterlab==4 jupyter-packaging jupyterlab-h5web
+
+# Install front-end dependencies (`jlpm` is JupyterLab's pinned version of yarn)
+jlpm install
+
 # Install package in development mode
 pip install -e .
+
 # Link your development version of the extension with JupyterLab
 jupyter labextension develop . --overwrite
-# Server extension must be manually installed in develop mode
+
+# Server extension must be manually enabled in develop mode
 jupyter server extension enable jupyterlab_h5web
-# Rebuild extension Typescript source after making changes
+```
+
+## Develop
+
+```bash
+# Start JupyterLab
+jupyter lab
+
+# In a separate terminal, watch and rebuild the front-end automatically
+jlpm run watch
+
+# Alternatively, rebuild when needed
 jlpm run build
 ```
 
-You can watch the source directory and run JupyterLab at the same time in
-different terminals to watch for changes in the extension's source and
-automatically rebuild the extension.
+Whenever the front-end rebuilds, make sure to **refresh** JupyterLab in your
+browser to see the changes.
 
-```bash
-# Watch the source directory in one terminal, automatically rebuilding when needed
-jlpm run watch
-# Run JupyterLab in another terminal
-jupyter lab
-```
-
-With the watch command running, every saved change will immediately be built
-locally and available in your running JupyterLab. Refresh JupyterLab to load the
-change in your browser (you may need to wait several seconds for the extension
-to be rebuilt).
-
-By default, the `jlpm run build` command generates the source maps for this
-extension to make it easier to debug using the browser dev tools. To also
-generate source maps for the JupyterLab core extensions, you can run the
-following command:
+By default, `jlpm run build` builds the front-end in development mode and
+generates source maps for easier debugging with the browser dev tools. To also
+generate source maps for the JupyterLab core extensions, run:
 
 ```bash
 jupyter lab build --minimize=False
 ```
 
-> **Note**: Building the extension in developement mode prevents from testing
-> R3F visualisations
-> ([they freeze the browser](https://github.com/silx-kit/jupyterlab-h5web/issues/67)).
-> To test the visualisations, the extension must be built in production mode by
-> running `jlpm build:prod`. Unfortunately, this means that the `watch` command
-> cannot be used (`jlpm build:prod` must be run at each change).
+> Unfortunately, building the front-end in development mode
+> [breaks](https://github.com/silx-kit/jupyterlab-h5web/issues/67) H5Web's
+> R3F-based visualisations (_Heatmap_, _Line_, etc.) The current workaround is
+> to built in production mode with `jlpm run build:prod`.
 
-## Development uninstall
+## Uninstall
 
 ```bash
 # Server extension must be manually disabled in develop mode
@@ -66,12 +62,12 @@ In development mode, you will also need to remove the symlink created by
 located. Then you can remove the symlink named `jupyterlab-h5web` within that
 folder.
 
-## Formatting
+## Format
 
 This extension uses `prettier` to format `*.ts` files and `black` to format
 `*.py` files.
 
-## Release process
+## Release
 
 The release process is adapted from
 [the one from h5web](https://github.com/silx-kit/h5web/blob/main/CONTRIBUTING.md#release-process).

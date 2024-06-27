@@ -54,7 +54,7 @@ setup_args = dict(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
-    install_requires=["jupyter_server>=1.6,<3", "h5grove==2.1.0", "h5py>=3.5"],
+    install_requires=["jupyter_server>=1.6,<3", "h5grove==2.2.0", "h5py>=3.5"],
     extras_require={"full": ["hdf5plugin"]},
     python_requires=">=3.8",
     zip_safe=False,
@@ -83,7 +83,7 @@ setup_args = dict(
 ensured_targets = [str(lab_path / "package.json"), str(lab_path / "static/style.js")]
 
 post_develop = npm_builder(
-    build_cmd="install:extension", source_dir="src", build_dir=lab_path
+    build_cmd="build", source_dir="src", build_dir=lab_path
 )
 setup_args["cmdclass"] = wrap_installers(
     post_develop=post_develop, ensured_targets=ensured_targets
