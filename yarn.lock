@@ -437,7 +437,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/react-dom@npm:^2.0.0":
+"@floating-ui/react-dom@npm:^2.1.1":
   version: 2.1.1
   resolution: "@floating-ui/react-dom@npm:2.1.1"
   dependencies:
@@ -449,24 +449,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/react@npm:0.26.14":
-  version: 0.26.14
-  resolution: "@floating-ui/react@npm:0.26.14"
+"@floating-ui/react@npm:0.26.20":
+  version: 0.26.20
+  resolution: "@floating-ui/react@npm:0.26.20"
   dependencies:
-    "@floating-ui/react-dom": ^2.0.0
-    "@floating-ui/utils": ^0.2.0
+    "@floating-ui/react-dom": ^2.1.1
+    "@floating-ui/utils": ^0.2.5
     tabbable: ^6.0.0
   peerDependencies:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 81e9d215d33fdbe243f5ce9ba139e90a131a84a7a1f2d853b5591d31186e0a5542a2ee2eee76a9d24db1487698bf11c84a2767fe28c7186803b9b9c58cd92f97
+  checksum: efabcb9370a9bd040f81c20695791ab6f4ce3333fdd7d5ea8a3ec5b9e888b2b58a8c8567eff950ab938899e267bbef3e90ea291fa4b597b1a89839f2c929cb2f
   languageName: node
   linkType: hard
 
-"@floating-ui/utils@npm:^0.2.0, @floating-ui/utils@npm:^0.2.3":
+"@floating-ui/utils@npm:^0.2.3":
   version: 0.2.3
   resolution: "@floating-ui/utils@npm:0.2.3"
   checksum: 25c61c6391c2b6d46305c377b5fb6929c953d5ee8e79785cdb63137f7e7a557555cc2d97331d5fd6d848f69760095e645631c0a915766cd7343b555e4c9ecf66
+  languageName: node
+  linkType: hard
+
+"@floating-ui/utils@npm:^0.2.5":
+  version: 0.2.7
+  resolution: "@floating-ui/utils@npm:0.2.7"
+  checksum: 7e6707c4c6d496f86377a97aac0232926953a2da9c2058ed79d8b44031038ef8fcf9743dac7b38c1da7148460194da987814d78af801ec5c278abf9b303adb22
   languageName: node
   linkType: hard
 
@@ -477,14 +484,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@h5web/app@npm:12.0.0":
-  version: 12.0.0
-  resolution: "@h5web/app@npm:12.0.0"
+"@h5web/app@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@h5web/app@npm:13.0.0"
   dependencies:
-    "@h5web/lib": 12.0.0
+    "@h5web/lib": 13.0.0
     "@react-hookz/web": 24.0.4
-    "@react-three/fiber": 8.16.6
-    axios: 1.6.8
+    "@react-three/fiber": 8.16.8
+    axios: 1.7.3
     d3-format: 3.1.0
     ndarray: 1.0.19
     ndarray-ops: 1.2.2
@@ -492,8 +499,8 @@ __metadata:
     react-icons: 5.2.1
     react-reflex: 4.2.6
     react-slider: 2.0.4
-    three: 0.164.1
-    zustand: 4.5.2
+    three: 0.167.1
+    zustand: 4.5.4
   peerDependencies:
     react: ">=18"
     react-dom: ">=18"
@@ -501,15 +508,15 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 598a466ef947f334da1f0fd4929c68b4b4abc6cd834c7fef4b9a67d67b1d024fb23fde24191090d0e9d025ddbd96e654146c5ae7a23af96f3b61c3fd03e8d880
+  checksum: 0ccb5332a9981a9e41f5a8cc0f5dcdc823b5cb22048c6d874b3f13a3704d48774d5cdb4187b56d2519f3d18cacf38381aa250abf65e826abac447ad6c4619ffc
   languageName: node
   linkType: hard
 
-"@h5web/lib@npm:12.0.0":
-  version: 12.0.0
-  resolution: "@h5web/lib@npm:12.0.0"
+"@h5web/lib@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@h5web/lib@npm:13.0.0"
   dependencies:
-    "@floating-ui/react": 0.26.14
+    "@floating-ui/react": 0.26.20
     "@react-hookz/web": 24.0.4
     "@visx/axis": 3.10.1
     "@visx/drag": 3.3.0
@@ -530,7 +537,7 @@ __metadata:
     react-measure: 2.5.2
     react-slider: 2.0.4
     react-window: 1.8.10
-    zustand: 4.5.2
+    zustand: 4.5.4
   peerDependencies:
     "@react-three/fiber": ">=8"
     react: ">=18"
@@ -540,7 +547,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 9ade8ad13430261b1dc770360cfac9425257c9f4fb6527dfd32c402da482142c3cce684966a02a208c8f8ebbaed2fd9868c5a556544a2caa20ea759ba2fb58f2
+  checksum: 4b7d178a89db646c82d4f6ed49c470b43d3da5ea4795631f660d5ceccdc65d0febbb5f19059fc92f75440ceaddbe4e3921c64c05354a17000aaa514886320cc0
   languageName: node
   linkType: hard
 
@@ -1345,9 +1352,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/fiber@npm:8.16.6":
-  version: 8.16.6
-  resolution: "@react-three/fiber@npm:8.16.6"
+"@react-three/fiber@npm:8.16.8":
+  version: 8.16.8
+  resolution: "@react-three/fiber@npm:8.16.8"
   dependencies:
     "@babel/runtime": ^7.17.8
     "@types/react-reconciler": ^0.26.7
@@ -1382,7 +1389,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: b398a8f6c287c3d61d2d19f4c5308b9e3d95a04c65d56574bdf0b459e1234962e64cfa2d378fd07f25027c8272a4a5e2f8a278ab4bfaa20d90fe47fcd809ee12
+  checksum: eb675bdb6af8ef6d7d60d34d755e03ee0b4458f5d45b6f4445e55dc9f80873e3156ce7ce87eb31379e2a7a7625530a9a0742d741daef53a35b106318791c4b51
   languageName: node
   linkType: hard
 
@@ -2623,14 +2630,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:1.6.8":
-  version: 1.6.8
-  resolution: "axios@npm:1.6.8"
+"axios@npm:1.7.3":
+  version: 1.7.3
+  resolution: "axios@npm:1.7.3"
   dependencies:
     follow-redirects: ^1.15.6
     form-data: ^4.0.0
     proxy-from-env: ^1.1.0
-  checksum: bf007fa4b207d102459300698620b3b0873503c6d47bf5a8f6e43c0c64c90035a4f698b55027ca1958f61ab43723df2781c38a99711848d232cad7accbcdfcdd
+  checksum: bc304d6da974922342aed7c33155934354429cdc7e1ba9d399ab9ff3ac76103f3697eeedf042a634d43cdae682182bcffd942291db42d2be45b750597cdd5eef
   languageName: node
   linkType: hard
 
@@ -5177,7 +5184,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "jupyterlab-h5web@workspace:."
   dependencies:
-    "@h5web/app": 12.0.0
+    "@h5web/app": 13.0.0
     "@jupyterlab/application": ^4.0.0
     "@jupyterlab/apputils": ^4.0.0
     "@jupyterlab/builder": ^4.0.0
@@ -7148,10 +7155,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:0.164.1":
-  version: 0.164.1
-  resolution: "three@npm:0.164.1"
-  checksum: 64a1b713cd14b53af12858ad1b89a9daaa493ee2a42384480e408ec3add6cd474811b34a5faa4a3611398db39ed86afb3a96b4d0a54a2feaacc9c5dc54cf5c8a
+"three@npm:0.167.1":
+  version: 0.167.1
+  resolution: "three@npm:0.167.1"
+  checksum: 4500a7eb16dc9143f0e71b11c4886d003f31cd8e4cd4e755a045afbcdce0f3f9cec47ab1c9d00eb45fa2bb3ace6ef17b105eee93b90b15b43f0af1139db8741d
   languageName: node
   linkType: hard
 
@@ -7798,9 +7805,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zustand@npm:4.5.2":
-  version: 4.5.2
-  resolution: "zustand@npm:4.5.2"
+"zustand@npm:4.5.4":
+  version: 4.5.4
+  resolution: "zustand@npm:4.5.4"
   dependencies:
     use-sync-external-store: 1.2.0
   peerDependencies:
@@ -7814,7 +7821,7 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: 160052a7faaefbaad1071e890a06e5d7a04f6ff6985def30a7b4471f4ddbdd1d30bb05b3688a2777cd0b717d1f0d98dad24883a5caa3deeb3afb4d83b6dabc55
+  checksum: 8e824aea8b5232f9a719c6d33e016272a0dae8c69a0980a3e2aefbcf2a89379b343af1f2dace340f45f788ec8d8a55a56d037c53498b3b05b91e985d26cae047
   languageName: node
   linkType: hard
 
