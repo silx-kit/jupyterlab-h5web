@@ -18,7 +18,7 @@ const PATCH_OPENING = true;
 // Add special handling for HDF files to the function handling file openings (docManager.open)
 export function patchOpeningOfHdf5File(
   app: JupyterFrontEnd,
-  docManager: IDocumentManager
+  docManager: IDocumentManager,
 ): void {
   const { commands } = app;
 
@@ -27,7 +27,7 @@ export function patchOpeningOfHdf5File(
     path: string,
     widgetName = 'default',
     kernel?: Partial<Kernel.IModel>,
-    options?: DocumentRegistry.IOpenOptions
+    options?: DocumentRegistry.IOpenOptions,
   ) => {
     if (HDF5_FILE_TYPE.extensions.includes(PathExt.extname(path))) {
       commands.execute(OPEN_H5WEB_COMMAND);
@@ -41,7 +41,7 @@ export function patchOpeningOfHdf5File(
 export function activateOpenInBrowser(
   app: JupyterFrontEnd,
   browser: IDefaultFileBrowser,
-  docManager: IDocumentManager
+  docManager: IDocumentManager,
 ): void {
   const { commands } = app;
   commands.addCommand(OPEN_H5WEB_COMMAND, {
@@ -81,7 +81,7 @@ export function activateOpenInBrowser(
         name: 'jupyterlab-h5web:main',
         readOnly: true,
         modelName: HDF5_FILE_TYPE.fileFormat,
-      })
+      }),
     );
   }
 }

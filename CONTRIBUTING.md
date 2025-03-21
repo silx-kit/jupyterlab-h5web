@@ -4,7 +4,7 @@
 
 ```bash
 # Prepare environment with pip, conda, micromamba ...
-conda install -c conda-forge nodejs=20 jupyterlab==4 jupyter-packaging jupyterlab-h5web
+conda install -c conda-forge nodejs=22 jupyterlab==4 jupyter-packaging jupyterlab-h5web
 
 # Install front-end dependencies (`jlpm` is JupyterLab's pinned version of yarn)
 jlpm install

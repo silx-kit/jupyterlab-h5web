@@ -13,7 +13,7 @@ function H5webApp(props: { filePath: string }) {
       params: { file: filePath },
       headers: token ? { Authorization: `token ${token}` } : {},
     }),
-    [filePath, token]
+    [filePath, token],
   );
 
   return (

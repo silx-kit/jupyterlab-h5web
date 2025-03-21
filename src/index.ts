@@ -20,7 +20,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     app: JupyterFrontEnd,
     defaultFileBrowser: IDefaultFileBrowser,
     rendermime: IRenderMimeRegistry,
-    docManager: IDocumentManager
+    docManager: IDocumentManager,
   ): void => {
     // eslint-disable-next-line no-console
     console.log('JupyterLab extension jupyterlab-h5web is activated!');
