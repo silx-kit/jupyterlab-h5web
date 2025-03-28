@@ -1,0 +1,25 @@
+{
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  "json.format.enable": false,
+
+  "js/ts.implicitProjectConfig.checkJs": false,
+  "css.validate": false,
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[python]": { "editor.formatOnSave": false },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.preferences.autoImportSpecifierExcludeRegexes": [
+    "^(node:)?(console|util|test)$"
+  ],
+
+  "eslint.codeAction.disableRuleComment": { "location": "sameLine" }
+}

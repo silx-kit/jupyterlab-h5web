@@ -113,8 +113,5 @@ nexus.nx
 
 # End of https://www.gitignore.io/api/python
 
-# VSCode
-.vscode
-
 # Collaborative
 .jupyter_ystore.db
