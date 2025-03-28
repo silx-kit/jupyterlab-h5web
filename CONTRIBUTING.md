@@ -9,6 +9,9 @@ conda install -c conda-forge nodejs=22 jupyterlab==4 jupyter-packaging jupyterla
 # Install front-end dependencies (`jlpm` is JupyterLab's pinned version of yarn)
 jlpm install
 
+# Build the front-end
+jlpm build
+
 # Install package in development mode
 pip install -e .
 

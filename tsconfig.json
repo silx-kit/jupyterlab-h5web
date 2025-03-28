@@ -1,25 +1,25 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "composite": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "incremental": true,
-    "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
-    "noEmitOnError": true,
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "preserveWatchOutput": true,
-    "resolveJsonModule": true,
-    "outDir": "lib",
-    "rootDir": "src",
-    "skipLibCheck": true,
-    "strict": true,
-    "strictNullChecks": true,
     "target": "es2018",
-    "types": []
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "incremental": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "useUnknownInCatchVariables": true
   },
-  "include": ["src/*"]
+  "include": ["*", "src"]
 }
