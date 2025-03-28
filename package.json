@@ -43,17 +43,17 @@
     "build:prod": "jlpm run clean && jlpm run build:lib && jlpm run build:labextension",
     "build:labextension": "jupyter labextension build .",
     "build:labextension:dev": "jupyter labextension build --development True --source-map True .",
-    "build:lib": "tsc",
+    "build:lib": "tsc --project tsconfig.build.json",
     "clean": "jlpm run clean:lib",
     "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
     "clean:labextension": "rimraf jupyterlab_h5web/labextension",
     "clean:all": "jlpm run clean:lib && jlpm run clean:labextension",
     "lint": "run-p 'lint:*'",
-    "lint:eslint": "eslint \"**/*.{ts,tsx,js,jsx}\" --max-warnings=0",
-    "lint:tsc": "tsc --noEmit",
+    "lint:eslint": "eslint --max-warnings=0",
+    "lint:tsc": "tsc",
     "lint:prettier": "prettier --check .",
     "watch": "run-p watch:src watch:labextension",
-    "watch:src": "tsc -w",
+    "watch:src": "tsc --project tsconfig.build.json --watch",
     "watch:labextension": "jupyter labextension watch .",
     "postversion": "git push && git push --tags"
   },
@@ -76,20 +76,17 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
+    "@esrf/eslint-config": "1.0.6",
     "@jupyterlab/builder": "4.3.6",
     "@types/node": "^22.13.11",
     "@types/react": "^18.3.19",
     "@types/react-dom": "^18.3.5",
-    "@typescript-eslint/eslint-plugin": "^5.55.0",
-    "@typescript-eslint/parser": "^5.55.0",
-    "eslint": "8.26.0",
-    "eslint-config-galex": "4.3.1",
-    "eslint-plugin-import": "^2.27.5",
+    "eslint": "9.23.0",
     "mkdirp": "3.0.1",
     "npm-run-all": "4.1.5",
     "prettier": "3.5.3",
     "rimraf": "6.0.1",
-    "typescript": "~5.1.3"
+    "typescript": "5.8.2"
   },
   "jupyterlab": {
     "discovery": {

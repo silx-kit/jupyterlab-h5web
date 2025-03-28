@@ -1,10 +1,10 @@
-import React, { useMemo } from 'react';
 import { App, getFeedbackMailto, H5GroveProvider } from '@h5web/app';
 import { ServerConnection } from '@jupyterlab/services';
+import { useMemo } from 'react';
 
 const FEEDBACK_EMAIL = 'h5web@esrf.fr';
 
-function H5webApp(props: { filePath: string }) {
+function H5WebApp(props: { filePath: string }) {
   const { filePath } = props;
   const { baseUrl, token } = ServerConnection.makeSettings();
 
@@ -34,4 +34,4 @@ function H5webApp(props: { filePath: string }) {
   );
 }
 
-export default H5webApp;
+export default H5WebApp;
