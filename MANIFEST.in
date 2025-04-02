@@ -1,28 +1,30 @@
+# Files
+include install.json
+include jupyter-config/jupyterlab-h5web.json
 include LICENSE.md
 include README.md
-include pyproject.toml
-exclude CONTRIBUTING.md
-exclude requirements_release.txt
-exclude example.ipynb
-
-include jupyter-config/jupyterlab-h5web.json
-
 include package.json
-include install.json
-include ts*.json
+include pyproject.toml
 include yarn.lock
-graft jupyterlab_h5web/labextension
 
-# Javascript files
-graft src
-graft style
-prune **/node_modules
-prune lib
-prune binder
+exclude CONTRIBUTING.md
+exclude eslint.config.mjs
+exclude example.ipynb
+exclude requirements_release.txt
+exclude tsconfig*.json
 
-# Patterns to exclude from any directory
 global-exclude *~
 global-exclude *.pyc
 global-exclude *.pyo
-global-exclude .git
-global-exclude .ipynb_checkpoints
+
+# Directories
+graft jupyterlab_h5web/labextension
+graft src
+graft style
+
+prune .git
+prune .ipynb_checkpoints
+prune .vscode
+prune binder
+prune lib
+prune **/node_modules

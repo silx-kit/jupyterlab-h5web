@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
+    "allowJs": false,
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": false,
+    "noEmitOnError": true,
+    "sourceMap": true,
+    "preserveWatchOutput": true
+  }
+}

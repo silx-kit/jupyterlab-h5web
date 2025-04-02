@@ -1,10 +1,10 @@
-import type {
-  JupyterFrontEnd,
-  JupyterFrontEndPlugin,
+import {
+  type JupyterFrontEnd,
+  type JupyterFrontEndPlugin,
 } from '@jupyterlab/application';
+import { createRendermimePlugins } from '@jupyterlab/application/lib/mimerenderers';
 import { IDocumentManager } from '@jupyterlab/docmanager';
 import { IDefaultFileBrowser } from '@jupyterlab/filebrowser';
-import { createRendermimePlugins } from '@jupyterlab/application/lib/mimerenderers';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 
 import { activateOpenInBrowser } from './browser';
@@ -28,8 +28,8 @@ const extension: JupyterFrontEndPlugin<void> = {
     app.docRegistry.addFileType(HDF5_FILE_TYPE);
 
     const [mimePlugin] = createRendermimePlugins([mimeExtension]);
-    app.registerPlugin(mimePlugin);
-    mimePlugin.activate(app, rendermime);
+    app.registerPlugin(mimePlugin); // eslint-disable-line @typescript-eslint/no-unsafe-argument
+    void mimePlugin.activate(app, rendermime);
 
     activateOpenInBrowser(app, defaultFileBrowser, docManager);
   },

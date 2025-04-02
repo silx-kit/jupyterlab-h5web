@@ -1,14 +1,15 @@
-import type { JupyterFrontEnd } from '@jupyterlab/application';
+import { type JupyterFrontEnd } from '@jupyterlab/application';
 import { MainAreaWidget } from '@jupyterlab/apputils';
 import { PathExt } from '@jupyterlab/coreutils';
-import type { IDocumentManager } from '@jupyterlab/docmanager';
-import type { DocumentRegistry } from '@jupyterlab/docregistry';
-import type { IDefaultFileBrowser } from '@jupyterlab/filebrowser';
-import type { Kernel } from '@jupyterlab/services';
+import { type IDocumentManager } from '@jupyterlab/docmanager';
+import { type DocumentRegistry } from '@jupyterlab/docregistry';
+import { type IDefaultFileBrowser } from '@jupyterlab/filebrowser';
+import { type Kernel } from '@jupyterlab/services';
 
 import HDF5_FILE_TYPE from './fileType';
+import { H5WebWidget } from './H5WebWidget';
+import H5WebWidgetFactory from './H5WebWidgetFactory';
 import { h5webIcon } from './icons';
-import H5webWidgetFactory, { H5webWidget } from './widget';
 
 const OPEN_H5WEB_COMMAND = 'h5web-open';
 
@@ -22,7 +23,9 @@ export function patchOpeningOfHdf5File(
 ): void {
   const { commands } = app;
 
-  const normalOpen = docManager.open;
+  const normalOpen = docManager.open.bind(docManager);
+
+  // eslint-disable-next-line no-param-reassign
   docManager.open = (
     path: string,
     widgetName = 'default',
@@ -30,7 +33,7 @@ export function patchOpeningOfHdf5File(
     options?: DocumentRegistry.IOpenOptions,
   ) => {
     if (HDF5_FILE_TYPE.extensions.includes(PathExt.extname(path))) {
-      commands.execute(OPEN_H5WEB_COMMAND);
+      void commands.execute(OPEN_H5WEB_COMMAND);
       return undefined;
     }
     // If it is not a HDF5 file, handle the opening "normally"
@@ -49,21 +52,21 @@ export function activateOpenInBrowser(
     caption: 'Explore and visualize the contents of the HDF5 file',
     icon: h5webIcon,
     execute: () => {
-      const file = browser.selectedItems().next();
+      const [file] = [...browser.selectedItems()];
 
       // https://github.com/silx-kit/jupyterlab-h5web/issues/121
-      const rawPath = file.value.path as string;
-      const path = rawPath.startsWith('RTC:')
-        ? rawPath.slice(4, rawPath.length)
-        : rawPath;
+      const rawPath = file.path;
+      const path = rawPath.startsWith('RTC:') ? rawPath.slice(4) : rawPath;
 
-      const content = new H5webWidget(path);
-      const widget = new MainAreaWidget<H5webWidget>({ content });
-      widget.title.label = file.value.name;
+      const content = new H5WebWidget(path);
+      const widget = new MainAreaWidget<H5WebWidget>({ content });
+      widget.title.label = file.name;
+
       app.shell.add(widget, 'main');
     },
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (PATCH_OPENING) {
     patchOpeningOfHdf5File(app, docManager);
 
@@ -75,7 +78,7 @@ export function activateOpenInBrowser(
     });
   } else {
     app.docRegistry.addWidgetFactory(
-      new H5webWidgetFactory({
+      new H5WebWidgetFactory({
         defaultFor: [HDF5_FILE_TYPE.name],
         fileTypes: [HDF5_FILE_TYPE.name],
         name: 'jupyterlab-h5web:main',

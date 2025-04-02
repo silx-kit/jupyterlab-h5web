@@ -1,6 +1,6 @@
-import React from 'react';
-import H5webApp from './H5webApp';
 import { useMeasure } from '@react-hookz/web';
+
+import H5WebApp from './H5WebApp';
 
 interface Props {
   path: string;
@@ -14,7 +14,7 @@ function H5WebInCell(props: Props) {
 
   return (
     <div ref={cellRef} className="h5web-in-cell">
-      {rect && rect.width > 0 && <H5webApp filePath={path} />}
+      {rect && rect.width > 0 && <H5WebApp filePath={path} />}
     </div>
   );
 }
