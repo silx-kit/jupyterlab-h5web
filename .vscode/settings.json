@@ -7,8 +7,8 @@
   "css.validate": false,
 
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[python]": { "editor.defaultFormatter": "ms-python.black-formatter" },
   "editor.formatOnSave": true,
-  "[python]": { "editor.formatOnSave": false },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
@@ -21,5 +21,6 @@
     "^(node:)?(console|util|test)$"
   ],
 
+  "black-formatter.importStrategy": "fromEnvironment",
   "eslint.codeAction.disableRuleComment": { "location": "sameLine" }
 }
