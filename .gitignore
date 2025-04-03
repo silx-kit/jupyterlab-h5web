@@ -6,6 +6,8 @@ node_modules/
 *.tsbuildinfo
 .yarn
 jupyterlab_h5web/labextension
+# Version file is handled by hatchling
+jupyterlab_h5web/_version.py
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
@@ -107,11 +109,11 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# End of https://www.gitignore.io/api/python
+
 # Example files
 simple.h5
 nexus.nx
-
-# End of https://www.gitignore.io/api/python
 
 # Collaborative
 .jupyter_ystore.db
