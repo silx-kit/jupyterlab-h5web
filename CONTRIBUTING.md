@@ -2,15 +2,13 @@
 
 ## Install
 
+1. Clone the repo locally and navigate in the created folder
+2. Prepare a virtual environment with `mamba`, `conda` or `micromamba`
+3. Run the following commands in your newly created environment
+
 ```bash
-# Prepare environment with pip, conda, micromamba ...
-conda install -c conda-forge nodejs=22 jupyterlab==4 jupyter-packaging jupyterlab-h5web
-
-# Install front-end dependencies (`jlpm` is JupyterLab's pinned version of yarn)
-jlpm install
-
-# Build the front-end
-jlpm build
+# Prepare environment (replace `mamba` by `conda` if needed)
+mamba install -c conda-forge nodejs=22 jupyterlab==4 jupyter-packaging jupyterlab-h5web
 
 # Install package in development mode
 pip install -e .
@@ -20,6 +18,9 @@ jupyter labextension develop . --overwrite
 
 # Server extension must be manually enabled in develop mode
 jupyter server extension enable jupyterlab_h5web
+
+# Rebuild extension Typescript source after making changes
+jlpm build
 ```
 
 ## Develop
