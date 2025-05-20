@@ -88,12 +88,15 @@ An example is provided in [example.ipynb](example.ipynb).
 **jupyter-h5web** detects HDF5 files based on their file extensions. The viewer
 works for the following extensions:
 
-- "Classic" HDF5: `.h5`, `.hdf5`, `.hdf`
+- "Classic" HDF5: `.h5`, `.hdf5`, `.hdf`, `.hf5`
 - [NeXus](https://www.nexusformat.org/): `.nexus`, `.nx`, `.nxs`, `.nx5`
 - [CXI](https://cxidb.org/cxi.html): `.cxi`
 - [NetCDF4](https://docs.unidata.ucar.edu/nug/current/): `.nc`, `.nc4`
 - [Loom](http://linnarssonlab.org/loompy/format/index.html): `.loom`
 - [JLD2](https://github.com/JuliaIO/JLD2.jl): `.jld2`
+- [EBSD-HDF5](https://link.springer.com/article/10.1186/2193-9772-3-4): `.h5ebsd`, `.edaxh5`, `.oh5`
+- [DREAM.3D](https://dream3d.bluequartz.net/Help/3_SupportedFileFormats/Native_DREAM3D_File_Format/): `.dream3d`
+- [GEOH5](https://mirageoscience-geoh5py.readthedocs-hosted.com/en/v0.8.0/content/geoh5_format/index.html): `.geoh5`
 
 For other types of files, you can change the extension to one of the supported
 extensions or, if it is widespread,
