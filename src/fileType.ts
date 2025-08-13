@@ -31,6 +31,7 @@ const HDF5_FILE_TYPE = {
     '.oh5',
     '.dream3d',
     '.geoh5',
+    '.h5oina',
   ],
   mimeTypes: ['application/x-hdf5'],
   fileFormat: 'base64' as const,
