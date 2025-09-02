@@ -137,7 +137,7 @@ If `jupyterlab_h5web` is installed and enabled but you are not seeing the
 frontend, check the frontend is installed:
 
 ```bash
-jupyter labextension list
+jupyter labextension list --verbose
 ```
 
 ## Uninstall

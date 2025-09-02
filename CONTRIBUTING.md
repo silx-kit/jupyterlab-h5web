@@ -8,19 +8,23 @@
 
 ```bash
 # Prepare environment (replace `mamba` by `conda` if needed)
-mamba install -c conda-forge nodejs=22 "jupyterlab==4.3.6" jupyter-packaging jupyterlab-h5web
+mamba install -c conda-forge nodejs=22 "jupyterlab==4.4.6" jupyter-packaging jupyterlab-h5web
 
 # Install package in development mode
 pip install -e .
 
 # Build the extension's Typescript source
-jlpm build
+jlpm run build
 
 # Link your development version of the extension with JupyterLab
 jupyter labextension develop . --overwrite
 
 # Server extension must be manually enabled in develop mode
 jupyter server extension enable jupyterlab_h5web
+
+# Check your setup
+jupyter server extension list
+jupyter labextension list --verbose
 ```
 
 ## Develop
