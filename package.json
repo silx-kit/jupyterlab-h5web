@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-h5web",
-  "version": "12.4.0",
+  "version": "12.5.0",
   "description": "A JupyterLab extension to explore and visualize HDF5 file contents.",
   "license": "MIT",
   "homepage": "https://github.com/silx-kit/jupyterlab-h5web",
