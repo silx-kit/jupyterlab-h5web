@@ -8,7 +8,7 @@
 
 ```bash
 # Prepare environment (replace `mamba` by `conda` if needed)
-mamba install -c conda-forge nodejs=22 "jupyterlab==4.4.6" jupyter-packaging jupyterlab-h5web
+mamba install -c conda-forge nodejs=24 "jupyterlab==4.4.6" jupyter-packaging jupyterlab-h5web
 
 # Install package in development mode
 pip install -e .

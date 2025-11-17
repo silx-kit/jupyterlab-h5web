@@ -27,9 +27,9 @@ about: File a bug report to help us improve.
 ### Context
 
 - OS: [e.g. iOS]
-- Browser: [e.g. Chrome, Safari]
-- Version: [e.g. 22]
-- JupyterLab version: [e.g. 2.3.2]
+- Browser: [e.g. Firefox, Chrome, Safari]
+- Version: [e.g. 135]
+- JupyterLab version: [e.g. 4.4.6]
 
 <details><summary>Extension lists</summary>
 <pre>
