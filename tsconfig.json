@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "target": "es2018",
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "react-jsx",
