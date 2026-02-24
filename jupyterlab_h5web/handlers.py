@@ -41,7 +41,7 @@ class ContentHandler(BaseHandler):
             as_absolute_path(self.base_dir, Path(file_path)),
             path,
             create_error,
-            h5py_options={"locking": False} if H5PY_HAS_FILE_LOCKING_ARG else {},
+            h5py_options={"swmr": True, "locking": False} if H5PY_HAS_FILE_LOCKING_ARG else {"swmr": True},
         ) as content:
             payload = self.parse_content(content)
 
@@ -96,6 +96,7 @@ class PathsHandler(BaseHandler):
             as_absolute_path(self.base_dir, Path(file_path)),
             path,
             create_error,
+            h5py_options={"swmr": True, "locking": False} if H5PY_HAS_FILE_LOCKING_ARG else {"swmr": True},
         ) as paths:
             response = encode(paths)
 
