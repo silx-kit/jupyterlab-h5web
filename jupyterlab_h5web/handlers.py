@@ -107,7 +107,6 @@ class PathsHandler(BaseHandler):
 
 
 def setup_handlers(web_app, base_dir: str):
-    pattern = ".*$"
     endpoints = {
         "attr": AttributeHandler,
         "data": DataHandler,
@@ -117,11 +116,11 @@ def setup_handlers(web_app, base_dir: str):
 
     handlers = [
         (
-            url_path_join(web_app.settings["base_url"], "h5web", endpoint, pattern),
+            url_path_join(web_app.settings["base_url"], "h5web", endpoint),
             handler,
             {"base_dir": Path(base_dir)},
         )
         for endpoint, handler in endpoints.items()
     ]
 
-    web_app.add_handlers(pattern, handlers)
+    web_app.add_handlers(".*$", handlers)

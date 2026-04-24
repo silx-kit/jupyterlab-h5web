@@ -24,7 +24,7 @@ jupyter server extension enable jupyterlab_h5web
 
 # Check your setup
 jupyter server extension list
-jupyter labextension list --verbose
+jupyter labextension list
 ```
 
 ## Develop
