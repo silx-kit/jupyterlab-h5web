@@ -9,7 +9,7 @@ import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 
 import { activateOpenInBrowser } from './browser';
 import HDF5_FILE_TYPE from './fileType';
-// eslint-disable-next-line import/no-namespace
+// eslint-disable-next-line import-x/no-namespace
 import * as mimeExtension from './mimeplugin';
 
 const extension: JupyterFrontEndPlugin<void> = {
